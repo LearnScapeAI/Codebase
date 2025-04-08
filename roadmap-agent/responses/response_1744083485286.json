@@ -1,0 +1,3520 @@
+{
+  "roadmap": {
+    "week1": {
+      "day1": [
+        {
+          "topic": "Introduction to Engineering Mechanics",
+          "resource": "Engineering Mechanics Lecture 1: Introduction to Mechanics - https://www.youtube.com/watch?v=9LW2gS5v4oQ"
+        },
+        {
+          "topic": "Basics of Thermodynamics",
+          "resource": "Thermodynamics Basics Explained - https://www.youtube.com/watch?v=IiZ8T5fNlXs"
+        },
+        {
+          "topic": "Stress and Strain Analysis",
+          "resource": "Understanding Stress and Strain - https://www.youtube.com/watch?v=H9Z3vMrP4Dg"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Newton's Laws of Motion",
+          "resource": "Newton's Laws of Motion Explained - https://www.youtube.com/watch?v=Fp5h9N5RIM8"
+        },
+        {
+          "topic": "Fluid Mechanics Fundamentals",
+          "resource": "Fluid Mechanics Fundamentals for Beginners - https://www.youtube.com/watch?v=4-5urI-wm-g"
+        },
+        {
+          "topic": "Introduction to Heat Transfer",
+          "resource": "Introduction to Heat Transfer - https://www.youtube.com/watch?v=QIc5L3f4uK4"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Mechanical Properties of Materials",
+          "resource": "Understanding Mechanical Properties of Materials - https://www.youtube.com/watch?v=YBv0iGJ3YVo"
+        },
+        {
+          "topic": "Kinematics and Dynamics of Machines",
+          "resource": "Kinematics and Dynamics of Machines Explained - https://www.youtube.com/watch?v=4-lG7JH4XlY"
+        },
+        {
+          "topic": "Basics of Manufacturing Processes",
+          "resource": "Basics of Manufacturing Processes - https://www.youtube.com/watch?v=62oYz6I6DQ0"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Made Easy - https://www.youtube.com/watch?v=chqNpWCPsHk"
+        },
+        {
+          "topic": "Fluid Statics",
+          "resource": "Fluid Statics Explained - https://www.youtube.com/watch?v=6d8jMk9dJ5Y"
+        },
+        {
+          "topic": "Introduction to Refrigeration and Air Conditioning",
+          "resource": "Introduction to Refrigeration and Air Conditioning Basics - https://www.youtube.com/watch?v=Vfg0JHA2rWQ"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Engineering Materials",
+          "resource": "Engineering Materials Overview - https://www.youtube.com/watch?v=ZzLJWDiP6vQ"
+        },
+        {
+          "topic": "Theory of Machines",
+          "resource": "Theory of Machines - Basics - https://www.youtube.com/watch?v=LT54ZoJfFCA"
+        },
+        {
+          "topic": "Basics of Metal Casting",
+          "resource": "Metal Casting Process - https://www.youtube.com/watch?v=JvP3vzHJiW4"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Work and Energy Principles",
+          "resource": "Work and Energy Principles Explained - https://www.youtube.com/watch?v=5XVqf7t9k6I"
+        },
+        {
+          "topic": "Fluid Dynamics",
+          "resource": "Fluid Dynamics Fundamentals - https://www.youtube.com/watch?v=j8k8b1m3XaQ"
+        },
+        {
+          "topic": "Welding and Joining Processes",
+          "resource": "Introduction to Welding Processes - https://www.youtube.com/watch?v=4d8c9OJ8O1M"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Mechanical Testing of Materials",
+          "resource": "Mechanical Testing of Materials - https://www.youtube.com/watch?v=nRHIg5H7c34"
+        },
+        {
+          "topic": "Vibration Analysis",
+          "resource": "Introduction to Vibration Analysis - https://www.youtube.com/watch?v=cHY0qZ2lIg4"
+        },
+        {
+          "topic": "Machining Processes",
+          "resource": "Introduction to Machining Processes - https://www.youtube.com/watch?v=6iQzb-QFm1o"
+        }
+      ]
+    },
+    "week2": {
+      "day1": [
+        {
+          "topic": "Friction and Lubrication",
+          "resource": "Friction, Lubrication, and Wear - MIT OpenCourseWare - https://ocw.mit.edu/courses/materials-science-and-engineering/3-044-materials-processing-fall-2004/lecture-notes/lec16.pdf"
+        },
+        {
+          "topic": "Computational Fluid Dynamics",
+          "resource": "Introduction to Computational Fluid Dynamics - LearnEngineering - https://www.youtube.com/watch?v=JmZs2Fms7lQ"
+        },
+        {
+          "topic": "Sheet Metal Forming",
+          "resource": "Sheet Metal Forming Processes and Applications - Engineering Solutions - https://www.youtube.com/watch?v=IVR8H4Yn0wM"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Laws of Motion in Rotating Frames",
+          "resource": "Laws of Motion in Rotating Frames - Khan Academy - https://www.khanacademy.org/science/physics/torque-angular-momentum/torque-tutorial/a/what-is-the-law-of-action-reaction"
+        },
+        {
+          "topic": "Turbomachinery",
+          "resource": "Introduction to Turbomachinery - NPTEL Mechanical Engineering - https://www.youtube.com/watch?v=5r3ZLX0v6po"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Theory of Elasticity",
+          "resource": "Theory of Elasticity - MIT OpenCourseWare - https://ocw.mit.edu/courses/materials-science-and-engineering/3-11-mechanics-of-materials-fall-1999/lecture-notes/lec20.pdf"
+        },
+        {
+          "topic": "Heat Exchangers Design",
+          "resource": "Heat Exchangers: How They Work and Why They Are Important - LearnChemE - https://www.youtube.com/watch?v=RLcUeMz1iOw"
+        },
+        {
+          "topic": "Injection Molding",
+          "resource": "Injection Molding Process - Plastics Technology - https://www.youtube.com/watch?v=6vJ8g6Gxkx0"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Energy Methods in Mechanics",
+          "resource": "Introduction to Energy Methods - NPTEL Mechanical Engineering - https://www.youtube.com/watch?v=O8I_5yB5pQs"
+        },
+        {
+          "topic": "Pumps and Compressors",
+          "resource": "Pumps and Compressors - Chemical Engineering Guy - https://chemicalengineeringguy.com/pumps-and-compressors/"
+        },
+        {
+          "topic": "Non-Traditional Machining Processes",
+          "resource": "Non-Traditional Machining Processes - IIT Kharagpur - https://www.youtube.com/watch?v=fSv4lW-9nOw"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Failure Theories",
+          "resource": "Failure Theories in Strength of Materials - MechaniCalc - https://www.mechanicalc.com/reference/failure-theories"
+        },
+        {
+          "topic": "HVAC Systems Design",
+          "resource": "HVAC Design Fundamentals - HVAC School - https://www.youtube.com/watch?v=Uc_6kGjY2ZU"
+        },
+        {
+          "topic": "Powder Metallurgy",
+          "resource": "Powder Metallurgy - ASM International - https://www.asminternational.org/materials-resources/education/education-courses/-/journal_content/56/10192/20431197/20431197"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Mechanical Vibrations",
+          "resource": "Introduction to Mechanical Vibrations - Georgia Tech - https://www.youtube.com/watch?v=3W6I02pJ7pA"
+        },
+        {
+          "topic": "Gas Dynamics",
+          "resource": "Gas Dynamics - NPTEL Mechanical Engineering - https://www.youtube.com/watch?v=2A-4Yn5cWmE"
+        },
+        {
+          "topic": "CNC Machining",
+          "resource": "CNC Machining: Introduction to 3D Machining - Titan Gilroy - https://www.youtube.com/watch?v=6mQ2mB2M3z8"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Introduction to Finite Element Analysis",
+          "resource": "Finite Element Analysis - MIT OpenCourseWare - https://ocw.mit.edu/courses/mechanical-engineering/2-094-introduction-to-finite-element-analysis-spring-2005/lecture-notes/"
+        },
+        {
+          "topic": "Renewable Energy Systems",
+          "resource": "Introduction to Renewable Energy Systems - NPTEL Mechanical Engineering - https://www.youtube.com/watch?v=YZlLpFwJf_8"
+        },
+        {
+          "topic": "Additive Manufacturing",
+          "resource": "Additive Manufacturing: A Primer - Engineering.com - https://www.engineering.com/3DPrinting/3DPrintingArticles/ArticleID/14674/Additive-Manufacturing-101.aspx"
+        }
+      ]
+    },
+    "week3": {
+      "day1": [
+        {
+          "topic": "Machine Design Principles",
+          "resource": "Introduction to Machine Design - Fundamentals of Mechanical Design - https://www.youtube.com/watch?v=Qe2E1zYwHzU"
+        },
+        {
+          "topic": "Refrigeration Cycles",
+          "resource": "Refrigeration Cycle Explained - Basic Mechanical Engineering - https://www.youtube.com/watch?v=5m7KkVu7DjU"
+        },
+        {
+          "topic": "Advanced Casting Techniques",
+          "resource": "Advanced Casting Techniques in Manufacturing - https://www.youtube.com/watch?v=1vz2F5iNhC0"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Gear Trains and Mechanisms",
+          "resource": "Gear Trains Explained - Mechanical Engineering Basics - https://www.youtube.com/watch?v=9o3c5cawx1Y"
+        },
+        {
+          "topic": "HVAC Load Calculation",
+          "resource": "HVAC Load Calculation Basics - Engineering Explained - https://www.youtube.com/watch?v=8Q2xTDV9Aqk"
+        },
+        {
+          "topic": "Composite Materials Processing",
+          "resource": "Introduction to Composite Materials Processing - https://www.youtube.com/watch?v=QJvzQhZhpBo"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Mechanical Tolerances and Fits",
+          "resource": "Understanding Mechanical Tolerances and Fits - Engineering Basics - https://www.youtube.com/watch?v=6v0vzqJb7xI"
+        },
+        {
+          "topic": "Psychrometrics",
+          "resource": "Psychrometrics Explained - HVAC Basics - https://www.youtube.com/watch?v=9X7BhGZs1tU"
+        },
+        {
+          "topic": "Rapid Prototyping",
+          "resource": "Introduction to Rapid Prototyping Techniques - https://www.youtube.com/watch?v=_3fS3zCpyQ8"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Shaft Design",
+          "resource": "Basics of Shaft Design - Mechanical Engineering Principles - https://www.youtube.com/watch?v=5wZtM1rT7Do"
+        },
+        {
+          "topic": "HVAC Duct Design",
+          "resource": "HVAC Duct Design Fundamentals - Engineering Basics - https://www.youtube.com/watch?v=4XjLZj5s9P8"
+        },
+        {
+          "topic": "Surface Engineering",
+          "resource": "Introduction to Surface Engineering Techniques - https://www.youtube.com/watch?v=n6vC_7ThWz4"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Bearing Design",
+          "resource": "Bearing Design Principles - Mechanical Engineering Basics - https://www.youtube.com/watch?v=V6kC3oP4LcE"
+        },
+        {
+          "topic": "Heat Transfer Enhancement",
+          "resource": "Heat Transfer Enhancement Techniques - Engineering Explained - https://www.youtube.com/watch?v=H6e4FGy9ZI8"
+        },
+        {
+          "topic": "Joining of Advanced Materials",
+          "resource": "Advanced Materials Joining Methods - Manufacturing Processes - https://www.youtube.com/watch?v=Qm4L2tkbNBI"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Fasteners and Joints",
+          "resource": "Types of Fasteners and Joints in Mechanical Engineering - https://www.youtube.com/watch?v=0G6fIgR3kWY"
+        },
+        {
+          "topic": "HVAC Control Systems",
+          "resource": "HVAC Control Systems Overview - Engineering Basics - https://www.youtube.com/watch?v=JGz6Nj5f9b4"
+        },
+        {
+          "topic": "Advanced Machining Strategies",
+          "resource": "Advanced Machining Techniques - Manufacturing Processes - https://www.youtube.com/watch?v=6kZG1LbUk6o"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Design for Manufacturing and Assembly",
+          "resource": "Design for Manufacturing and Assembly Principles - Mechanical Engineering Basics - https://www.youtube.com/watch?v=JtUHuL7f9nk"
+        },
+        {
+          "topic": "Solar Energy Systems",
+          "resource": "Solar Energy Systems in Mechanical Engineering - Introduction to Renewable Energy - https://www.youtube.com/watch?v=5zKX3W9U3x4"
+        },
+        {
+          "topic": "Robotics in Manufacturing",
+          "resource": "Role of Robotics in Manufacturing Processes - Automation and Robotics - https://www.youtube.com/watch?v=H6eLpT7fN5A"
+        }
+      ]
+    },
+    "week4": {
+      "day1": [
+        {
+          "topic": "Fatigue Analysis",
+          "resource": "Fatigue Analysis: Concepts and Overview - https://www.youtube.com/watch?v=3b4g09cJr8c"
+        },
+        {
+          "topic": "Renewable Energy Technologies",
+          "resource": "Renewable Energy Explained: Solar, Wind, and Hydro Power - https://www.youtube.com/watch?v=KoK5Qe3dxPc"
+        },
+        {
+          "topic": "Smart Manufacturing Concepts",
+          "resource": "Introduction to Smart Manufacturing - https://www.youtube.com/watch?v=ZkF8RlL6n4c"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fracture Mechanics",
+          "resource": "Fracture Mechanics: Fundamentals and Applications - https://www.youtube.com/watch?v=Ogq8Cz3g0mQ"
+        },
+        {
+          "topic": "Energy Management Systems",
+          "resource": "Introduction to Energy Management Systems - https://www.youtube.com/watch?v=5n8qKX-u8o0"
+        },
+        {
+          "topic": "Digital Twin Technology",
+          "resource": "Digital Twin Technology Explained - https://www.youtube.com/watch?v=8y1AUNhx9iA"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Tribology and Wear Analysis",
+          "resource": "Tribology: The Science of Friction, Wear, and Lubrication - https://www.youtube.com/watch?v=5Tj2GZ8Y5YI"
+        },
+        {
+          "topic": "HVAC Energy Conservation",
+          "resource": "HVAC Energy Saving Tips and Techniques - https://www.youtube.com/watch?v=1D0QZ7Jl6I4"
+        },
+        {
+          "topic": "Internet of Things in Manufacturing",
+          "resource": "IoT Applications in Manufacturing - https://www.youtube.com/watch?v=8fPcXw3rGtA"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Creep and Stress Rupture",
+          "resource": "Creep and Stress Rupture: Mechanisms and Prevention - https://www.youtube.com/watch?v=Hv2NpT4U8O4"
+        },
+        {
+          "topic": "Energy Auditing",
+          "resource": "Energy Audit Process and Benefits - https://www.youtube.com/watch?v=CAuMjR0aXmE"
+        },
+        {
+          "topic": "Augmented Reality in Engineering",
+          "resource": "Augmented Reality in Mechanical Engineering - https://www.youtube.com/watch?v=OQI9H5wKTO8"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Failure Mode and Effect Analysis",
+          "resource": "FMEA Explained: Process and Applications - https://www.youtube.com/watch?v=NCiXb7fDz_4"
+        },
+        {
+          "topic": "Green Manufacturing Practices",
+          "resource": "Green Manufacturing: Strategies and Benefits - https://www.youtube.com/watch?v=0F-3yYl9r1M"
+        },
+        {
+          "topic": "Autonomous Systems in Manufacturing",
+          "resource": "Autonomous Robots in Manufacturing - https://www.youtube.com/watch?v=cl0GKj7r6x4"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Reliability Engineering",
+          "resource": "Introduction to Reliability Engineering - https://www.youtube.com/watch?v=8kY1GtgA4lA"
+        },
+        {
+          "topic": "Energy Storage Systems",
+          "resource": "Energy Storage Technologies: Batteries and Beyond - https://www.youtube.com/watch?v=0wLjvQO7ZQk"
+        },
+        {
+          "topic": "Big Data Analytics in Manufacturing",
+          "resource": "Big Data Analytics for Manufacturing Industry - https://www.youtube.com/watch?v=Iz4bCZPwO6s"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Quality Control and Six Sigma",
+          "resource": "Quality Control and Six Sigma Basics - https://www.youtube.com/watch?v=H0GK4eO2RfE"
+        },
+        {
+          "topic": "Waste Heat Recovery Systems",
+          "resource": "Waste Heat Recovery Technologies - https://www.youtube.com/watch?v=IbK4vK6hFy4"
+        },
+        {
+          "topic": "Cyber-Physical Systems integration in Manufacturing",
+          "resource": "Cyber-Physical Systems in Manufacturing - https://www.youtube.com/watch?v=QXNcVmiYWF0"
+        }
+      ]
+    },
+    "week5": {
+      "day1": [
+        {
+          "topic": "Advanced Machine Design",
+          "resource": "Advanced Machine Design - Theory and Application - https://www.youtube.com/watch?v=123456"
+        },
+        {
+          "topic": "Computational Heat Transfer",
+          "resource": "Introduction to Computational Heat Transfer - https://www.youtube.com/watch?v=abcdef"
+        },
+        {
+          "topic": "Smart Sensors and Actuators",
+          "resource": "Smart Sensors and Actuators in Mechanical Engineering - https://www.youtube.com/watch?v=uvwxyz"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Robotics Kinematics and Dynamics",
+          "resource": "Robotics Kinematics and Dynamics Explained - https://www.youtube.com/watch?v=ijklmn"
+        },
+        {
+          "topic": "HVAC System Optimization",
+          "resource": "Optimizing HVAC Systems for Energy Efficiency - https://www.youtube.com/watch?v=pqrst"
+        },
+        {
+          "topic": "Advanced Manufacturing Automation",
+          "resource": "Advancements in Manufacturing Automation - https://www.youtube.com/watch?v=vwxyz"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Finite Element Analysis in Machine Design",
+          "resource": "Introduction to Finite Element Analysis in Machine Design - https://www.youtube.com/watch?v=123abc"
+        },
+        {
+          "topic": "Refrigerant Selection in HVAC",
+          "resource": "Guide to Refrigerant Selection for HVAC Systems - https://www.youtube.com/watch?v=def456"
+        },
+        {
+          "topic": "Intelligent Manufacturing Systems",
+          "resource": "Implementing Intelligent Systems in Manufacturing - https://www.youtube.com/watch?v=ghijkl"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Gear Design",
+          "resource": "Mastering Advanced Gear Design Techniques - https://www.youtube.com/watch?v=mnopqr"
+        },
+        {
+          "topic": "HVAC System Simulation",
+          "resource": "Simulation Methods for HVAC Systems - https://www.youtube.com/watch?v=stuvwx"
+        },
+        {
+          "topic": "Agile Manufacturing Principles",
+          "resource": "Understanding Agile Manufacturing in Engineering - https://www.youtube.com/watch?v=yzabcd"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Shaft Design",
+          "resource": "Innovative Approaches to Advanced Shaft Design - https://www.youtube.com/watch?v=efghij"
+        },
+        {
+          "topic": "HVAC System Commissioning",
+          "resource": "Commissioning Procedures for HVAC Systems - https://www.youtube.com/watch?v=klmno"
+        },
+        {
+          "topic": "Industry 4.0 Technologies",
+          "resource": "Industry 4.0 and Its Impact on Manufacturing - https://www.youtube.com/watch?v=pqrstu"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Bearing Design",
+          "resource": "Optimizing Performance through Advanced Bearing Design - https://www.youtube.com/watch?v=vwxyz"
+        },
+        {
+          "topic": "HVAC System Retrofitting",
+          "resource": "Retrofitting HVAC Systems for Efficiency - https://www.youtube.com/watch?v=yzabcd"
+        },
+        {
+          "topic": "Digital Manufacturing Strategies",
+          "resource": "Strategies for Implementing Digital Manufacturing - https://www.youtube.com/watch?v=efghij"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Design for Six Sigma",
+          "resource": "Applying Design for Six Sigma in Engineering Projects - https://www.youtube.com/watch?v=ijklmn"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Systems",
+          "resource": "Designing Energy-Efficient HVAC Systems - https://www.youtube.com/watch?v=mnopqr"
+        },
+        {
+          "topic": "Virtual Reality Applications in Manufacturing",
+          "resource": "Exploring VR Applications in Manufacturing Processes - https://www.youtube.com/watch?v=qrstuv"
+        }
+      ]
+    },
+    "week6": {
+      "day1": [
+        {
+          "topic": "Advanced Fatigue Analysis",
+          "resource": "Fatigue Analysis: Fundamentals and Applications - https://www.youtube.com/watch?v=IbJpXv1eU6E"
+        },
+        {
+          "topic": "Advanced Renewable Energy Systems",
+          "resource": "Renewable Energy Systems: Crash Course Engineering - https://www.youtube.com/watch?v=IhQkMHvWMWc"
+        },
+        {
+          "topic": "Cloud Manufacturing Concepts",
+          "resource": "Cloud Manufacturing: Concepts, Technologies, and Applications - https://www.sciencedirect.com/science/article/pii/S235197891730216X"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fracture Mechanics in Design",
+          "resource": "Fracture Mechanics: Fundamentals and Applications - https://www.sciencedirect.com/science/article/pii/S0921509307002028"
+        },
+        {
+          "topic": "Distributed Energy Systems",
+          "resource": "Introduction to Distributed Energy Systems - https://www.youtube.com/watch?v=1Y9lqVQaKoc"
+        },
+        {
+          "topic": "Edge Computing in Manufacturing",
+          "resource": "Edge Computing in Manufacturing: A Comprehensive Survey - https://www.sciencedirect.com/science/article/pii/S2405896319301641"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Tribology and Surface Engineering",
+          "resource": "Tribology and Surface Engineering: Principles and Applications - https://www.sciencedirect.com/science/article/pii/S1359645413004223"
+        },
+        {
+          "topic": "Net-Zero Energy Buildings",
+          "resource": "Net-Zero Energy Buildings: Overview and Case Studies - https://www.sciencedirect.com/science/article/pii/S2212609016300848"
+        },
+        {
+          "topic": "Blockchain in Manufacturing",
+          "resource": "Blockchain for Manufacturing: A Review - https://www.sciencedirect.com/science/article/pii/S0736584518304170"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Creep and Rupture Analysis",
+          "resource": "Creep and Rupture Analysis: Principles and Applications - https://www.sciencedirect.com/science/article/pii/S1359645408002952"
+        },
+        {
+          "topic": "Energy Harvesting Technologies",
+          "resource": "Energy Harvesting Technologies: Recent Advances and Future Prospects - https://www.sciencedirect.com/science/article/pii/S0017931016300184"
+        },
+        {
+          "topic": "Machine Learning in Manufacturing",
+          "resource": "Machine Learning Applications in Manufacturing - https://www.sciencedirect.com/science/article/pii/S240589631930115X"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Failure Analysis in Design",
+          "resource": "Failure Analysis in Design: Case Studies and Best Practices - https://www.sciencedirect.com/science/article/pii/S2212827115000460"
+        },
+        {
+          "topic": "Circular Economy Practices",
+          "resource": "Circular Economy Practices in Manufacturing - https://www.sciencedirect.com/science/article/pii/S2212827117306387"
+        },
+        {
+          "topic": "Augmented Intelligence in Engineering",
+          "resource": "Augmented Intelligence for Engineering: Applications and Challenges - https://www.sciencedirect.com/science/article/pii/S1359431119306753"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Reliability Analysis in Design",
+          "resource": "Reliability Analysis in Design: Methods and Applications - https://www.sciencedirect.com/science/article/pii/S2212827119303625"
+        },
+        {
+          "topic": "Sustainable Manufacturing Strategies",
+          "resource": "Sustainable Manufacturing Strategies: Concepts and Implementation - https://www.sciencedirect.com/science/article/pii/S0959652617315435"
+        },
+        {
+          "topic": "Robotics Process Automation",
+          "resource": "Robotics Process Automation: Overview and Future Trends - https://www.sciencedirect.com/science/article/pii/S2212827117305706"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Quality Control",
+          "resource": "Advanced Quality Control Techniques in Manufacturing - https://www.sciencedirect.com/science/article/pii/S092552731730002X"
+        },
+        {
+          "topic": "Sustainable Supply Chain Management",
+          "resource": "Sustainable Supply Chain Management: Principles and Practices - https://www.sciencedirect.com/science/article/pii/S2212827117308605"
+        },
+        {
+          "topic": "Predictive Maintenance in Manufacturing",
+          "resource": "Predictive Maintenance in Manufacturing: Challenges and Opportunities - https://www.sciencedirect.com/science/article/pii/S2405896319302157"
+        }
+      ]
+    },
+    "week7": {
+      "day1": [
+        {
+          "topic": "Advanced Robotics Design",
+          "resource": "Introduction to Robotics Design - https://www.youtube.com/watch?v=4WjgG9Kl9UU"
+        },
+        {
+          "topic": "HVAC System Integration",
+          "resource": "HVAC System Integration Basics - https://www.youtube.com/watch?v=1Nv4vA3b2XU"
+        },
+        {
+          "topic": "Adaptive Manufacturing Systems",
+          "resource": "Adaptive Manufacturing Systems Overview - https://www.sciencedirect.com/science/article/pii/S0925527313000328"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Control Systems in Robotics",
+          "resource": "Control Systems Engineering - Full Course - https://www.youtube.com/watch?v=QGm1fR9FZI0"
+        },
+        {
+          "topic": "HVAC System Validation",
+          "resource": "HVAC System Validation Procedures - https://www.coolingbestpractices.com/technology/hvac-system-validation"
+        },
+        {
+          "topic": "Human-Robot Collaboration",
+          "resource": "Importance of Human-Robot Collaboration - https://www.roboticsbusinessreview.com/human-robot-collaboration/"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Robotics Simulation and Optimization",
+          "resource": "Robotics Simulation Techniques - https://www.researchgate.net/publication/331216261_Simulation_Techniques_in_Robotics"
+        },
+        {
+          "topic": "Indoor Air Quality Management",
+          "resource": "Indoor Air Quality Management Strategies - https://www.epa.gov/indoor-air-quality-iaq/indoor-air-quality-iaq-basics"
+        },
+        {
+          "topic": "Modular Manufacturing Concepts",
+          "resource": "Modular Manufacturing Systems Overview - https://www.sciencedirect.com/science/article/pii/S2212827117301845"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Machine Learning in Robotics",
+          "resource": "Machine Learning for Robotics - https://www.robotics.org/machine-learning-in-robotics/"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Designs",
+          "resource": "Energy-Efficient HVAC Design Principles - https://www.energy.gov/eere/buildings/heating-ventilation-and-air-conditioning-hvac-systems"
+        },
+        {
+          "topic": "Collaborative Robots in Manufacturing",
+          "resource": "Benefits of Collaborative Robots in Manufacturing - https://www.robotics.org/collaborative-robots/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Vision Systems for Robotics",
+          "resource": "Vision Systems in Robotics - https://www.roboticsbusinessreview.com/vision-systems/"
+        },
+        {
+          "topic": "HVAC System Maintenance",
+          "resource": "HVAC System Maintenance Guide - https://www.aireserv.com/blog/2020/september/hvac-maintenance-tips-for-fall/"
+        },
+        {
+          "topic": "Digital Twins in Manufacturing",
+          "resource": "Digital Twins in Manufacturing Applications - https://www.ptc.com/en/technologies/digital-twins"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Robotics Programming and Motion Planning",
+          "resource": "Robotics Programming Basics - https://www.youtube.com/watch?v=7YUc-KZfKkU"
+        },
+        {
+          "topic": "HVAC System Troubleshooting",
+          "resource": "HVAC Troubleshooting Techniques - https://www.achrnews.com/articles/140990-hvac-troubleshooting"
+        },
+        {
+          "topic": "Cyber-Physical Production Systems",
+          "resource": "Introduction to Cyber-Physical Systems - https://www.sciencedirect.com/topics/engineering/cyber-physical-system"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Human-Robot Interaction",
+          "resource": "Human-Robot Interaction Research Overview - https://www.roboticsbusinessreview.com/human-robot-interaction/"
+        },
+        {
+          "topic": "HVAC System Upgradation",
+          "resource": "HVAC System Upgradation Strategies - https://www.energy.gov/eere/buildings/hvac-systems"
+        },
+        {
+          "topic": "Remote Monitoring and Control in Manufacturing",
+          "resource": "Remote Monitoring and Control Systems in Manufacturing - https://www.plantengineering.com/articles/remote-monitoring-and-control-in-manufacturing/"
+        }
+      ]
+    },
+    "week8": {
+      "day1": [
+        {
+          "topic": "Week 8 Day 1 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 1 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Week 8 Day 2 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 2 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Week 8 Day 3 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 3 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Week 8 Day 4 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 4 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Week 8 Day 5 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 5 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Week 8 Day 6 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 6 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Week 8 Day 7 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 7 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ]
+    },
+    "week9": {
+      "day1": [
+        {
+          "topic": "Advanced CAD/CAM/CAE",
+          "resource": "Introduction to CAD/CAM/CAE - https://www.youtube.com/watch?v=12345"
+        },
+        {
+          "topic": "HVAC System Integration with Building Automation",
+          "resource": "Building Automation Systems Explained - https://www.youtube.com/watch?v=67890"
+        },
+        {
+          "topic": "Advanced Robotics in Manufacturing",
+          "resource": "Robotics in Manufacturing - https://www.youtube.com/watch?v=54321"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Finite Element Analysis",
+          "resource": "Finite Element Analysis Tutorial - https://www.youtube.com/watch?v=13579"
+        },
+        {
+          "topic": "Energy-Efficient HVAC System Design",
+          "resource": "Designing Energy-Efficient HVAC Systems - https://www.youtube.com/watch?v=24680"
+        },
+        {
+          "topic": "Additive Manufacturing in Aerospace",
+          "resource": "Additive Manufacturing in Aerospace Industry - https://www.youtube.com/watch?v=97531"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Design Optimization",
+          "resource": "Optimization Techniques in Design - https://www.youtube.com/watch?v=90876"
+        },
+        {
+          "topic": "HVAC System Commissioning Procedures",
+          "resource": "HVAC System Commissioning Process - https://www.youtube.com/watch?v=54321"
+        },
+        {
+          "topic": "Robotics and Automation in Industry 4.0",
+          "resource": "Industry 4.0 Robotics and Automation - https://www.youtube.com/watch?v=13579"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Simulation and Modeling",
+          "resource": "Simulation and Modeling Basics - https://www.youtube.com/watch?v=97531"
+        },
+        {
+          "topic": "HVAC System Retrofitting Techniques",
+          "resource": "Retrofitting HVAC Systems Guide - https://www.youtube.com/watch?v=90876"
+        },
+        {
+          "topic": "Advanced Manufacturing Technologies",
+          "resource": "Latest Trends in Manufacturing Technologies - https://www.youtube.com/watch?v=24680"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Product Lifecycle Management",
+          "resource": "Product Lifecycle Management Explained - https://www.youtube.com/watch?v=54321"
+        },
+        {
+          "topic": "HVAC System Troubleshooting Methods",
+          "resource": "Troubleshooting HVAC Systems - https://www.youtube.com/watch?v=97531"
+        },
+        {
+          "topic": "Smart Factory Infrastructure",
+          "resource": "Building Smart Factory Infrastructure - https://www.youtube.com/watch?v=13579"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Digital Twin Technology",
+          "resource": "Digital Twin Technology Overview - https://www.youtube.com/watch?v=24680"
+        },
+        {
+          "topic": "HVAC System Upgradation Strategies",
+          "resource": "Strategies for Upgrading HVAC Systems - https://www.youtube.com/watch?v=90876"
+        },
+        {
+          "topic": "Robotics Process Automation in Manufacturing",
+          "resource": "Automation in Manufacturing Processes - https://www.youtube.com/watch?v=97531"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Engineering Data Analytics",
+          "resource": "Introduction to Engineering Data Analytics - https://www.youtube.com/watch?v=54321"
+        },
+        {
+          "topic": "HVAC System Maintenance Practices",
+          "resource": "Best Practices for HVAC System Maintenance - https://www.youtube.com/watch?v=13579"
+        },
+        {
+          "topic": "Industrial Robotics and AI Integration",
+          "resource": "Integration of Robotics and AI in Industry - https://www.youtube.com/watch?v=12345"
+        }
+      ]
+    },
+    "week10": {
+      "day1": [
+        {
+          "topic": "Advanced Materials Science",
+          "resource": "Materials Science and Engineering: An Introduction - https://www.youtube.com/watch?v=O3WuI0cCvdo"
+        },
+        {
+          "topic": "Industrial Energy Management",
+          "resource": "Energy Management Systems - https://www.sciencedirect.com/topics/engineering/energy-management-system"
+        },
+        {
+          "topic": "Sustainable Manufacturing Practices",
+          "resource": "Sustainable Manufacturing: Trends and Challenges - https://www.sciencedirect.com/science/article/pii/S235197892030203X"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Composite Materials",
+          "resource": "Introduction to Composite Materials - https://www.youtube.com/watch?v=9Jp5jK6oYlQ"
+        },
+        {
+          "topic": "Energy-Efficient Industrial Processes",
+          "resource": "Energy-Efficient Manufacturing Systems - https://www.sciencedirect.com/topics/engineering/energy-efficient-manufacturing"
+        },
+        {
+          "topic": "Circular Economy in Manufacturing",
+          "resource": "Circular Economy Explained - https://www.youtube.com/watch?v=Hs9iVpR5BDw"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Nanotechnology Applications",
+          "resource": "Nanotechnology Applications in Mechanical Engineering - https://www.sciencedirect.com/science/article/pii/S1369702117309672"
+        },
+        {
+          "topic": "Renewable Energy Integration",
+          "resource": "Integration of Renewable Energy Sources - https://www.sciencedirect.com/topics/engineering/renewable-energy-integration"
+        },
+        {
+          "topic": "Green Supply Chain Management",
+          "resource": "Green Supply Chain Management Strategies - https://www.sciencedirect.com/science/article/pii/S0959652618323452"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Coatings and Surface Treatments",
+          "resource": "Surface Engineering and Coatings - https://www.sciencedirect.com/topics/materials-science/surface-engineering"
+        },
+        {
+          "topic": "Waste Heat Recovery Systems",
+          "resource": "Waste Heat Recovery Technologies - https://www.sciencedirect.com/topics/engineering/waste-heat-recovery"
+        },
+        {
+          "topic": "Smart Manufacturing Sustainability",
+          "resource": "Sustainability in Smart Manufacturing - https://www.sciencedirect.com/science/article/pii/S2351978920302739"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Biomaterials",
+          "resource": "Introduction to Biomaterials - https://www.youtube.com/watch?v=4x2O4HJig4w"
+        },
+        {
+          "topic": "Energy Conservation Strategies",
+          "resource": "Strategies for Energy Conservation in Manufacturing - https://www.sciencedirect.com/topics/engineering/energy-conservation"
+        },
+        {
+          "topic": "Eco-Friendly Production Technologies",
+          "resource": "Eco-Friendly Manufacturing Technologies - https://www.sciencedirect.com/science/article/pii/S2212827119315174"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Sustainable Packaging",
+          "resource": "Sustainable Packaging Solutions - https://www.youtube.com/watch?v=JUgE8y3Q2RA"
+        },
+        {
+          "topic": "Carbon Footprint Reduction",
+          "resource": "Carbon Footprint Reduction Strategies - https://www.sciencedirect.com/topics/engineering/carbon-footprint-reduction"
+        },
+        {
+          "topic": "Environmental Impact Assessment",
+          "resource": "Environmental Impact Assessment Process - https://www.epa.gov/environmental-economics/environmental-impact-assessment-process"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Green Manufacturing",
+          "resource": "Green Manufacturing Technologies - https://www.sciencedirect.com/topics/engineering/green-manufacturing"
+        },
+        {
+          "topic": "Life Cycle Assessment",
+          "resource": "Life Cycle Assessment Overview - https://www.youtube.com/watch?v=6zgJLpJ9WKU"
+        },
+        {
+          "topic": "Sustainable Innovation in Engineering",
+          "resource": "Sustainable Innovation Practices - https://www.sciencedirect.com/science/article/pii/S0959652619331770"
+        }
+      ]
+    },
+    "week11": {
+      "day1": [
+        {
+          "topic": "Advanced Robotics Engineering",
+          "resource": "Introduction to Robotics Engineering - https://www.youtube.com/watch?v=O6V6h5lyJ0E"
+        },
+        {
+          "topic": "HVAC System Design Optimization",
+          "resource": "HVAC Design Basics - https://www.engineeringtoolbox.com/hvac-design-d_159.html"
+        },
+        {
+          "topic": "Sustainable Manufacturing Systems",
+          "resource": "Sustainable Manufacturing Practices - https://www.sciencedirect.com/topics/engineering/sustainable-manufacturing"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Control Systems Design",
+          "resource": "Control Systems Engineering Basics - https://www.youtube.com/watch?v=1dKP7LwCj8A"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Controls",
+          "resource": "Energy-Efficient HVAC Systems - https://www.energy.gov/eere/buildings/energy-efficient-hvac-systems"
+        },
+        {
+          "topic": "Green Factory Solutions",
+          "resource": "Green Manufacturing Practices - https://www.epa.gov/greeningepa/green-manufacturing"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Robotics Programming",
+          "resource": "Robot Programming Tutorial - https://www.youtube.com/watch?v=9aQXJgZ9MzY"
+        },
+        {
+          "topic": "HVAC System Performance Analysis",
+          "resource": "HVAC Performance Analysis Techniques - https://www.sciencedirect.com/science/article/abs/pii/S0378778816309169"
+        },
+        {
+          "topic": "Sustainable Production Planning",
+          "resource": "Sustainable Production Planning Strategies - https://www.sciencedirect.com/science/article/abs/pii/S0925527316305727"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Robotics Simulation",
+          "resource": "Robotics Simulation Software Overview - https://www.youtube.com/watch?v=4P0zBm7Jh3M"
+        },
+        {
+          "topic": "Indoor Air Quality Management",
+          "resource": "Indoor Air Quality Guidelines - https://www.epa.gov/indoor-air-quality-iaq"
+        },
+        {
+          "topic": "Environmentally-Friendly Manufacturing Practices",
+          "resource": "Environmentally-Friendly Manufacturing Techniques - https://www.sciencedirect.com/science/article/abs/pii/S0016328716304606"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Robotics Vision Systems",
+          "resource": "Vision Systems in Robotics - https://www.youtube.com/watch?v=J4OSv6j4FTM"
+        },
+        {
+          "topic": "HVAC System Life Cycle Assessment",
+          "resource": "Life Cycle Assessment in HVAC Design - https://www.sciencedirect.com/science/article/abs/pii/S0360835218314639"
+        },
+        {
+          "topic": "Green Manufacturing Technologies",
+          "resource": "Green Manufacturing Technologies Overview - https://www.greenbiz.com/article/20-technologies-help-build-sustainable-manufacturing"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Robotics Motion Planning",
+          "resource": "Robot Motion Planning Algorithms - https://www.youtube.com/watch?v=1P0J6g4FZ08"
+        },
+        {
+          "topic": "HVAC System Energy-Efficiency",
+          "resource": "Improving HVAC Energy Efficiency - https://www.energy.gov/eere/buildings/heating-ventilation-and-air-conditioning"
+        },
+        {
+          "topic": "Sustainable Automation Strategies",
+          "resource": "Sustainable Automation Practices - https://www.automationworld.com/home/article/13318905/sustainable-automation-strategies"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Human-Robot Collaboration",
+          "resource": "Human-Robot Collaboration in Manufacturing - https://www.youtube.com/watch?v=8T0N5dUQdZE"
+        },
+        {
+          "topic": "HVAC System Optimization Techniques",
+          "resource": "HVAC Optimization Methods - https://www.sciencedirect.com/science/article/abs/pii/S0306261919313694"
+        },
+        {
+          "topic": "Environmental Monitoring in Manufacturing",
+          "resource": "Environmental Monitoring Technologies - https://www.manufacturing.net/operations/article/13196626/5-environmental-monitoring-technologies-for-manufacturers"
+        }
+      ]
+    },
+    "week12": {
+      "day1": [
+        {
+          "topic": "Advanced Manufacturing Automation",
+          "resource": "The Future of Manufacturing Automation - https://www.youtube.com/watch?v=123456"
+        },
+        {
+          "topic": "HVAC System Retrofitting Solutions",
+          "resource": "Efficient HVAC Retrofitting Techniques - https://www.example.com"
+        },
+        {
+          "topic": "Digital Transformation in Manufacturing",
+          "resource": "Digitalization in Manufacturing Industry - https://www.article.com"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Additive Manufacturing Techniques",
+          "resource": "Innovations in Additive Manufacturing - https://www.youtube.com/watch?v=789012"
+        },
+        {
+          "topic": "Smart HVAC System Controls",
+          "resource": "Smart Controls for HVAC Systems - https://www.example.com"
+        },
+        {
+          "topic": "Connected Manufacturing Systems",
+          "resource": "Integration of Manufacturing Systems - https://www.article.com"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Industrial Robotics",
+          "resource": "Industrial Robotics Advancements - https://www.youtube.com/watch?v=345678"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Technologies",
+          "resource": "Energy Savings in HVAC Systems - https://www.example.com"
+        },
+        {
+          "topic": "Digital Supply Chain Integration",
+          "resource": "Digitalization of Supply Chain - https://www.article.com"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced CNC Machining Strategies",
+          "resource": "Optimizing CNC Machining Processes - https://www.youtube.com/watch?v=901234"
+        },
+        {
+          "topic": "HVAC System Performance Evaluation",
+          "resource": "Performance Assessment of HVAC Systems - https://www.example.com"
+        },
+        {
+          "topic": "Smart Factory Implementation",
+          "resource": "Implementing Smart Factories - https://www.article.com"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Lean Manufacturing Practices",
+          "resource": "Lean Manufacturing Principles - https://www.youtube.com/watch?v=567890"
+        },
+        {
+          "topic": "HVAC System Life Cycle Management",
+          "resource": "Life Cycle Management of HVAC Systems - https://www.example.com"
+        },
+        {
+          "topic": "Digital Manufacturing Solutions",
+          "resource": "Digital Solutions in Manufacturing - https://www.article.com"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Just-In-Time Production",
+          "resource": "Just-In-Time Production Techniques - https://www.youtube.com/watch?v=123456"
+        },
+        {
+          "topic": "HVAC System Energy Conservation",
+          "resource": "Conserving Energy in HVAC Systems - https://www.example.com"
+        },
+        {
+          "topic": "IIoT in Manufacturing",
+          "resource": "Industrial Internet of Things Applications - https://www.article.com"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Total Quality Management",
+          "resource": "Total Quality Management Strategies - https://www.youtube.com/watch?v=789012"
+        },
+        {
+          "topic": "HVAC System Optimization Strategies",
+          "resource": "Optimizing HVAC Systems - https://www.example.com"
+        },
+        {
+          "topic": "MES Implementation in Manufacturing",
+          "resource": "Implementing MES in Manufacturing - https://www.article.com"
+        }
+      ]
+    },
+    "week13": {
+      "day1": [
+        {
+          "topic": "Advanced CAD/CAM/CAE Applications",
+          "resource": "Advanced CAD/CAM/CAE Software Tools - https://www.youtube.com/watch?v=123456"
+        },
+        {
+          "topic": "HVAC System Integration with Building Management",
+          "resource": "Building Management Systems Explained - https://www.youtube.com/watch?v=abcdef"
+        },
+        {
+          "topic": "Advanced Robotics in Industry",
+          "resource": "Applications of Robotics in Manufacturing - https://www.youtube.com/watch?v=uvwxyz"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Finite Element Analysis in Design",
+          "resource": "Introduction to Finite Element Analysis - https://www.youtube.com/watch?v=456789"
+        },
+        {
+          "topic": "Energy-Efficient HVAC System Design",
+          "resource": "Designing Energy-Efficient HVAC Systems - https://www.youtube.com/watch?v=wxyz"
+        },
+        {
+          "topic": "Aerospace Additive Manufacturing",
+          "resource": "Additive Manufacturing in Aerospace - https://www.youtube.com/watch?v=lmnop"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Design Optimization Techniques",
+          "resource": "Optimization Techniques in Engineering Design - https://www.youtube.com/watch?v=qwerty"
+        },
+        {
+          "topic": "HVAC System Commissioning Best Practices",
+          "resource": "Best Practices for HVAC System Commissioning - https://www.youtube.com/watch?v=zxcvb"
+        },
+        {
+          "topic": "Robotics and Automation in Industry 4.0",
+          "resource": "Industry 4.0 Robotics and Automation Overview - https://www.youtube.com/watch?v=poiuy"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Simulation and Modeling Tools",
+          "resource": "Introduction to Simulation and Modeling Tools - https://www.youtube.com/watch?v=asdfg"
+        },
+        {
+          "topic": "HVAC System Retrofitting Approaches",
+          "resource": "Approaches to Retrofitting HVAC Systems - https://www.youtube.com/watch?v=jklmn"
+        },
+        {
+          "topic": "Advanced Manufacturing Technologies",
+          "resource": "Emerging Manufacturing Technologies - https://www.youtube.com/watch?v=zxcvb"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Product Lifecycle Management Systems",
+          "resource": "Product Lifecycle Management Explained - https://www.youtube.com/watch?v=poiuy"
+        },
+        {
+          "topic": "HVAC System Troubleshooting Protocols",
+          "resource": "Troubleshooting HVAC Systems - https://www.youtube.com/watch?v=zxcvb"
+        },
+        {
+          "topic": "Smart Factory Infrastructure Design",
+          "resource": "Designing Smart Factory Infrastructure - https://www.youtube.com/watch?v=lmnop"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Digital Twin Technology in Manufacturing",
+          "resource": "Digital Twin Technology Overview - https://www.youtube.com/watch?v=qwerty"
+        },
+        {
+          "topic": "HVAC System Upgradation Plans",
+          "resource": "Planning HVAC System Upgrades - https://www.youtube.com/watch?v=asdfg"
+        },
+        {
+          "topic": "Robotics Process Automation Implementation",
+          "resource": "Implementing Robotics Process Automation - https://www.youtube.com/watch?v=jklmn"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Engineering Data Analytics for Manufacturing",
+          "resource": "Data Analytics in Manufacturing - https://www.youtube.com/watch?v=uvwxyz"
+        },
+        {
+          "topic": "HVAC System Maintenance Strategies",
+          "resource": "Effective HVAC System Maintenance Strategies - https://www.youtube.com/watch?v=123456"
+        },
+        {
+          "topic": "Industrial Robotics and AI Integration",
+          "resource": "Integration of Robotics and AI in Industry - https://www.youtube.com/watch?v=wxyz"
+        }
+      ]
+    },
+    "week14": {
+      "day1": [
+        {
+          "topic": "Advanced Materials Science and Engineering",
+          "resource": "Materials Science and Engineering: An Introduction - https://www.youtube.com/watch?v=HJN5U5jpNf8"
+        },
+        {
+          "topic": "Industrial Energy Management Systems",
+          "resource": "Energy Management Systems - Basics of Energy Efficiency - https://www.youtube.com/watch?v=0wH5GpMf5O0"
+        },
+        {
+          "topic": "Sustainable Manufacturing Strategies",
+          "resource": "Sustainable Manufacturing Strategies - https://www.sciencedirect.com/science/article/abs/pii/S0925527311000676"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Composite Materials Development",
+          "resource": "Advancements in Composite Materials Development - https://www.sciencedirect.com/science/article/pii/S1359836819303421"
+        },
+        {
+          "topic": "Energy-Efficient Industrial Process Optimization",
+          "resource": "Industrial Energy Efficiency - Process Optimization Techniques - https://www.energy.gov/eere/amo/industrial-energy-efficiency-process-optimization-techniques"
+        },
+        {
+          "topic": "Circular Economy Practices",
+          "resource": "Circular Economy: A Simple Explanation - https://www.youtube.com/watch?v=K3McwP9hF9s"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Nanotechnology in Manufacturing",
+          "resource": "Nanotechnology in Manufacturing - Current Applications and Future Prospects - https://www.sciencedirect.com/science/article/abs/pii/S0927775718311099"
+        },
+        {
+          "topic": "Renewable Energy Utilization",
+          "resource": "Renewable Energy Explained - https://www.youtube.com/watch?v=2t9SfHxWQyE"
+        },
+        {
+          "topic": "Green Supply Chain Optimization",
+          "resource": "Green Supply Chain Management - Strategies and Practices - https://www.sciencedirect.com/science/article/abs/pii/S0957417417304997"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Coatings and Surface Treatments in Industry",
+          "resource": "Coatings and Surface Treatments for Industrial Applications - https://www.sciencedirect.com/science/article/abs/pii/S004316481930458X"
+        },
+        {
+          "topic": "Waste Heat Recovery Solutions",
+          "resource": "Waste Heat Recovery Technologies - https://www.energy.gov/eere/amo/waste-heat-recovery-technologies"
+        },
+        {
+          "topic": "Smart Manufacturing Sustainability Initiatives",
+          "resource": "Smart Manufacturing for Sustainable Production - https://www.sciencedirect.com/science/article/abs/pii/S2405896316311384"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Biomaterials Applications",
+          "resource": "Applications of Biomaterials in Engineering - https://www.sciencedirect.com/science/article/abs/pii/S0959652619328451"
+        },
+        {
+          "topic": "Energy Conservation Methods",
+          "resource": "Energy Conservation Techniques in Industries - https://www.energy.gov/eere/amo/energy-conservation-techniques-industries"
+        },
+        {
+          "topic": "Eco-Friendly Production Technologies",
+          "resource": "Eco-Friendly Manufacturing Technologies - https://www.sciencedirect.com/science/article/abs/pii/S0959652619332737"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Sustainable Packaging Designs",
+          "resource": "Sustainable Packaging Design Principles - https://www.sciencedirect.com/science/article/abs/pii/S2212827121001893"
+        },
+        {
+          "topic": "Carbon Footprint Reduction Techniques",
+          "resource": "Carbon Footprint Reduction Strategies - https://www.youtube.com/watch?v=OLB3Fej9BmY"
+        },
+        {
+          "topic": "Environmental Impact Assessment Tools",
+          "resource": "Tools for Environmental Impact Assessment - https://www.sciencedirect.com/science/article/abs/pii/S0956053X20303496"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Green Manufacturing Processes",
+          "resource": "Green Manufacturing Processes and Technologies Overview - https://www.sciencedirect.com/science/article/abs/pii/S0956053X17305942"
+        },
+        {
+          "topic": "Life Cycle Assessment in Manufacturing",
+          "resource": "Life Cycle Assessment in Manufacturing Industry - https://www.sciencedirect.com/science/article/abs/pii/S0959652617327970"
+        },
+        {
+          "topic": "Sustainable Innovation in Engineering",
+          "resource": "Sustainable Innovation in Engineering - https://www.sciencedirect.com/science/article/abs/pii/S2212827117300969"
+        }
+      ]
+    },
+    "week15": {
+      "day1": [
+        {
+          "topic": "Advanced Robotics Engineering Principles",
+          "resource": "Introduction to Robotics Engineering Principles - https://www.youtube.com/watch?v=K3aA3HvT7bQ"
+        },
+        {
+          "topic": "HVAC System Design Optimization Strategies",
+          "resource": "Optimization of HVAC Systems Design - https://www.sciencedirect.com/science/article/abs/pii/S1876610218305166"
+        },
+        {
+          "topic": "Sustainable Manufacturing Systems Design",
+          "resource": "Design for Sustainability in Manufacturing Systems - https://www.sciencedirect.com/science/article/abs/pii/S095965261732087X"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Control Systems Design for Robotics",
+          "resource": "Control Systems Design for Robotics - https://www.youtube.com/watch?v=5l9F6lV7J3M"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Control Systems",
+          "resource": "Energy-Efficient Control Strategies for HVAC Systems - https://www.sciencedirect.com/science/article/abs/pii/S1876610218305166"
+        },
+        {
+          "topic": "Green Factory Solutions Implementation",
+          "resource": "Implementing Green Solutions in Factory Settings - https://www.sciencedirect.com/science/article/abs/pii/S2212827117301258"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Robotics Programming Techniques",
+          "resource": "Advanced Robotics Programming Techniques Overview - https://www.youtube.com/watch?v=nrzZpV7n7OQ"
+        },
+        {
+          "topic": "HVAC System Performance Analysis Methods",
+          "resource": "Methods for Analyzing HVAC System Performance - https://www.sciencedirect.com/science/article/abs/pii/S1876610218305166"
+        },
+        {
+          "topic": "Sustainable Production Planning Approaches",
+          "resource": "Sustainable Approaches to Production Planning - https://www.sciencedirect.com/science/article/abs/pii/S2212827117301258"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Robotics Simulation and Modeling",
+          "resource": "Introduction to Robotics Simulation and Modeling - https://www.youtube.com/watch?v=8iRnIUCf6WU"
+        },
+        {
+          "topic": "Indoor Air Quality Management in HVAC Systems",
+          "resource": "Indoor Air Quality Management in HVAC Systems - https://www.sciencedirect.com/science/article/abs/pii/S0360132318301348"
+        },
+        {
+          "topic": "Environmentally-Friendly Manufacturing Practices",
+          "resource": "Implementing Environmentally-Friendly Practices in Manufacturing - https://www.sciencedirect.com/science/article/abs/pii/S095965261732087X"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Robotics Vision Systems Applications",
+          "resource": "Vision Systems Applications in Robotics - https://www.youtube.com/watch?v=q8T4KvL8v1g"
+        },
+        {
+          "topic": "HVAC System Life Cycle Assessment Practices",
+          "resource": "Life Cycle Assessment for HVAC Systems - https://www.sciencedirect.com/science/article/abs/pii/S0360132318301348"
+        },
+        {
+          "topic": "Green Manufacturing Technologies",
+          "resource": "Emerging Green Technologies in Manufacturing - https://www.sciencedirect.com/science/article/abs/pii/S095965261732087X"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Robotics Motion Planning Algorithms",
+          "resource": "Motion Planning Algorithms in Robotics - https://www.youtube.com/watch?v=Vr3lWdX5Rmg"
+        },
+        {
+          "topic": "HVAC System Energy-Efficiency Measures",
+          "resource": "Energy-Efficiency Measures for HVAC Systems - https://www.sciencedirect.com/science/article/abs/pii/S1876610218305166"
+        },
+        {
+          "topic": "Sustainable Automation Strategies",
+          "resource": "Strategies for Sustainable Automation - https://www.sciencedirect.com/science/article/abs/pii/S2212827117301258"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Human-Robot Collaboration Methods",
+          "resource": "Human-Robot Collaboration Methods Overview - https://www.youtube.com/watch?v=5G8Q2QJhBf0"
+        },
+        {
+          "topic": "HVAC System Optimization Techniques",
+          "resource": "Optimization Techniques for HVAC Systems - https://www.sciencedirect.com/science/article/abs/pii/S1876610218305166"
+        },
+        {
+          "topic": "Environmental Monitoring in Manufacturing Processes",
+          "resource": "Importance of Environmental Monitoring in Manufacturing - https://www.sciencedirect.com/science/article/abs/pii/S095965261732087X"
+        }
+      ]
+    },
+    "week16": {
+      "day1": [
+        {
+          "topic": "Advanced Manufacturing Automation Technologies",
+          "resource": "The Future of Automation - Industry 4.0 and Beyond - https://www.youtube.com/watch?v=2Nq5ZjWl8OY"
+        },
+        {
+          "topic": "HVAC System Retrofitting Solutions",
+          "resource": "HVAC Retrofitting: What You Need to Know - https://www.achrnews.com/articles/141766-hvac-retrofitting-what-you-need-to-know"
+        },
+        {
+          "topic": "Digital Transformation in Manufacturing Industry",
+          "resource": "Digital Transformation in Manufacturing: A Guide - https://www.mckinsey.com/business-functions/operations/our-insights/digital-transformation-the-three-steps-to-success-for-industrial-companies"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Additive Manufacturing Techniques and Applications",
+          "resource": "Introduction to Additive Manufacturing - https://www.youtube.com/watch?v=H3Q6K4bfZf4"
+        },
+        {
+          "topic": "Smart HVAC System Controls",
+          "resource": "Smart HVAC Systems: How They Work - https://www.energy.gov/eere/buildings/smart-hvac-systems-how-they-work"
+        },
+        {
+          "topic": "Connected Manufacturing Systems Development",
+          "resource": "Connected Manufacturing: The Future of Industry - https://www2.deloitte.com/global/en/pages/manufacturing/articles/connected-manufacturing.html"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Industrial Robotics Design",
+          "resource": "Industrial Robotics: Design and Applications - https://www.youtube.com/watch?v=7zO5j1tqH0Y"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Technologies",
+          "resource": "Energy-Efficient HVAC Systems: Benefits and Trends - https://www.energy.gov/eere/buildings/energy-efficient-hvac-systems-benefits-and-trends"
+        },
+        {
+          "topic": "Digital Supply Chain Integration",
+          "resource": "Digital Supply Chain Integration Explained - https://www.supplychaindigital.com/technology/digital-supply-chain-integration-explained"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced CNC Machining Strategies for Manufacturing",
+          "resource": "Advanced CNC Machining Techniques - https://www.youtube.com/watch?v=9oRl6yX7OoA"
+        },
+        {
+          "topic": "HVAC System Performance Evaluation Techniques",
+          "resource": "HVAC Performance Evaluation Methods - https://www.energyvanguard.com/blog/hvac-performance-evaluation-methods"
+        },
+        {
+          "topic": "Smart Factory Implementation",
+          "resource": "Smart Factory: The Future of Manufacturing - https://www2.deloitte.com/global/en/pages/manufacturing/articles/smart-factory.html"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Lean Manufacturing Practices for Efficiency",
+          "resource": "Lean Manufacturing Principles and Techniques - https://www.youtube.com/watch?v=1dK5pL6GkQE"
+        },
+        {
+          "topic": "HVAC System Life Cycle Management Strategies",
+          "resource": "HVAC Life Cycle Management Best Practices - https://www.achrnews.com/articles/142682-hvac-life-cycle-management-best-practices"
+        },
+        {
+          "topic": "Digital Manufacturing Solutions Implementation",
+          "resource": "Digital Manufacturing Trends and Solutions - https://www.plantengineering.com/articles/digital-manufacturing-trends-and-solutions/"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Just-In-Time Production Methods",
+          "resource": "Just-In-Time Production Explained - https://www.youtube.com/watch?v=7sO4e5L9I2A"
+        },
+        {
+          "topic": "HVAC System Energy Conservation Approaches",
+          "resource": "Energy Conservation Techniques for HVAC Systems - https://www.energyvanguard.com/blog/energy-conservation-techniques-for-hvac-systems"
+        },
+        {
+          "topic": "IIoT Integration in Manufacturing",
+          "resource": "IIoT Integration in Manufacturing Processes - https://www.machinemetrics.com/blog/what-is-iiot"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Total Quality Management Practices",
+          "resource": "Total Quality Management: Principles and Applications - https://www.youtube.com/watch?v=H0_yKMP2WZs"
+        },
+        {
+          "topic": "HVAC System Optimization Strategies",
+          "resource": "HVAC System Optimization Techniques - https://www.achrnews.com/articles/141825-hvac-system-optimization-techniques"
+        },
+        {
+          "topic": "MES Implementation in Manufacturing Processes",
+          "resource": "MES Implementation Best Practices - https://www.invensis.net/blog/manufacturing/mes-implementation-best-practices/"
+        }
+      ]
+    },
+    "week17": {
+      "day1": [
+        {
+          "topic": "Advanced CAD/CAM/CAE Applications in Engineering",
+          "resource": "Advanced CAD/CAM/CAE Applications in Engineering - https://www.youtube.com/watch?v=123456"
+        },
+        {
+          "topic": "HVAC System Integration with Building Management Systems",
+          "resource": "HVAC System Integration with Building Management Systems - https://www.example.com/article1"
+        },
+        {
+          "topic": "Advanced Robotics in Industry Applications",
+          "resource": "Advanced Robotics in Industry Applications - https://www.example.com/article2"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Finite Element Analysis Techniques in Design",
+          "resource": "Advanced Finite Element Analysis Techniques in Design - https://www.youtube.com/watch?v=234567"
+        },
+        {
+          "topic": "Energy-Efficient HVAC System Design Approaches",
+          "resource": "Energy-Efficient HVAC System Design Approaches - https://www.example.com/article3"
+        },
+        {
+          "topic": "Aerospace Additive Manufacturing Innovations",
+          "resource": "Aerospace Additive Manufacturing Innovations - https://www.example.com/article4"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Design Optimization Methods",
+          "resource": "Advanced Design Optimization Methods - https://www.youtube.com/watch?v=345678"
+        },
+        {
+          "topic": "HVAC System Commissioning Best Practices",
+          "resource": "HVAC System Commissioning Best Practices - https://www.example.com/article5"
+        },
+        {
+          "topic": "Robotics and Automation in Industry 4.0 Implementation",
+          "resource": "Robotics and Automation in Industry 4.0 Implementation - https://www.example.com/article6"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Simulation and Modeling Tools for Engineering",
+          "resource": "Advanced Simulation and Modeling Tools for Engineering - https://www.youtube.com/watch?v=456789"
+        },
+        {
+          "topic": "HVAC System Retrofitting Approaches",
+          "resource": "HVAC System Retrofitting Approaches - https://www.example.com/article7"
+        },
+        {
+          "topic": "Advanced Manufacturing Technologies Utilization",
+          "resource": "Advanced Manufacturing Technologies Utilization - https://www.example.com/article8"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Product Lifecycle Management Systems Implementation",
+          "resource": "Advanced Product Lifecycle Management Systems Implementation - https://www.youtube.com/watch?v=567890"
+        },
+        {
+          "topic": "HVAC System Troubleshooting Protocols",
+          "resource": "HVAC System Troubleshooting Protocols - https://www.example.com/article9"
+        },
+        {
+          "topic": "Smart Factory Infrastructure Designing",
+          "resource": "Smart Factory Infrastructure Designing - https://www.example.com/article10"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Digital Twin Technology in Manufacturing Industry",
+          "resource": "Advanced Digital Twin Technology in Manufacturing Industry - https://www.youtube.com/watch?v=678901"
+        },
+        {
+          "topic": "HVAC System Upgradation Plans",
+          "resource": "HVAC System Upgradation Plans - https://www.example.com/article11"
+        },
+        {
+          "topic": "Robotics Process Automation Implementation Strategies",
+          "resource": "Robotics Process Automation Implementation Strategies - https://www.example.com/article12"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Engineering Data Analytics for Manufacturing Efficiency",
+          "resource": "Advanced Engineering Data Analytics for Manufacturing Efficiency - https://www.youtube.com/watch?v=789012"
+        },
+        {
+          "topic": "HVAC System Maintenance Strategies",
+          "resource": "HVAC System Maintenance Strategies - https://www.example.com/article13"
+        },
+        {
+          "topic": "Industrial Robotics and AI Integration Solutions",
+          "resource": "Industrial Robotics and AI Integration Solutions - https://www.example.com/article14"
+        }
+      ]
+    },
+    "week18": {
+      "day1": [
+        {
+          "topic": "Advanced Materials Science and Engineering Principles",
+          "resource": "Materials Science: The Secret Behind Everyday Products - https://www.youtube.com/watch?v=pV7CfCp4vH4"
+        },
+        {
+          "topic": "Industrial Energy Management Systems",
+          "resource": "Energy Management Systems Explained - https://www.youtube.com/watch?v=rr1mRjV2BqA"
+        },
+        {
+          "topic": "Sustainable Manufacturing Strategies Development",
+          "resource": "Sustainable Manufacturing: The Future of Industry - https://www.youtube.com/watch?v=J0a6kq5gkzU"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Composite Materials Development and Applications",
+          "resource": "Introduction to Composite Materials - https://www.youtube.com/watch?v=0A-9X8QXz8Q"
+        },
+        {
+          "topic": "Energy-Efficient Industrial Process Optimization Techniques",
+          "resource": "Industrial Process Optimization Techniques - https://www.youtube.com/watch?v=U1v8mSVlJ9w"
+        },
+        {
+          "topic": "Circular Economy Practices Integration",
+          "resource": "Circular Economy Explained - https://www.youtube.com/watch?v=4l9Uv5j1Dn4"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Nanotechnology in Manufacturing Industry",
+          "resource": "Nanotechnology in Manufacturing - https://www.youtube.com/watch?v=S1MzNp1g0i0"
+        },
+        {
+          "topic": "Renewable Energy Utilization Methods",
+          "resource": "Renewable Energy 101 - https://www.youtube.com/watch?v=T3y9ODLQ4F0"
+        },
+        {
+          "topic": "Green Supply Chain Optimization Strategies",
+          "resource": "Green Supply Chain Management - https://www.youtube.com/watch?v=7FqYw6KJtHY"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Coatings and Surface Treatments in Industrial Applications",
+          "resource": "Coatings and Surface Treatments Overview - https://www.youtube.com/watch?v=1g5n3GdC3tM"
+        },
+        {
+          "topic": "Waste Heat Recovery Solutions Implementation",
+          "resource": "Waste Heat Recovery Technologies - https://www.youtube.com/watch?v=Ie3J4k3x3Ew"
+        },
+        {
+          "topic": "Smart Manufacturing Sustainability Initiatives Development",
+          "resource": "Smart Manufacturing for Sustainability - https://www.youtube.com/watch?v=Hg9QF0W3tPw"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Biomaterials Applications in Engineering",
+          "resource": "Introduction to Biomaterials - https://www.youtube.com/watch?v=5_z9CtIYzvI"
+        },
+        {
+          "topic": "Energy Conservation Methods Utilization",
+          "resource": "Energy Conservation Techniques - https://www.youtube.com/watch?v=rrM8fpQrOEs"
+        },
+        {
+          "topic": "Eco-Friendly Production Technologies Implementation",
+          "resource": "Eco-Friendly Manufacturing Solutions - https://www.youtube.com/watch?v=Qo4T8GFF2V0"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Sustainable Packaging Designs in Manufacturing",
+          "resource": "Sustainable Packaging Design Principles - https://www.youtube.com/watch?v=K9w6oVmYnJ0"
+        },
+        {
+          "topic": "Carbon Footprint Reduction Techniques",
+          "resource": "Carbon Footprint Reduction Strategies - https://www.youtube.com/watch?v=Q7xv4Z5Crlw"
+        },
+        {
+          "topic": "Environmental Impact Assessment Tools Employment",
+          "resource": "Environmental Impact Assessment Basics - https://www.youtube.com/watch?v=Jr48pC1H6Ig"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Green Manufacturing Processes Implementation",
+          "resource": "Green Manufacturing Practices - https://www.youtube.com/watch?v=sN0X1yJwJE8"
+        },
+        {
+          "topic": "Life Cycle Assessment in Manufacturing Execution",
+          "resource": "Life Cycle Assessment Explained - https://www.youtube.com/watch?v=J8fjI4nt7T8"
+        },
+        {
+          "topic": "Sustainable Innovation in Engineering Development",
+          "resource": "Sustainable Innovation Strategies - https://www.youtube.com/watch?v=MvqUoW9Cn3w"
+        }
+      ]
+    },
+    "week19": {
+      "day1": [
+        {
+          "topic": "Advanced Robotics Engineering Principles Implementation",
+          "resource": "Robotics: Advanced Concepts and Principles - https://www.youtube.com/watch?v=3eJeVHord3M"
+        },
+        {
+          "topic": "HVAC System Design Optimization Strategies Development",
+          "resource": "HVAC System Design Basics for Beginners - https://www.youtube.com/watch?v=H52DnJ6Cj4U"
+        },
+        {
+          "topic": "Sustainable Manufacturing Systems Design Enhancement",
+          "resource": "Sustainable Manufacturing Systems: Concepts and Strategies - https://www.sciencedirect.com/science/article/abs/pii/S0925527319309256"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Control Systems Design for Robotics in Engineering",
+          "resource": "Control Systems Engineering Basics - https://www.youtube.com/watch?v=7_zg7s6dLQo"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Control Systems Implementation",
+          "resource": "Energy-Efficient HVAC Systems: Principles and Applications - https://www.energy.gov/eere/buildings/energy-efficient-hvac-systems"
+        },
+        {
+          "topic": "Green Factory Solutions Integration",
+          "resource": "Green Manufacturing Practices for Factories - https://www.sciencedirect.com/science/article/abs/pii/S0925527319307614"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Robotics Programming Techniques Utilization",
+          "resource": "Robotics Programming Tutorial for Beginners - https://www.youtube.com/watch?v=9l2Hj2iRj38"
+        },
+        {
+          "topic": "HVAC System Performance Analysis Methods Implementation",
+          "resource": "HVAC System Performance Analysis Techniques - https://www.sciencedirect.com/science/article/abs/pii/S0360835207003017"
+        },
+        {
+          "topic": "Sustainable Production Planning Approaches Development",
+          "resource": "Sustainable Production Planning Strategies - https://www.sciencedirect.com/science/article/abs/pii/S0957417408000907"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Robotics Simulation and Modeling Techniques Employment",
+          "resource": "Robotics Simulation and Modeling Tools Overview - https://www.youtube.com/watch?v=_gL0w1D0j2o"
+        },
+        {
+          "topic": "Indoor Air Quality Management in HVAC Systems",
+          "resource": "Indoor Air Quality Management Guidelines - https://www.epa.gov/indoor-air-quality-iaq/indoor-air-quality-iaq-basics"
+        },
+        {
+          "topic": "Environmentally-Friendly Manufacturing Practices Implementation",
+          "resource": "Implementing Green Manufacturing Practices - https://www.sciencedirect.com/science/article/abs/pii/S0959652612007652"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Robotics Vision Systems Applications Utilization",
+          "resource": "Vision Systems in Robotics: Applications and Benefits - https://www.youtube.com/watch?v=-9z4K5oYgV0"
+        },
+        {
+          "topic": "HVAC System Life Cycle Assessment Practices Implementation",
+          "resource": "Life Cycle Assessment of HVAC Systems - https://www.sciencedirect.com/science/article/abs/pii/S0360835205002860"
+        },
+        {
+          "topic": "Green Manufacturing Technologies Development",
+          "resource": "Emerging Green Manufacturing Technologies - https://www.sciencedirect.com/science/article/abs/pii/S0959652615025511"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Robotics Motion Planning Algorithms Employment",
+          "resource": "Motion Planning Algorithms in Robotics - https://www.youtube.com/watch?v=9j6-lmT1SJw"
+        },
+        {
+          "topic": "HVAC System Energy-Efficiency Measures Implementation",
+          "resource": "Energy-Efficient HVAC Measures and Techniques - https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source"
+        },
+        {
+          "topic": "Sustainable Automation Strategies Development",
+          "resource": "Sustainable Automation Practices in Manufacturing - https://www.sciencedirect.com/science/article/abs/pii/S0959652617320832"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Human-Robot Collaboration Methods Utilization",
+          "resource": "Human-Robot Collaboration in Industry - https://www.youtube.com/watch?v=lofQ8ZJm4n4"
+        },
+        {
+          "topic": "HVAC System Optimization Techniques Implementation",
+          "resource": "HVAC System Optimization Methods - https://www.sciencedirect.com/science/article/abs/pii/S0360835207001834"
+        },
+        {
+          "topic": "Environmental Monitoring in Manufacturing Processes Development",
+          "resource": "Environmental Monitoring in Manufacturing: Importance and Methods - https://www.sciencedirect.com/science/article/abs/pii/S0959652617315651"
+        }
+      ]
+    },
+    "week20": {
+      "day1": [
+        {
+          "topic": "Week 20 Day 1 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 20 Day 1 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Week 20 Day 2 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 20 Day 2 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Week 20 Day 3 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 20 Day 3 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Week 20 Day 4 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 20 Day 4 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Week 20 Day 5 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 20 Day 5 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Week 20 Day 6 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 20 Day 6 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Week 20 Day 7 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 20 Day 7 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ]
+    },
+    "week21": {
+      "day1": [
+        {
+          "topic": "Advanced CAD/CAM/CAE Applications in Engineering Utilization",
+          "resource": "Advanced CAD/CAM/CAE Technologies in Mechanical Engineering - https://www.youtube.com/watch?v=123abc"
+        },
+        {
+          "topic": "HVAC System Integration with Building Management Systems Implementation",
+          "resource": "Integration of HVAC Systems with Building Automation - https://www.engineering.com/AdvancedHVACIntegration"
+        },
+        {
+          "topic": "Advanced Robotics in Industry Applications Development",
+          "resource": "Applications of Robotics in Manufacturing - https://www.robotics.org/applications"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Finite Element Analysis Techniques in Design Utilization",
+          "resource": "Introduction to FEA Techniques for Mechanical Design - https://www.autodesk.com/solutions/finite-element-analysis"
+        },
+        {
+          "topic": "Energy-Efficient HVAC System Design Approaches Implementation",
+          "resource": "Energy-Efficient HVAC Design Strategies - https://www.ashrae.org/energyefficiencyHVAC"
+        },
+        {
+          "topic": "Aerospace Additive Manufacturing Innovations Employment",
+          "resource": "Innovations in Additive Manufacturing for Aerospace - https://www.materialstoday.com/aerospaceadditivemanufacturing"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Design Optimization Methods Employment",
+          "resource": "Optimization Techniques in Mechanical Design - https://www.designnews.com/designoptimization"
+        },
+        {
+          "topic": "HVAC System Commissioning Best Practices Implementation",
+          "resource": "Best Practices for HVAC System Commissioning - https://www.ashrae.org/commissioningHVAC"
+        },
+        {
+          "topic": "Robotics and Automation in Industry 4.0 Implementation",
+          "resource": "Automation Trends in Industry 4.0 - https://www.mckinsey.com/industry4.0"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Simulation and Modeling Tools for Engineering Utilization",
+          "resource": "Introduction to Engineering Simulation Tools - https://www.comsol.com/engineeringsimulation"
+        },
+        {
+          "topic": "HVAC System Retrofitting Approaches Implementation",
+          "resource": "Approaches to Retrofitting HVAC Systems - https://www.energy.gov/retrofithvac"
+        },
+        {
+          "topic": "Advanced Manufacturing Technologies Utilization",
+          "resource": "Latest Trends in Manufacturing Technologies - https://www.sme.org/manufacturingtechnologies"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Product Lifecycle Management Systems Implementation",
+          "resource": "PLM Systems for Mechanical Engineering - https://www.ptc.com/product-lifecycle-management"
+        },
+        {
+          "topic": "HVAC System Troubleshooting Protocols Employment",
+          "resource": "Troubleshooting Protocols for HVAC Systems - https://www.trane.com/hvactroubleshooting"
+        },
+        {
+          "topic": "Smart Factory Infrastructure Designing Development",
+          "resource": "Designing Smart Factory Infrastructure - https://www.forbes.com/smartfactorydesign"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Digital Twin Technology in Manufacturing Industry Utilization",
+          "resource": "Digital Twin Technology in Manufacturing - https://www.ibm.com/digitaltwin"
+        },
+        {
+          "topic": "HVAC System Upgradation Plans Implementation",
+          "resource": "Strategies for HVAC System Upgradation - https://www.ashrae.org/upgradateHVAC"
+        },
+        {
+          "topic": "Robotics Process Automation Implementation Strategies",
+          "resource": "Strategies for Robotics Process Automation - https://www.roboticstomorrow.com/processautomation"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Engineering Data Analytics for Manufacturing Efficiency Utilization",
+          "resource": "Data Analytics in Manufacturing Efficiency - https://www.mckinsey.com/engineeringanalytics"
+        },
+        {
+          "topic": "HVAC System Maintenance Strategies Employment",
+          "resource": "Maintenance Strategies for HVAC Systems - https://www.ashrae.org/maintenanceHVAC"
+        },
+        {
+          "topic": "Industrial Robotics and AI Integration Solutions Development",
+          "resource": "Integration of Robotics and AI in Industry - https://www.therobotreport.com/roboticsAIintegration"
+        }
+      ]
+    },
+    "week22": {
+      "day1": [
+        {
+          "topic": "Advanced Materials Science and Engineering Principles Implementation",
+          "resource": "Materials Science: An Introduction - https://www.youtube.com/watch?v=3MgFZKk7pNc"
+        },
+        {
+          "topic": "Industrial Energy Management Systems Development",
+          "resource": "Energy Management Systems - https://www.sciencedirect.com/topics/engineering/energy-management-system"
+        },
+        {
+          "topic": "Sustainable Manufacturing Strategies Development",
+          "resource": "Sustainable Manufacturing Strategies - https://www.sciencedirect.com/science/article/pii/S2405896319300533"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Composite Materials Development and Applications Utilization",
+          "resource": "Composite Materials - Properties, Applications - https://www.youtube.com/watch?v=X2LzTUNRgkY"
+        },
+        {
+          "topic": "Energy-Efficient Industrial Process Optimization Techniques Implementation",
+          "resource": "Energy Efficiency in Industrial Processes - https://www.sciencedirect.com/science/article/pii/S0360544219305638"
+        },
+        {
+          "topic": "Circular Economy Practices Integration",
+          "resource": "Circular Economy Explained - https://www.youtube.com/watch?v=QjwYy8K3PvI"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Nanotechnology in Manufacturing Industry Utilization",
+          "resource": "Nanotechnology in Manufacturing - https://www.youtube.com/watch?v=B2UZ8_L6O8M"
+        },
+        {
+          "topic": "Renewable Energy Utilization Methods Implementation",
+          "resource": "Renewable Energy in Manufacturing - https://www.sciencedirect.com/topics/engineering/renewable-energy"
+        },
+        {
+          "topic": "Green Supply Chain Optimization Strategies Development",
+          "resource": "Green Supply Chain Strategies - https://www.sciencedirect.com/science/article/pii/S2405896319300533"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Coatings and Surface Treatments in Industrial Applications Utilization",
+          "resource": "Surface Treatments in Industrial Applications - https://www.youtube.com/watch?v=Kz9k9jHd5t8"
+        },
+        {
+          "topic": "Waste Heat Recovery Solutions Implementation",
+          "resource": "Waste Heat Recovery Technologies - https://www.sciencedirect.com/science/article/pii/S0360544219305870"
+        },
+        {
+          "topic": "Smart Manufacturing Sustainability Initiatives Development",
+          "resource": "Smart Manufacturing Sustainability - https://www.sciencedirect.com/science/article/pii/S2212827119301419"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Biomaterials Applications in Engineering Utilization",
+          "resource": "Biomaterials in Engineering - https://www.youtube.com/watch?v=Z1-N14g9kQo"
+        },
+        {
+          "topic": "Energy Conservation Methods Utilization",
+          "resource": "Energy Conservation Techniques - https://www.sciencedirect.com/topics/engineering/energy-conservation"
+        },
+        {
+          "topic": "Eco-Friendly Production Technologies Implementation",
+          "resource": "Eco-Friendly Production - https://www.sciencedirect.com/science/article/pii/S221282711930133X"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Sustainable Packaging Designs in Manufacturing Employment",
+          "resource": "Sustainable Packaging Designs - https://www.youtube.com/watch?v=6T8W9xXpVcQ"
+        },
+        {
+          "topic": "Carbon Footprint Reduction Techniques Implementation",
+          "resource": "Carbon Footprint Reduction - https://www.sciencedirect.com/topics/engineering/carbon-footprint-reduction"
+        },
+        {
+          "topic": "Environmental Impact Assessment Tools Employment",
+          "resource": "Environmental Impact Assessment Tools - https://www.sciencedirect.com/science/article/pii/S2212827119300979"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Green Manufacturing Processes Implementation",
+          "resource": "Green Manufacturing Processes - https://www.youtube.com/watch?v=8yQ4vx5z8NM"
+        },
+        {
+          "topic": "Life Cycle Assessment in Manufacturing Execution",
+          "resource": "Life Cycle Assessment in Manufacturing - https://www.sciencedirect.com/topics/engineering/life-cycle-assessment"
+        },
+        {
+          "topic": "Sustainable Innovation in Engineering Development",
+          "resource": "Sustainable Innovation in Engineering - https://www.sciencedirect.com/science/article/pii/S2212827119300181"
+        }
+      ]
+    },
+    "week23": {
+      "day1": [
+        {
+          "topic": "Advanced Robotics Engineering Principles Implementation",
+          "resource": "Introduction to Robotics - Robotics Engineering | Mechanical Engineering | GATE 2026 - https://www.youtube.com/watch?v=Hs6dVgjK-MU"
+        },
+        {
+          "topic": "HVAC System Design Optimization Strategies Development",
+          "resource": "HVAC Design Fundamentals - HVAC Engineering Basics for Mechanical Engineers | GATE 2026 - https://www.youtube.com/watch?v=91rL4oxz1cI"
+        },
+        {
+          "topic": "Sustainable Manufacturing Systems Design Enhancement",
+          "resource": "Sustainable Manufacturing Processes - Introduction to Sustainable Manufacturing | GATE 2026 - https://www.youtube.com/watch?v=2E2ROXv4joo"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Control Systems Design for Robotics in Engineering Utilization",
+          "resource": "Control Systems Engineering - Basics of Control Systems | Control Systems for Mechanical Engineers | GATE 2026 - https://www.youtube.com/watch?v=0mWZvZJDfvs"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Control Systems Implementation",
+          "resource": "Energy-Efficient HVAC Systems - Energy Efficiency in HVAC Design | GATE 2026 - https://www.youtube.com/watch?v=1Qzf5b2Gcew"
+        },
+        {
+          "topic": "Green Factory Solutions Integration",
+          "resource": "Green Factory Design - Sustainable Factory Solutions | GATE 2026 - https://www.youtube.com/watch?v=1cScA5pKKD4"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Robotics Programming Techniques Utilization",
+          "resource": "Robotics Programming Tutorial - Basics of Robotics Programming | GATE 2026 - https://www.youtube.com/watch?v=4ZjY5KtJcHk"
+        },
+        {
+          "topic": "HVAC System Performance Analysis Methods Implementation",
+          "resource": "HVAC System Performance Analysis - HVAC System Efficiency Analysis Methods | GATE 2026 - https://www.youtube.com/watch?v=1vF8t1K5n3U"
+        },
+        {
+          "topic": "Sustainable Production Planning Approaches Development",
+          "resource": "Sustainable Production Planning - Sustainable Manufacturing Strategies | GATE 2026 - https://www.youtube.com/watch?v=3Iw6p7lTgKg"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Robotics Simulation and Modeling Techniques Employment",
+          "resource": "Robotics Simulation and Modeling - Simulation Techniques for Robotics | GATE 2026 - https://www.youtube.com/watch?v=1SfJGJF2L3c"
+        },
+        {
+          "topic": "Indoor Air Quality Management in HVAC Systems",
+          "resource": "Indoor Air Quality in HVAC - Importance of Indoor Air Quality Management | GATE 2026 - https://www.youtube.com/watch?v=3PaFzWQTzI8"
+        },
+        {
+          "topic": "Environmentally-Friendly Manufacturing Practices Implementation",
+          "resource": "Environmentally-Friendly Manufacturing - Sustainable Manufacturing Practices | GATE 2026 - https://www.youtube.com/watch?v=2Wn41F9V4YQ"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Robotics Vision Systems Applications Utilization",
+          "resource": "Robotics Vision Systems - Applications of Vision Systems in Robotics | GATE 2026 - https://www.youtube.com/watch?v=1rCI6LgIz3g"
+        },
+        {
+          "topic": "HVAC System Life Cycle Assessment Practices Implementation",
+          "resource": "HVAC System Life Cycle Assessment - Importance of Life Cycle Assessment in HVAC Design | GATE 2026 - https://www.youtube.com/watch?v=3pzq4t9XkRg"
+        },
+        {
+          "topic": "Green Manufacturing Technologies Development",
+          "resource": "Green Manufacturing Technologies - Sustainable Technologies in Manufacturing | GATE 2026 - https://www.youtube.com/watch?v=2x9fYhH9qZ0"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Robotics Motion Planning Algorithms Employment",
+          "resource": "Robotics Motion Planning Algorithms - Algorithms for Motion Planning in Robotics | GATE 2026 - https://www.youtube.com/watch?v=4J2n2Zf5P1A"
+        },
+        {
+          "topic": "HVAC System Energy-Efficiency Measures Implementation",
+          "resource": "HVAC Energy-Efficiency Measures - Strategies for Improving Energy Efficiency in HVAC Systems | GATE 2026 - https://www.youtube.com/watch?v=1Xz1K5gJ2kQ"
+        },
+        {
+          "topic": "Sustainable Automation Strategies Development",
+          "resource": "Sustainable Automation - Strategies for Sustainable Automation in Manufacturing | GATE 2026 - https://www.youtube.com/watch?v=3fF5JyE2qWk"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Human-Robot Collaboration Methods Utilization",
+          "resource": "Human-Robot Collaboration - Methods for Effective Collaboration in Robotics | GATE 2026 - https://www.youtube.com/watch?v=1nEbMlYGFtg"
+        },
+        {
+          "topic": "HVAC System Optimization Techniques Implementation",
+          "resource": "HVAC System Optimization - Techniques for Optimizing HVAC System Performance | GATE 2026 - https://www.youtube.com/watch?v=2PbHfXG4jKQ"
+        },
+        {
+          "topic": "Environmental Monitoring in Manufacturing Processes Development",
+          "resource": "Environmental Monitoring in Manufacturing - Importance of Monitoring Environmental Impact | GATE 2026 - https://www.youtube.com/watch?v=3G5sZDd7w6A"
+        }
+      ]
+    },
+    "week24": {
+      "day1": [
+        {
+          "topic": "Advanced Manufacturing Automation Technologies Utilization",
+          "resource": "Factory Automation | The Future of Manufacturing - https://www.youtube.com/watch?v=H8H4rQjF8c0"
+        },
+        {
+          "topic": "HVAC System Retrofitting Solutions Implementation",
+          "resource": "Retrofitting HVAC Systems for Energy Efficiency - https://www.energy.gov/eere/buildings/retrofitting-hvac-systems-energy-efficiency"
+        },
+        {
+          "topic": "Digital Transformation in Manufacturing Industry Development",
+          "resource": "Digital Transformation in Manufacturing: A Guide for Industry Leaders - https://www.mckinsey.com/business-functions/operations/our-insights/digital-transformation-in-manufacturing-a-guide-for-industry-leaders"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Additive Manufacturing Techniques and Applications Utilization",
+          "resource": "Additive Manufacturing: What it is and How it Works - https://www.autodesk.com/solutions/additive-manufacturing/what-is-additive-manufacturing"
+        },
+        {
+          "topic": "Smart HVAC System Controls Implementation",
+          "resource": "Smart HVAC Controls Explained - https://www.buildings.com/news/industry-news/articleid/21806/title/smart-hvac-controls-explained"
+        },
+        {
+          "topic": "Connected Manufacturing Systems Development",
+          "resource": "Connected Manufacturing Systems: The Future of Industry 4.0 - https://www.machinemetrics.com/blog/the-connected-manufacturing-systems-the-future-of-industry-4-0"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Industrial Robotics Design Employment",
+          "resource": "Industrial Robotics: Types, Applications, and Future Prospects - https://www.robotics.org/blog-article.cfm/Industrial-Robotics-Types-Applications-and-Future-Prospects/106"
+        },
+        {
+          "topic": "Energy-Efficient HVAC Technologies Implementation",
+          "resource": "Energy-Efficient HVAC Systems: A Comprehensive Guide - https://www.energystar.gov/products/heating_cooling/heat_pumps_air_source/energy_star_certified_air_source_heat_pump"
+        },
+        {
+          "topic": "Digital Supply Chain Integration Development",
+          "resource": "Digital Supply Chain Integration: Challenges and Opportunities - https://www.scmr.com/article/supply_chain_innovation_in_the_digital_age"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced CNC Machining Strategies for Manufacturing Implementation",
+          "resource": "CNC Machining: From Design to Product - https://www.engineering.com/AdvancedManufacturing/ArticleID/18581/CNC-Machining-From-Design-to-Product.aspx"
+        },
+        {
+          "topic": "HVAC System Performance Evaluation Techniques Employment",
+          "resource": "HVAC System Performance Evaluation Methods - https://www.energy.gov/eere/buildings/hvac-system-performance-evaluation-methods"
+        },
+        {
+          "topic": "Smart Factory Implementation Development",
+          "resource": "Smart Factory: Benefits and Challenges - https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-smart-factory-reality-vs-hype"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Advanced Lean Manufacturing Practices for Efficiency Implementation",
+          "resource": "Lean Manufacturing Principles and Techniques - https://www.industryweek.com/lean-six-sigma/article/21970251/what-is-lean-manufacturing"
+        },
+        {
+          "topic": "HVAC System Life Cycle Management Strategies Employment",
+          "resource": "HVAC System Life Cycle Management Best Practices - https://www.energy.gov/eere/buildings/hvac-system-life-cycle-management-best-practices"
+        },
+        {
+          "topic": "Digital Manufacturing Solutions Implementation",
+          "resource": "Digital Manufacturing: Trends and Technologies - https://www2.deloitte.com/us/en/pages/industries/articles/digital-manufacturing.html"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Advanced Just-In-Time Production Methods Implementation",
+          "resource": "Just-In-Time (JIT) Production System Explained - https://www.investopedia.com/terms/j/justintime.asp"
+        },
+        {
+          "topic": "HVAC System Energy Conservation Approaches Employment",
+          "resource": "Energy Conservation in HVAC Systems - https://www.energyvanguard.com/blog/energy-conservation-in-hvac-systems"
+        },
+        {
+          "topic": "IIoT Integration in Manufacturing Development",
+          "resource": "IIoT in Manufacturing: Revolutionizing the Industry - https://www.forbes.com/sites/forbestechcouncil/2021/06/23/the-impact-of-iiot-on-the-future-of-manufacturing/?sh=7aaf85c52d59"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Advanced Total Quality Management Practices Utilization",
+          "resource": "Total Quality Management (TQM) Principles - https://asq.org/quality-resources/total-quality-management"
+        },
+        {
+          "topic": "HVAC System Optimization Strategies Implementation",
+          "resource": "HVAC System Optimization Techniques - https://www.energy.gov/eere/buildings/hvac-system-optimization-techniques"
+        },
+        {
+          "topic": "MES Implementation in Manufacturing Processes Development",
+          "resource": "MES Implementation: Challenges and Best Practices - https://www.plantengineering.com/articles/mes-implementation-challenges-and-best-practices/"
+        }
+      ]
+    },
+    "week25": {
+      "day1": [
+        {
+          "topic": "Advanced CAD/CAM/CAE Applications in Engineering Utilization",
+          "resource": "Advanced CAD/CAM/CAE Applications in Mechanical Engineering - https://www.youtube.com/watch?v=123abc"
+        },
+        {
+          "topic": "HVAC System Integration with Building Management Systems Implementation",
+          "resource": "HVAC System Integration in Building Management Systems - https://www.engineering.com/AdvancedBMSIntegration"
+        },
+        {
+          "topic": "Advanced Robotics in Industry Applications Development",
+          "resource": "Advanced Robotics Applications in Manufacturing - https://www.robotics.org/industry"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Advanced Finite Element Analysis Techniques in Design Utilization",
+          "resource": "Advanced FEA Techniques for Mechanical Design - https://www.autodesk.com/fea"
+        },
+        {
+          "topic": "Energy-Efficient HVAC System Design Approaches Implementation",
+          "resource": "Energy-Efficient HVAC Design Strategies - https://www.energy.gov/hvacdesign"
+        },
+        {
+          "topic": "Aerospace Additive Manufacturing Innovations Employment",
+          "resource": "Additive Manufacturing in Aerospace - https://www.nasa.gov/additivemanufacturing"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Advanced Design Optimization Methods Employment",
+          "resource": "Design Optimization Techniques in Engineering - https://www.engineeringtoolbox.com/designoptimization"
+        },
+        {
+          "topic": "HVAC System Commissioning Best Practices Implementation",
+          "resource": "Best Practices for HVAC System Commissioning - https://www.ashrae.org/hvaccommissioning"
+        },
+        {
+          "topic": "Robotics and Automation in Industry 4.0 Implementation",
+          "resource": "Robotics and Automation in Industry 4.0 - https://www.roboticsbusinessreview.com/industry4"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Advanced Simulation and Modeling Tools for Engineering Utilization",
+          "resource": "Simulation and Modeling Tools in Mechanical Engineering - https://www.simscale.com/simulationtools"
+        },
+        {
+          "topic": "HVAC System Maintenance Strategies Implementation",
+          "resource": "Effective HVAC System Maintenance Practices - https://www.engineering.com/hvacmaintenance"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Mechatronics Integration in Engineering Systems",
+          "resource": "Mechatronics in Mechanical Engineering - https://www.designnews.com/mechatronics"
+        },
+        {
+          "topic": "Renewable Energy Technologies in Mechanical Engineering",
+          "resource": "Renewable Energy in Mechanical Engineering - https://www.sciencedirect.com/renewableenergy"
+        },
+        {
+          "topic": "Computational Fluid Dynamics in Engineering Applications",
+          "resource": "CFD Applications in Mechanical Engineering - https://www.cfd-online.com/cfdapplications"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Machine Learning in Mechanical Engineering",
+          "resource": "Machine Learning Applications in Mechanical Engineering - https://www.analyticsvidhya.com/machinelearningmechanical"
+        },
+        {
+          "topic": "Smart Materials and Structures in Engineering",
+          "resource": "Smart Materials in Engineering - https://www.sciencedirect.com/smartmaterials"
+        },
+        {
+          "topic": "Failure Analysis and Prevention in Mechanical Systems",
+          "resource": "Failure Analysis Techniques in Mechanical Engineering - https://www.asminternational.org/failureanalysis"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Nanotechnology Applications in Mechanical Engineering",
+          "resource": "Nanotechnology in Mechanical Engineering - https://www.nanowerk.com/nanotechnologymechanical"
+        },
+        {
+          "topic": "Industrial Automation Systems and Control",
+          "resource": "Automation Systems in Mechanical Engineering - https://www.automation.com/industrialautomation"
+        },
+        {
+          "topic": "Sustainable Design and Manufacturing Practices",
+          "resource": "Sustainable Practices in Mechanical Engineering - https://www.sciencedirect.com/sustainabledesign"
+        }
+      ]
+    },
+    "week26": {
+      "day1": [
+        {
+          "topic": "Engineering Mechanics - Equilibrium of Rigid Bodies",
+          "resource": "Equilibrium of Rigid Bodies - Statics - Engineering Mechanics - https://www.youtube.com/watch?v=2Pf4eEew4mo"
+        },
+        {
+          "topic": "Thermodynamics - Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Explained - First, Second, Third Law - https://www.youtube.com/watch?v=AWvzgMRYwzk"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fluid Mechanics - Bernoulli's Equation",
+          "resource": "Bernoulli's Equation Explained - Fluid Mechanics - https://www.youtube.com/watch?v=7b6fF9XHqkY"
+        },
+        {
+          "topic": "Manufacturing Processes - Machining Processes",
+          "resource": "Introduction to Machining Processes - https://www.youtube.com/watch?v=2dOW6k8GQJg"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Strength of Materials - Stress and Strain",
+          "resource": "Stress and Strain - Strength of Materials - https://www.youtube.com/watch?v=1Fm5O2Y9sKo"
+        },
+        {
+          "topic": "Heat Transfer - Conduction, Convection, Radiation",
+          "resource": "Heat Transfer: Conduction, Convection, and Radiation Explained - https://www.youtube.com/watch?v=0r8fZVl4efg"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Theory of Machines - Kinematics of Machines",
+          "resource": "Kinematics of Machines - Theory of Machines - https://www.youtube.com/watch?v=Kk6H8c6Z9ZI"
+        },
+        {
+          "topic": "Engineering Mathematics - Differential Equations",
+          "resource": "Differential Equations - Engineering Mathematics - https://www.youtube.com/watch?v=QgMJcMqLol4"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Machine Design - Design of Shafts",
+          "resource": "Design of Shafts - Machine Design - https://www.youtube.com/watch?v=7T8hF45mrTs"
+        },
+        {
+          "topic": "Industrial Engineering - Production Planning and Control",
+          "resource": "Production Planning and Control - Industrial Engineering - https://www.youtube.com/watch?v=6DQHtLJU7l4"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Materials Science - Mechanical Properties of Materials",
+          "resource": "Mechanical Properties of Materials - Materials Science - https://www.youtube.com/watch?v=8kR2o0DdZ1Y"
+        },
+        {
+          "topic": "Engineering Drawing - Orthographic Projection",
+          "resource": "Orthographic Projection - Engineering Drawing - https://www.youtube.com/watch?v=QI5RvJLZYzU"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Automobile Engineering - IC Engine Basics",
+          "resource": "Basics of Internal Combustion Engines - Automobile Engineering - https://www.youtube.com/watch?v=3a9Lct3jJ5o"
+        },
+        {
+          "topic": "Power Plant Engineering - Steam Power Plants",
+          "resource": "Steam Power Plants - Power Plant Engineering - https://www.youtube.com/watch?v=kSv7s8Vh5oI"
+        }
+      ]
+    },
+    "week27": {
+      "day1": [
+        {
+          "topic": "Engineering Mechanics: Friction",
+          "resource": "Friction - Basic Concepts and Laws - https://www.youtube.com/watch?v=KZpELXjL6fg"
+        },
+        {
+          "topic": "Strength of Materials: Stress and Strain",
+          "resource": "Introduction to Stress and Strain - https://www.youtube.com/watch?v=U6jR1y8Zsbo"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Theory of Machines: Kinematics of Machines",
+          "resource": "Kinematics of Machines - Basics - https://www.youtube.com/watch?v=K13gHUEy2u4"
+        },
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Bernoulli's Equation Explained - https://www.youtube.com/watch?v=Z2X4B2tV2gM"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Heat Transfer: Conduction, Convection, and Radiation",
+          "resource": "Introduction to Heat Transfer - https://www.youtube.com/watch?v=8Pqul5rVxeE"
+        },
+        {
+          "topic": "Machine Design: Design of Shafts",
+          "resource": "Design of Shafts - Basics - https://www.youtube.com/watch?v=PEUfjV2uTQU"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Explained - https://www.youtube.com/watch?v=chQ8Aj3x8U4"
+        },
+        {
+          "topic": "Manufacturing Processes: Casting and Welding",
+          "resource": "Casting and Welding Processes - https://www.youtube.com/watch?v=fdF9gHlT9sc"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Differential Equations - Introduction - https://www.youtube.com/watch?v=JwS3JWojWJ8"
+        },
+        {
+          "topic": "Engineering Materials: Properties of Materials",
+          "resource": "Introduction to Properties of Materials - https://www.youtube.com/watch?v=1C8r3oBhSjE"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Industrial Engineering: Production Planning and Control",
+          "resource": "Production Planning and Control - Basics - https://www.youtube.com/watch?v=6gXuXyYHf-0"
+        },
+        {
+          "topic": "Mechatronics: Introduction to Mechatronics",
+          "resource": "What is Mechatronics? - https://www.youtube.com/watch?v=e7t8T2pgq7g"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Environmental Engineering: Air Pollution Control",
+          "resource": "Air Pollution Control Methods - https://www.youtube.com/watch?v=5M3XyGdPt1U"
+        },
+        {
+          "topic": "Automobile Engineering: Basics of Automobile Engineering",
+          "resource": "Introduction to Automobile Engineering - https://www.youtube.com/watch?v=Z0rKzO1F6vE"
+        }
+      ]
+    },
+    "week28": {
+      "day1": [
+        {
+          "topic": "Theory of Machines - Kinematics of Machines",
+          "resource": "Theory of Machines - Kinematics of Machines by Gate Academy - https://www.youtube.com/watch?v=BlhNQ5N9Y1U"
+        },
+        {
+          "topic": "Engineering Mechanics - Friction",
+          "resource": "Engineering Mechanics - Friction by NPTEL - https://nptel.ac.in/courses/112104117/1"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Thermodynamics - Laws of Thermodynamics",
+          "resource": "Thermodynamics - Laws of Thermodynamics by Learn Engineering - https://www.youtube.com/watch?v=6iYV4UaB5l4"
+        },
+        {
+          "topic": "Fluid Mechanics - Bernoulli's Equation",
+          "resource": "Fluid Mechanics - Bernoulli's Equation by Mechanical Engineering - https://www.youtube.com/watch?v=skcXgBuV9Pw"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Strength of Materials - Stress and Strain",
+          "resource": "Strength of Materials - Stress and Strain by Gate Lectures by Ravindrababu Ravula - https://www.youtube.com/watch?v=-zH37rj8z5A"
+        },
+        {
+          "topic": "Machine Design - Design for Static and Dynamic Loading",
+          "resource": "Machine Design - Design for Static and Dynamic Loading by NPTEL - https://nptel.ac.in/courses/112104117/4"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Production Engineering - Metal Forming Processes",
+          "resource": "Production Engineering - Metal Forming Processes by Gate Smashers - https://www.youtube.com/watch?v=6zJ8RlkDnQQ"
+        },
+        {
+          "topic": "Industrial Engineering - Operations Research",
+          "resource": "Industrial Engineering - Operations Research by Gate Lectures by Ravindrababu Ravula - https://www.youtube.com/watch?v=5J2cShcGpG0"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Heat Transfer - Conduction, Convection, and Radiation",
+          "resource": "Heat Transfer - Conduction, Convection, and Radiation by Learn Engineering - https://www.youtube.com/watch?v=5S_3cL6m2uc"
+        },
+        {
+          "topic": "Engineering Mathematics - Differential Equations",
+          "resource": "Engineering Mathematics - Differential Equations by Gate Lectures by Ravindrababu Ravula - https://www.youtube.com/watch?v=3p6DnRbZiXc"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Automobile Engineering - Engine Components and Systems",
+          "resource": "Automobile Engineering - Engine Components and Systems by NPTEL - https://nptel.ac.in/courses/112104117/7"
+        },
+        {
+          "topic": "Mechatronics - Sensors and Actuators",
+          "resource": "Mechatronics - Sensors and Actuators by Gate Academy - https://www.youtube.com/watch?v=U1ZNym1Z9J0"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Material Science - Crystal Structure and Properties",
+          "resource": "Material Science - Crystal Structure and Properties by Gate Lectures by Ravindrababu Ravula - https://www.youtube.com/watch?v=VnXf8D1Ku1U"
+        },
+        {
+          "topic": "Engineering Economics - Cost Analysis and Break-Even Point",
+          "resource": "Engineering Economics - Cost Analysis and Break-Even Point by Mechanical Engineering - https://www.youtube.com/watch?v=7Jt0wX2xjSc"
+        }
+      ]
+    },
+    "week29": {
+      "day1": [
+        {
+          "topic": "Machine Design",
+          "resource": "Introduction to Machine Design - https://www.youtube.com/watch?v=Q3OlC-8Y9dE"
+        },
+        {
+          "topic": "Theory of Machines",
+          "resource": "Theory of Machines - Basics - https://www.youtube.com/watch?v=1BfL9Fb5gus"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Thermodynamics",
+          "resource": "Basics of Thermodynamics - https://www.youtube.com/watch?v=4kEj6vEfbW8"
+        },
+        {
+          "topic": "Fluid Mechanics",
+          "resource": "Fluid Mechanics Fundamentals - https://www.youtube.com/watch?v=0K3U4G6N3H8"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Engineering Mathematics",
+          "resource": "Linear Algebra - https://www.youtube.com/watch?v=ZK3O402wf1c"
+        },
+        {
+          "topic": "Strength of Materials",
+          "resource": "Strength of Materials Basics - https://www.youtube.com/watch?v=3T6YsWUo6PM"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Manufacturing Processes",
+          "resource": "Introduction to Manufacturing Processes - https://www.youtube.com/watch?v=Zr3XJdDpG20"
+        },
+        {
+          "topic": "Industrial Engineering",
+          "resource": "Basics of Industrial Engineering - https://www.youtube.com/watch?v=6G9wZzY6Jx8"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Mechatronics",
+          "resource": "Introduction to Mechatronics - https://www.youtube.com/watch?v=O-8cRlhjGZs"
+        },
+        {
+          "topic": "Engineering Mechanics",
+          "resource": "Engineering Mechanics Lecture Series - https://www.youtube.com/watch?v=KcN_2KHfY0Y"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Heat Transfer",
+          "resource": "Fundamentals of Heat Transfer - https://www.youtube.com/watch?v=nu7n5W3MteU"
+        },
+        {
+          "topic": "Material Science",
+          "resource": "Materials Science Basics - https://www.youtube.com/watch?v=Vd5uB1gG2ME"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Automobile Engineering",
+          "resource": "Automobile Engineering Basics - https://www.youtube.com/watch?v=0eHdYKp3jIc"
+        },
+        {
+          "topic": "Power Plant Engineering",
+          "resource": "Introduction to Power Plant Engineering - https://www.youtube.com/watch?v=0eHdYKp3jIc"
+        }
+      ]
+    },
+    "week30": {
+      "day1": [
+        {
+          "topic": "Theory of Machines: Kinematics of Machines",
+          "resource": "Kinematics of Machines - Introduction - https://www.youtube.com/watch?v=HtXKJb2n3jo"
+        },
+        {
+          "topic": "Engineering Mechanics: Friction",
+          "resource": "Friction: Definition & Types - https://www.youtube.com/watch?v=UuUe07b4a0o"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fluid Mechanics: Fluid Kinematics",
+          "resource": "Fluid Mechanics - Fluid Kinematics - https://www.youtube.com/watch?v=Hk4WvGKmG2Y"
+        },
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Explained - https://www.youtube.com/watch?v=efQXrW3DlGU"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Heat Transfer: Conduction",
+          "resource": "Heat Transfer: Conduction Basics - https://www.youtube.com/watch?v=QG5kCz_2d7I"
+        },
+        {
+          "topic": "Machine Design: Design of Shafts",
+          "resource": "Design of Shafts - Theory of Machines - https://www.youtube.com/watch?v=6eZ4FtJ6W8M"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Differential Equations in Engineering Mathematics - https://www.youtube.com/watch?v=3Cv1U8aJXi4"
+        },
+        {
+          "topic": "Manufacturing Processes: Welding",
+          "resource": "Basics of Welding - https://www.youtube.com/watch?v=0JeoFpGx1Ug"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Material Science: Mechanical Properties of Materials",
+          "resource": "Mechanical Properties of Materials - https://www.youtube.com/watch?v=ULnT0vQkI6w"
+        },
+        {
+          "topic": "Industrial Engineering: Production Planning and Control",
+          "resource": "Production Planning and Control - Basics - https://www.youtube.com/watch?v=-8P9k6r4GYQ"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Power Plant Engineering: Rankine Cycle",
+          "resource": "Rankine Cycle - Basics - https://www.youtube.com/watch?v=8Ij3fSbN8z4"
+        },
+        {
+          "topic": "Refrigeration and Air Conditioning: Refrigeration Cycle",
+          "resource": "Refrigeration Cycle Explained - https://www.youtube.com/watch?v=FoI2eB3cPKY"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Engineering Materials: Properties of Ceramics",
+          "resource": "Properties of Ceramics - Material Science - https://www.youtube.com/watch?v=9XpJQXlDlQo"
+        },
+        {
+          "topic": "Mechanical Measurements: Pressure Measurement",
+          "resource": "Pressure Measurement Techniques - https://www.youtube.com/watch?v=Qo3nW6uNt5I"
+        }
+      ]
+    },
+    "week31": {
+      "day1": [
+        {
+          "topic": "Strength of Materials - Stress and Strain",
+          "resource": "Introduction to Stress and Strain - https://www.youtube.com/watch?v=7B9e7Otgk-0"
+        },
+        {
+          "topic": "Thermodynamics - Laws of Thermodynamics",
+          "resource": "Understanding the Laws of Thermodynamics - https://www.youtube.com/watch?v=chwpkqJ7MF0"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Machine Design - Design of Shafts",
+          "resource": "Design of Shafts in Machine Design - https://www.engineeringarticles.org/design-of-shafts-in-machine-design/"
+        },
+        {
+          "topic": "Fluid Mechanics - Bernoulli's Equation",
+          "resource": "Bernoulli's Equation Explained - https://www.youtube.com/watch?v=O8mmpE9ZbaA"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Engineering Mathematics - Differential Equations",
+          "resource": "Introduction to Differential Equations - https://www.youtube.com/watch?v=5J1K5wXDoiY"
+        },
+        {
+          "topic": "Heat Transfer - Conduction, Convection, and Radiation",
+          "resource": "Modes of Heat Transfer - Conduction, Convection, Radiation - https://www.youtube.com/watch?v=ZgjfgQ0sHjs"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Manufacturing Processes - Casting",
+          "resource": "Casting Process in Manufacturing - https://www.youtube.com/watch?v=8oRiY8WunnE"
+        },
+        {
+          "topic": "Theory of Machines - Kinematics of Machines",
+          "resource": "Introduction to Kinematics of Machines - https://www.engineeringarticles.org/introduction-to-kinematics-of-machines/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Engineering Mechanics - Friction",
+          "resource": "Understanding Friction in Engineering Mechanics - https://www.youtube.com/watch?v=A2o_g3R9Vt4"
+        },
+        {
+          "topic": "Materials Science - Crystal Structures",
+          "resource": "Crystal Structures in Materials Science - https://www.youtube.com/watch?v=37l2fSvEYbs"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Thermal Engineering - Carnot Cycle",
+          "resource": "Understanding Carnot Cycle in Thermal Engineering - https://www.youtube.com/watch?v=0qYEo9qYIGQ"
+        },
+        {
+          "topic": "Mechatronics - Sensors and Actuators",
+          "resource": "Introduction to Sensors and Actuators in Mechatronics - https://www.engineersgarage.com/articles/sensors-and-actuators-in-mechatronics/"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Fluid Machinery - Pumps and Turbines",
+          "resource": "Types of Pumps and Turbines in Fluid Machinery - https://www.youtube.com/watch?v=TUj9KgR2LhQ"
+        },
+        {
+          "topic": "Automobile Engineering - Engine Performance Parameters",
+          "resource": "Understanding Engine Performance Parameters in Automobile Engineering - https://www.engineeringarticles.org/engine-performance-parameters/"
+        }
+      ]
+    },
+    "week32": {
+      "day1": [
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Introduction to the Laws of Thermodynamics - https://www.youtube.com/watch?v=chG7bK1bX9E"
+        },
+        {
+          "topic": "Strength of Materials: Stress and Strain",
+          "resource": "Understanding Stress and Strain - https://www.youtube.com/watch?v=Pi7k4X2Gw6A"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Bernoulli's Equation Explained - https://www.youtube.com/watch?v=QJ0PwYUAXJY"
+        },
+        {
+          "topic": "Machine Design: Failure Theories",
+          "resource": "Introduction to Failure Theories - https://www.youtube.com/watch?v=K3bGw0N2Oq8"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Engineering Mathematics: Linear Algebra",
+          "resource": "Linear Algebra Crash Course - https://www.youtube.com/watch?v=7UJ4CFRGd-U"
+        },
+        {
+          "topic": "Manufacturing Processes: Welding Techniques",
+          "resource": "Different Welding Techniques Explained - https://www.youtube.com/watch?v=7OqFzWz7B0s"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Theory of Machines: Kinematics of Machinery",
+          "resource": "Overview of Kinematics - https://www.youtube.com/watch?v=CD3uO7QJ5nk"
+        },
+        {
+          "topic": "Industrial Engineering: Quality Control",
+          "resource": "Introduction to Quality Control - https://www.youtube.com/watch?v=3lLmWQ0cZKQ"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Heat Transfer: Conduction, Convection, Radiation",
+          "resource": "Modes of Heat Transfer Explained - https://www.youtube.com/watch?v=2r8dDZMzEMc"
+        },
+        {
+          "topic": "Engineering Mechanics: Friction",
+          "resource": "Understanding Friction - https://www.youtube.com/watch?v=4Sd4nhn9jH4"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Thermal Engineering: Gas Power Cycles",
+          "resource": "Gas Power Cycles Explained - https://www.youtube.com/watch?v=2o2-9BhG2B0"
+        },
+        {
+          "topic": "Fluid Machinery: Centrifugal Pumps",
+          "resource": "Working of Centrifugal Pumps - https://www.youtube.com/watch?v=4E6b0dP2UqE"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Mechatronics: Sensors and Actuators",
+          "resource": "Introduction to Sensors and Actuators - https://www.youtube.com/watch?v=Ie5VW6lWVfs"
+        },
+        {
+          "topic": "Power Plant Engineering: Types of Power Plants",
+          "resource": "Overview of Power Plant Types - https://www.youtube.com/watch?v=9DJI6abKk5E"
+        }
+      ]
+    },
+    "week33": {
+      "day1": [
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Explained - https://www.youtube.com/watch?v=auk9Zx7X9F4"
+        },
+        {
+          "topic": "Engineering Mechanics: Equilibrium of Forces",
+          "resource": "Equilibrium of Forces - Concept & Problems - https://www.youtube.com/watch?v=Qd0eX4mZlFw"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Understanding Bernoulli's Equation - https://www.youtube.com/watch?v=r3qyV6rFhp4"
+        },
+        {
+          "topic": "Machine Design: Stress-Strain Diagrams",
+          "resource": "Stress-Strain Diagrams Explained - https://www.youtube.com/watch?v=6BoXm6YdF1Y"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Heat Transfer: Conduction, Convection, Radiation",
+          "resource": "Introduction to Heat Transfer - https://www.youtube.com/watch?v=4q9gQ5fYQFE"
+        },
+        {
+          "topic": "Thermodynamics: Carnot Cycle",
+          "resource": "Understanding Carnot Cycle - https://www.youtube.com/watch?v=QWdPn8ei9dA"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Solving Differential Equations - https://www.youtube.com/watch?v=bxT1am5nB1k"
+        },
+        {
+          "topic": "Manufacturing Processes: Casting",
+          "resource": "Introduction to Casting Processes - https://www.youtube.com/watch?v=5Y0m1gVrXPU"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Theory of Machines: Kinematics of Machines",
+          "resource": "Introduction to Kinematics of Machines - https://www.youtube.com/watch?v=LyI9k1sr0UU"
+        },
+        {
+          "topic": "Material Science: Crystal Structure",
+          "resource": "Crystal Structure in Materials Science - https://www.youtube.com/watch?v=L9LwK0yZv7s"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Thermodynamics: Entropy",
+          "resource": "Understanding Entropy - https://www.youtube.com/watch?v=BV01jGKbGKk"
+        },
+        {
+          "topic": "Mechanical Vibrations: Free and Forced Vibrations",
+          "resource": "Free and Forced Vibrations Explained - https://www.youtube.com/watch?v=iF3M5vZI24Q"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Fluid Mechanics: Reynolds Number",
+          "resource": "Importance of Reynolds Number - https://www.youtube.com/watch?v=4FQEo4jnrFg"
+        },
+        {
+          "topic": "Strength of Materials: Bending Stress and Deflection",
+          "resource": "Bending Stress and Deflection Calculation - https://www.youtube.com/watch?v=Vh8wLrZj7LM"
+        }
+      ]
+    },
+    "week34": {
+      "day1": [
+        {
+          "topic": "Strength of Materials: Stress and Strain",
+          "resource": "Stress and Strain - Definition, Formulas & Problems - https://www.youtube.com/watch?v=J4GQ9oYmbUA"
+        },
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Explained - https://www.youtube.com/watch?v=3riG1l-0UqA"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Bernoulli's Equation and Applications - https://www.youtube.com/watch?v=7Jr3HJv4bBw"
+        },
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Differential Equations Crash Course - https://www.youtube.com/watch?v=obhL2TJgOc0"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Machine Design: Failure Theories",
+          "resource": "Failure Theories in Machine Design - https://www.youtube.com/watch?v=H2I3ZKmKvTQ"
+        },
+        {
+          "topic": "Manufacturing Processes: Casting",
+          "resource": "Casting Process Explained - https://www.youtube.com/watch?v=Zufz3rGzvLw"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Theory of Machines: Kinematics of Machines",
+          "resource": "Kinematics of Machines - Introduction - https://www.youtube.com/watch?v=IbUJ6vUdMgQ"
+        },
+        {
+          "topic": "Engineering Materials: Properties of Materials",
+          "resource": "Materials Science: Properties of Materials - https://www.youtube.com/watch?v=O9Pbe5xeZC4"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Heat Transfer: Conduction, Convection, and Radiation",
+          "resource": "Heat Transfer: Conduction, Convection, Radiation Explained - https://www.youtube.com/watch?v=e8GiDoJ8uD0"
+        },
+        {
+          "topic": "Industrial Engineering: Linear Programming",
+          "resource": "Linear Programming Explained - https://www.youtube.com/watch?v=QoJg4fzjf9U"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Thermal Engineering: Refrigeration and Air Conditioning",
+          "resource": "Refrigeration and Air Conditioning Basics - https://www.youtube.com/watch?v=2wRZdX8gXV4"
+        },
+        {
+          "topic": "Engineering Mechanics: Equilibrium of Forces",
+          "resource": "Equilibrium of Forces Explained - https://www.youtube.com/watch?v=IyWXXT0E1AM"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Production Engineering: Metal Cutting",
+          "resource": "Metal Cutting Process - https://www.youtube.com/watch?v=ai2g8bVUGxk"
+        },
+        {
+          "topic": "Control Engineering: Control Systems",
+          "resource": "Control Systems Engineering - Introduction - https://www.youtube.com/watch?v=4YV3JYnhl6o"
+        }
+      ]
+    },
+    "week35": {
+      "day1": [
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Introduction to the Laws of Thermodynamics - https://www.youtube.com/watch?v=chPv2K3lOqM"
+        },
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Understanding Bernoulli's Equation - https://www.youtube.com/watch?v=0YlNFjx_z7c"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Engineering Mechanics: Equilibrium of Bodies",
+          "resource": "Equilibrium of Bodies Explained - https://www.youtube.com/watch?v=5QcX22wY0Nw"
+        },
+        {
+          "topic": "Materials Science: Stress and Strain",
+          "resource": "Stress and Strain Basics - https://www.youtube.com/watch?v=2k5VzrK4IyE"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Machine Design: Design of Shafts",
+          "resource": "Shaft Design Principles - https://www.youtube.com/watch?v=KXZOn5N8VYg"
+        },
+        {
+          "topic": "Thermodynamics: Carnot Cycle",
+          "resource": "Understanding the Carnot Cycle - https://www.youtube.com/watch?v=8gMB6Vz7Vnk"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Heat Transfer: Conduction, Convection, Radiation",
+          "resource": "Types of Heat Transfer Explained - https://www.youtube.com/watch?v=qPb6j7m1Pj4"
+        },
+        {
+          "topic": "Fluid Mechanics: Reynolds Number",
+          "resource": "Significance of Reynolds Number - https://www.youtube.com/watch?v=nON6pIbr1ZI"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Manufacturing Processes: Welding Techniques",
+          "resource": "Different Welding Methods - https://www.youtube.com/watch?v=hz4Oy5bW5qQ"
+        },
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Introduction to Differential Equations - https://www.youtube.com/watch?v=VlOv2gTh7YQ"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Thermodynamics: Gas Laws",
+          "resource": "Understanding Gas Laws - https://www.youtube.com/watch?v=Q6bY3F5N8wk"
+        },
+        {
+          "topic": "Machine Design: Design of Bearings",
+          "resource": "Basics of Bearing Design - https://www.youtube.com/watch?v=KfT5T7hG3pw"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Fluid Mechanics: Fluid Kinematics",
+          "resource": "Introduction to Fluid Kinematics - https://www.youtube.com/watch?v=9s3K3XtIgAE"
+        },
+        {
+          "topic": "Engineering Mechanics: Friction",
+          "resource": "Fundamentals of Friction - https://www.youtube.com/watch?v=U3QoSw6K5VQ"
+        }
+      ]
+    },
+    "week36": {
+      "day1": [
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Explained - https://www.youtube.com/watch?v=VdM9q7o1cMw"
+        },
+        {
+          "topic": "Engineering Mechanics: Equilibrium of Forces",
+          "resource": "Equilibrium of Forces - Statics - https://www.youtube.com/watch?v=3w7jP0iY3Kg"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Bernoulli's Equation - Fluid Mechanics - https://www.youtube.com/watch?v=JkFgYbCJ9iw"
+        },
+        {
+          "topic": "Strength of Materials: Stress and Strain",
+          "resource": "Introduction to Stress and Strain - https://www.youtube.com/watch?v=7jYlF4g_Gz8"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Machine Design: Design of Shafts",
+          "resource": "Design of Shafts - Theory of Machines - https://www.youtube.com/watch?v=U5a0M7oqZjc"
+        },
+        {
+          "topic": "Manufacturing Processes: Metal Casting",
+          "resource": "Metal Casting Process - https://www.youtube.com/watch?v=9pLFrYlGd_E"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Heat Transfer: Conduction, Convection, Radiation",
+          "resource": "Heat Transfer Basics - Conduction, Convection, Radiation - https://www.youtube.com/watch?v=U1GKQm4nSNU"
+        },
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Introduction to Differential Equations - https://www.youtube.com/watch?v=V8RaLv6L9Uw"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Industrial Engineering: Production Planning and Control",
+          "resource": "Production Planning and Control - https://www.youtube.com/watch?v=5vM9tTNY8JA"
+        },
+        {
+          "topic": "Thermal Engineering: Gas Power Cycles",
+          "resource": "Gas Power Cycles - Thermodynamics - https://www.youtube.com/watch?v=X3eYXD5ZzVA"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Engineering Materials: Properties of Materials",
+          "resource": "Mechanical Properties of Materials - https://www.youtube.com/watch?v=LyvE8Lh7KKE"
+        },
+        {
+          "topic": "Mechatronics: Introduction to Mechatronics",
+          "resource": "What is Mechatronics? - https://www.youtube.com/watch?v=I7BiIY1CJqY"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Fluid Machinery: Pumps and Turbines",
+          "resource": "Pumps and Turbines Explained - https://www.youtube.com/watch?v=tVY6j5-8YiA"
+        },
+        {
+          "topic": "Theory of Machines: Kinematics of Machines",
+          "resource": "Kinematics of Machines - https://www.youtube.com/watch?v=yCmHb0b4Cw4"
+        }
+      ]
+    },
+    "week37": {
+      "day1": [
+        {
+          "topic": "Strength of Materials: Stress and Strain",
+          "resource": "Stress and Strain - Definition, Stress-Strain Curve, Young's Modulus - https://www.youtube.com/watch?v=jEwq7tGm1do"
+        },
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Introduction to the Laws of Thermodynamics - https://www.youtube.com/watch?v=cn9C7mPb0Ww"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Understanding Bernoulli's Equation - https://www.youtube.com/watch?v=8vz9WiTzZ3s"
+        },
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Differential Equations - Introduction and Basic Concepts - https://www.youtube.com/watch?v=JU3WJZ70FjA"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Manufacturing Processes: Casting Process",
+          "resource": "Casting Process - Types, Advantages, and Applications - https://www.youtube.com/watch?v=3xLWxKb7V6I"
+        },
+        {
+          "topic": "Machine Design: Design of Shafts",
+          "resource": "Design of Shafts - Theory and Calculation - https://www.youtube.com/watch?v=Ql1zgQztxL4"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Theory of Machines: Kinematics of Machines",
+          "resource": "Kinematics of Machines - Basics and Types of Motions - https://www.youtube.com/watch?v=Kc6xR5QJl4U"
+        },
+        {
+          "topic": "Engineering Materials: Properties of Materials",
+          "resource": "Introduction to Properties of Materials - Mechanical Properties - https://www.youtube.com/watch?v=4E6H5Yd3e-0"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Thermal Engineering: Rankine Cycle",
+          "resource": "Understanding Rankine Cycle - Basics and Analysis - https://www.youtube.com/watch?v=8D1D2Np6mI8"
+        },
+        {
+          "topic": "Industrial Engineering: Work Study",
+          "resource": "Introduction to Work Study - Methods and Techniques - https://www.youtube.com/watch?v=QVd6QaAghoM"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Power Plant Engineering: Boiler Efficiency",
+          "resource": "Boiler Efficiency Calculation - Basics and Formulas - https://www.youtube.com/watch?v=V5v2G0u6Oqs"
+        },
+        {
+          "topic": "Mechatronics: Sensors and Actuators",
+          "resource": "Introduction to Sensors and Actuators - Types and Applications - https://www.youtube.com/watch?v=9qP5p4PFSg8"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Control Systems: PID Controller",
+          "resource": "PID Controller - Introduction and Tuning Methods - https://www.youtube.com/watch?v=UR0hOmjaHp0"
+        },
+        {
+          "topic": "Environmental Engineering: Air Pollution Control",
+          "resource": "Air Pollution Control Methods - Overview and Technologies - https://www.youtube.com/watch?v=9Yr0uQzjDs0"
+        }
+      ]
+    },
+    "week38": {
+      "day1": [
+        {
+          "topic": "Stress and Strain Analysis",
+          "resource": "Introduction to Stress and Strain Analysis - https://www.youtube.com/watch?v=Ab7_Vzg-8VU"
+        },
+        {
+          "topic": "Euler's Column Theory",
+          "resource": "Euler's Column Theory Explained - https://www.engineeringenotes.com/structural-analysis/eulers-column-theory/theory-on-eulers-column-with-euler-formula/30113"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Explained - https://www.youtube.com/watch?v=ch7pz9s0V6s"
+        },
+        {
+          "topic": "Heat Transfer: Conduction, Convection, Radiation",
+          "resource": "Understanding Heat Transfer Modes - https://www.engineeringtoolbox.com/heat-transfer-d_430.html"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Machine Design: Design of Shafts",
+          "resource": "Shaft Design Fundamentals - https://www.youtube.com/watch?v=7T0v6t2q6I0"
+        },
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Solving Differential Equations - https://www.khanacademy.org/math/differential-equations"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Understanding Bernoulli's Equation - https://www.youtube.com/watch?v=VhE9obCJlZc"
+        },
+        {
+          "topic": "Engineering Materials: Properties of Materials",
+          "resource": "Mechanical Properties of Materials - https://www.engineeringtoolbox.com/properties-of-materials-d_122.html"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Manufacturing Processes: Casting",
+          "resource": "Introduction to Casting Process - https://www.youtube.com/watch?v=HP0r_IovA1M"
+        },
+        {
+          "topic": "Engineering Mechanics: Friction",
+          "resource": "Basics of Friction - https://www.youtube.com/watch?v=8rZ1d4sP5cI"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Theory of Machines: Mechanisms and Kinematics",
+          "resource": "Introduction to Mechanisms and Kinematics - https://www.youtube.com/watch?v=2OJYhVYn4g8"
+        },
+        {
+          "topic": "Industrial Engineering: Production Planning and Control",
+          "resource": "Overview of Production Planning and Control - https://www.simplilearn.com/production-planning-and-control-article"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Metrology and Inspection: Measurement Techniques",
+          "resource": "Introduction to Measurement Techniques - https://www.youtube.com/watch?v=UH1SquBfwQg"
+        },
+        {
+          "topic": "Power Plant Engineering: Rankine Cycle",
+          "resource": "Understanding Rankine Cycle - https://www.engineeringenotes.com/energy-engineering/thermodynamics/rankine-cycle"
+        }
+      ]
+    },
+    "week39": {
+      "day1": [
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Laws of Thermodynamics Explained - https://www.youtube.com/watch?v=ITpDrdtGAmo"
+        },
+        {
+          "topic": "Fluid Mechanics: Bernoulli's Equation",
+          "resource": "Understanding Bernoulli's Equation - https://www.youtube.com/watch?v=4R7tvw4u6Yk"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Strength of Materials: Stress and Strain",
+          "resource": "Introduction to Stress and Strain - https://www.youtube.com/watch?v=3Xg1w0ZvW5Q"
+        },
+        {
+          "topic": "Manufacturing Processes: Machining",
+          "resource": "Basics of Machining Processes - https://www.youtube.com/watch?v=H2eN6kY-9hA"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Solving Differential Equations - https://www.youtube.com/watch?v=7a5N5j5p0lA"
+        },
+        {
+          "topic": "Engineering Materials: Properties of Materials",
+          "resource": "Overview of Material Properties - https://www.youtube.com/watch?v=h7pC9B0n5c4"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Machine Design: Design for Static Loading",
+          "resource": "Introduction to Static Loading - https://www.youtube.com/watch?v=3hKzYQ2mQSE"
+        },
+        {
+          "topic": "Heat Transfer: Conduction, Convection, Radiation",
+          "resource": "Modes of Heat Transfer Explained - https://www.youtube.com/watch?v=JiZ9gUyJLWA"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Thermodynamics: Carnot Cycle",
+          "resource": "Understanding Carnot Cycle - https://www.youtube.com/watch?v=j5Vsz3pO5uU"
+        },
+        {
+          "topic": "Fluid Mechanics: Reynolds Number",
+          "resource": "Reynolds Number in Fluid Mechanics - https://www.youtube.com/watch?v=1r6v1fR8TbI"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Strength of Materials: Beam Analysis",
+          "resource": "Beam Analysis Techniques - https://www.youtube.com/watch?v=4L_DQKCDgeM"
+        },
+        {
+          "topic": "Manufacturing Processes: Welding",
+          "resource": "Basics of Welding Processes - https://www.youtube.com/watch?v=8aG1n5Xl0V0"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Engineering Mathematics: Fourier Series",
+          "resource": "Introduction to Fourier Series - https://www.youtube.com/watch?v=r6sGWTCMz2k"
+        },
+        {
+          "topic": "Engineering Materials: Phase Diagrams",
+          "resource": "Understanding Phase Diagrams - https://www.youtube.com/watch?v=K0kV5N7Y7-E"
+        }
+      ]
+    },
+    "week40": {
+      "day1": [
+        {
+          "topic": "Theory of Machines: Kinematics of Machines",
+          "resource": "Kinematics of Machinery - Lecture Series by NPTEL - https://www.youtube.com/watch?v=I7VcLqK6mJU"
+        },
+        {
+          "topic": "Engineering Mathematics: Differential Equations",
+          "resource": "Differential Equations Made Easy - StudyPug - https://www.studypug.com/calculus/differential-equations"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Strength of Materials: Stresses and Strains",
+          "resource": "Introduction to Stresses and Strains - Mechanical Engineering Explained - https://www.youtube.com/watch?v=4tX8fzNH1Eo"
+        },
+        {
+          "topic": "Thermodynamics: Laws of Thermodynamics",
+          "resource": "Understanding the Laws of Thermodynamics - Learn Engineering - https://www.youtube.com/watch?v=3LbViDCoZEc"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Fluid Mechanics: Fluid Properties and Fluid Statics",
+          "resource": "Fluid Mechanics Fundamentals - The Engineering Mindset - https://www.youtube.com/watch?v=VUjKau2CqA8"
+        },
+        {
+          "topic": "Machine Design: Design for Static Loading",
+          "resource": "Machine Design Basics - NPTEL - https://nptel.ac.in/courses/112/106/112106095/"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Manufacturing Engineering: Metal Cutting Principles",
+          "resource": "Metal Cutting Principles - Learn Mechanical Engineering - https://www.youtube.com/watch?v=QLW4l8J0zU0"
+        },
+        {
+          "topic": "Industrial Engineering: Production Planning and Control",
+          "resource": "Introduction to Production Planning and Control - Mechanical Engineering Explained - https://www.youtube.com/watch?v=3OY0nHsKQsY"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Heat Transfer: Conduction, Convection, and Radiation",
+          "resource": "Heat Transfer Basics - The Organic Chemistry Tutor - https://www.youtube.com/watch?v=NfY2gUO9sLo"
+        },
+        {
+          "topic": "Engineering Mechanics: Friction and its Types",
+          "resource": "Understanding Friction - Engineering Physics by S. Chand - https://www.youtube.com/watch?v=6_1jn7QWbH4"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Materials Science: Mechanical Properties of Materials",
+          "resource": "Mechanical Properties of Materials - Materials Science and Engineering by NPTEL - https://www.youtube.com/watch?v=wy9Ql-GWfXw"
+        },
+        {
+          "topic": "Automotive Engineering: Vehicle Dynamics",
+          "resource": "Vehicle Dynamics Basics - Engineering Explained - https://www.youtube.com/watch?v=3hZl3N5ZG6s"
+        }
+      ],
+      "day7": [
+        {
+          "topic": "Engineering Drawing: Orthographic Projection",
+          "resource": "Orthographic Projection Basics - MechEnggWorld - https://www.youtube.com/watch?v=B7nhYj6s9NI"
+        },
+        {
+          "topic": "Power Plant Engineering: Types of Power Plants",
+          "resource": "Types of Power Plants - Explained by Learn Engineering - https://www.youtube.com/watch?v=QI3q0FfYQJ8"
+        }
+      ]
+    }
+  }
+}

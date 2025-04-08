@@ -1,0 +1,1668 @@
+{
+  "roadmap": {
+    "week1": {
+      "day1": [
+        {
+          "topic": "Introduction to Web Development",
+          "resource": "What is Web Development? - https://www.youtube.com/watch?v=3JluqTojuME"
+        },
+        {
+          "topic": "HTML Basics",
+          "resource": "HTML Crash Course For Absolute Beginners - https://www.youtube.com/watch?v=UB1O30fR-EE"
+        },
+        {
+          "topic": "Setting Up Development Environment",
+          "resource": "Setting Up a Development Environment - https://www.freecodecamp.org/news/how-to-set-up-a-developer-environment-cf9c3d037d44/"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "CSS Fundamentals",
+          "resource": "CSS Tutorial for Beginners - https://www.youtube.com/watch?v=yfoY53QXEnI"
+        },
+        {
+          "topic": "CSS Grid and Flexbox",
+          "resource": "CSS Grid and Flexbox Tutorial - https://www.youtube.com/watch?v=jV8B24rSN5o"
+        },
+        {
+          "topic": "Responsive Web Design",
+          "resource": "Responsive Web Design - https://www.freecodecamp.org/news/how-to-make-your-html-responsive-by-adding-a-single-line-of-css-2a62de81e431/"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "JavaScript Basics",
+          "resource": "JavaScript Tutorial for Beginners - https://www.youtube.com/watch?v=W6NZfCO5SIk"
+        },
+        {
+          "topic": "DOM Manipulation",
+          "resource": "DOM Manipulation in JavaScript - https://www.digitalocean.com/community/tutorials/introduction-to-the-dom"
+        },
+        {
+          "topic": "Event Handling",
+          "resource": "JavaScript Event Listeners - https://www.w3schools.com/js/js_htmldom_eventlistener.asp"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Version Control with Git",
+          "resource": "Git Tutorial for Beginners - https://www.youtube.com/watch?v=3fUbBty0wJo"
+        },
+        {
+          "topic": "GitHub",
+          "resource": "GitHub Guide - https://guides.github.com/"
+        },
+        {
+          "topic": "Git Workflow",
+          "resource": "Understanding the GitHub Flow - https://guides.github.com/introduction/flow/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Node.js Basics",
+          "resource": "Node.js Tutorial for Beginners - https://www.youtube.com/watch?v=TlB_eWDSMt4"
+        },
+        {
+          "topic": "NPM",
+          "resource": "What is NPM? - https://docs.npmjs.com/about-npm"
+        },
+        {
+          "topic": "Package.json",
+          "resource": "Understanding package.json - https://nodejs.dev/learn/the-package-json-guide"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Express.js Fundamentals",
+          "resource": "Express.js Tutorial - https://www.youtube.com/watch?v=L72fhGm1tfE"
+        },
+        {
+          "topic": "Routing in Express.js",
+          "resource": "Express.js Routing - https://expressjs.com/en/guide/routing.html"
+        },
+        {
+          "topic": "Middleware in Express.js",
+          "resource": "Express.js Middleware - https://expressjs.com/en/guide/writing-middleware.html"
+        }
+      ]
+    },
+    "week2": {
+      "day1": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "What is REST API? | Web Services Tutorial - https://www.youtube.com/watch?v=7YcW25PHnAA"
+        },
+        {
+          "topic": "CRUD Operations",
+          "resource": "CRUD Operations in REST API - https://restfulapi.net/http-methods/"
+        },
+        {
+          "topic": "Postman",
+          "resource": "Postman Tutorial for Beginners - https://www.guru99.com/postman-tutorial.html"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "MongoDB Basics",
+          "resource": "MongoDB Tutorial for Beginners - https://www.tutorialspoint.com/mongodb/index.htm"
+        },
+        {
+          "topic": "Mongoose ODM",
+          "resource": "Introduction to Mongoose for MongoDB - https://mongoosejs.com/docs/guide.html"
+        },
+        {
+          "topic": "Data Modeling",
+          "resource": "Data Modeling in MongoDB - https://university.mongodb.com/courses/M320/about"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Authentication and Authorization",
+          "resource": "Understanding Authentication vs Authorization - https://www.csoonline.com/article/3075887/what-is-authentication-authorization.html"
+        },
+        {
+          "topic": "JWT",
+          "resource": "JWT.io Introduction - https://jwt.io/introduction/"
+        },
+        {
+          "topic": "Passport.js",
+          "resource": "Passport.js Documentation - http://www.passportjs.org/docs/"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "React Basics",
+          "resource": "React.js Crash Course - https://www.youtube.com/watch?v=sBws8MSXN7A"
+        },
+        {
+          "topic": "JSX",
+          "resource": "Understanding JSX in React - https://reactjs.org/docs/introducing-jsx.html"
+        },
+        {
+          "topic": "Components",
+          "resource": "React Components Tutorial - https://www.tutorialspoint.com/reactjs/reactjs_components.htm"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "State Management in React",
+          "resource": "React State Management Tutorial - https://www.smashingmagazine.com/2020/01/introduction-state-management-react/"
+        },
+        {
+          "topic": "Context API",
+          "resource": "React Context API Explained - https://reactjs.org/docs/context.html"
+        },
+        {
+          "topic": "Redux",
+          "resource": "Redux Documentation - https://redux.js.org/introduction/getting-started"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "React Router",
+          "resource": "React Router Tutorial - https://www.youtube.com/watch?v=Law7wfdg_ls"
+        },
+        {
+          "topic": "Nested Routes",
+          "resource": "Nested Routes in React Router - https://reactrouter.com/web/guides/quick-start"
+        },
+        {
+          "topic": "Protected Routes",
+          "resource": "Protected Routes in React - https://ui.dev/react-router-v5-protected-routes/"
+        }
+      ]
+    },
+    "week3": {
+      "day1": [
+        {
+          "topic": "Responsive Design with Bootstrap",
+          "resource": "Bootstrap Tutorial For Beginners - Crash Course - https://www.youtube.com/watch?v=gqOEoUR5RHg"
+        },
+        {
+          "topic": "CSS Preprocessors with Sass",
+          "resource": "Sass Tutorial for Beginners - CSS With Superpowers - https://www.youtube.com/watch?v=_a5j7KoflTs"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Unit Testing in JavaScript",
+          "resource": "JavaScript Unit Testing with Jest - Getting Started - https://www.youtube.com/watch?v=7r4xVDI2vho"
+        },
+        {
+          "topic": "Testing Library",
+          "resource": "Testing Library Tutorial - React Testing - https://www.youtube.com/watch?v=4W4Hf8KbY5I"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Docker Basics",
+          "resource": "Docker Tutorial for Beginners - Full Course in 3 Hours - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        },
+        {
+          "topic": "Containerization",
+          "resource": "Containerization Explained - Docker Tutorial for Beginners - https://www.youtube.com/watch?v=pGYAg7TMmp0"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Continuous Integration and Deployment with Jenkins",
+          "resource": "Jenkins Tutorial For Beginners - https://www.youtube.com/watch?v=FX322pjjbJ8"
+        },
+        {
+          "topic": "Travis CI",
+          "resource": "Travis CI Tutorial - Continuous Integration with GitHub - https://www.youtube.com/watch?v=eB0nUzAI7M8"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "WebSockets",
+          "resource": "WebSockets Tutorial - Socket.io - https://www.youtube.com/watch?v=tHbCkikFfDE"
+        },
+        {
+          "topic": "Real-time Communication",
+          "resource": "Real-Time Chat App with Socket.io - Node.js, Express, and MongoDB - https://www.youtube.com/watch?v=jD7FnbI76Hg"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Performance Optimization",
+          "resource": "Web Performance Optimization - Crash Course - https://www.youtube.com/watch?v=5i6U6YjJ1TY"
+        },
+        {
+          "topic": "Lazy Loading and Code Splitting",
+          "resource": "Lazy Loading and Code Splitting in React - https://www.youtube.com/watch?v=bb6Km8b8Y9I"
+        }
+      ]
+    },
+    "week4": {
+      "day1": [
+        {
+          "topic": "GraphQL Basics",
+          "resource": "GraphQL Tutorial for Beginners - https://www.youtube.com/watch?v=ed8SzALpx1Q"
+        },
+        {
+          "topic": "Apollo Client",
+          "resource": "Getting Started with Apollo Client - https://www.apollographql.com/docs/react/get-started/"
+        },
+        {
+          "topic": "Apollo Server",
+          "resource": "Building a GraphQL Server with Apollo - https://www.apollographql.com/docs/apollo-server/"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Design Patterns in JavaScript",
+          "resource": "JavaScript Design Patterns - https://addyosmani.com/resources/essentialjsdesignpatterns/book/"
+        },
+        {
+          "topic": "MVC",
+          "resource": "Understanding MVC Architecture - https://www.tutorialspoint.com/design_pattern/mvc_pattern.htm"
+        },
+        {
+          "topic": "Observer",
+          "resource": "Observer Design Pattern in JavaScript - https://refactoring.guru/design-patterns/observer"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Security Best Practices",
+          "resource": "Web Security Best Practices - https://www.troyhunt.com/web-security-basics-what-is-security/"
+        },
+        {
+          "topic": "OWASP Top 10",
+          "resource": "OWASP Top 10 Security Risks - https://owasp.org/www-project-top-ten/"
+        },
+        {
+          "topic": "Cross-Site Scripting",
+          "resource": "Preventing Cross-Site Scripting Attacks - https://portswigger.net/web-security/cross-site-scripting"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Web Accessibility",
+          "resource": "Web Accessibility Fundamentals - https://web.dev/web-accessibility-course/"
+        },
+        {
+          "topic": "ARIA",
+          "resource": "Introduction to ARIA - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+        },
+        {
+          "topic": "Semantic HTML",
+          "resource": "Semantic HTML Explained - https://www.w3schools.com/html/html5_semantic_elements.asp"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Progressive Web Apps (PWAs)",
+          "resource": "Building Progressive Web Apps - https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+        },
+        {
+          "topic": "Service Workers",
+          "resource": "Introduction to Service Workers - https://developers.google.com/web/fundamentals/primers/service-workers"
+        },
+        {
+          "topic": "Offline Support",
+          "resource": "Adding Offline Support to Your Web App - https://web.dev/offline-cookbook/"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "SEO Basics",
+          "resource": "SEO for Beginners - https://moz.com/beginners-guide-to-seo"
+        },
+        {
+          "topic": "Meta Tags",
+          "resource": "Understanding Meta Tags in HTML - https://www.w3schools.com/tags/tag_meta.asp"
+        },
+        {
+          "topic": "Sitemap.xml",
+          "resource": "Creating a Sitemap.xml for SEO - https://yoast.com/what-is-an-xml-sitemap-and-why-should-you-have-one/"
+        }
+      ]
+    },
+    "week5": {
+      "day1": [
+        {
+          "topic": "Week 5 Day 1 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 5 Day 1 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Week 5 Day 2 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 5 Day 2 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Week 5 Day 3 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 5 Day 3 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Week 5 Day 4 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 5 Day 4 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Week 5 Day 5 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 5 Day 5 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Week 5 Day 6 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 5 Day 6 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ]
+    },
+    "week6": {
+      "day1": [
+        {
+          "topic": "Web Security",
+          "resource": "Web Security Fundamentals - https://www.youtube.com/watch?v=G_3GK7mQlsw"
+        },
+        {
+          "topic": "HTTPS",
+          "resource": "How HTTPS Works - https://www.cloudflare.com/learning/ssl/what-is-https/"
+        },
+        {
+          "topic": "Content Security Policy (CSP)",
+          "resource": "Introduction to Content Security Policy - https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Web Performance Optimization",
+          "resource": "Web Performance Optimization: The Definitive Guide - https://www.smashingmagazine.com/2018/01/definitive-guide-web-performance-optimization/"
+        },
+        {
+          "topic": "Minification",
+          "resource": "Introduction to Minification - https://www.keycdn.com/support/what-is-minification"
+        },
+        {
+          "topic": "Compression",
+          "resource": "A Comprehensive Guide to GZIP Compression - https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Design Systems",
+          "resource": "Design Systems Handbook - https://www.designbetter.co/design-systems-handbook"
+        },
+        {
+          "topic": "UI/UX Principles",
+          "resource": "UI/UX Design Principles - https://careerfoundry.com/en/blog/ux-design/ui-ux-design-principles-every-designer-needs-to-know/"
+        },
+        {
+          "topic": "Atomic Design",
+          "resource": "Atomic Design Methodology - https://bradfrost.com/blog/post/atomic-web-design/"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Web Assembly",
+          "resource": "What is WebAssembly? - https://developer.mozilla.org/en-US/docs/WebAssembly"
+        },
+        {
+          "topic": "Rust",
+          "resource": "The Rust Programming Language - https://www.rust-lang.org/"
+        },
+        {
+          "topic": "Emscripten",
+          "resource": "Emscripten Tutorial - https://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Web Scraping",
+          "resource": "Web Scraping with Puppeteer - https://blog.bitsrc.io/web-scraping-with-puppeteer-4ab3d3e3647f"
+        },
+        {
+          "topic": "Puppeteer",
+          "resource": "Puppeteer: The Headless Chrome Node API - https://developers.google.com/web/tools/puppeteer"
+        },
+        {
+          "topic": "Cheerio",
+          "resource": "Introduction to Cheerio - https://www.digitalocean.com/community/tutorials/how-to-scrape-web-pages-with-cheerio"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Machine Learning in Web Development",
+          "resource": "Machine Learning for Web Developers - https://www.youtube.com/watch?v=9zhrxE5PQgY"
+        },
+        {
+          "topic": "TensorFlow.js",
+          "resource": "Getting Started with TensorFlow.js - https://www.tensorflow.org/js/tutorials"
+        },
+        {
+          "topic": "ML5.js",
+          "resource": "Introduction to ML5.js - https://learn.ml5js.org/docs/#/"
+        }
+      ]
+    },
+    "week7": {
+      "day1": [
+        {
+          "topic": "Introduction to React Hooks",
+          "resource": "React Hooks Crash Course - https://www.youtube.com/watch?v=-MlNBTSg_Ww"
+        },
+        {
+          "topic": "Redux Fundamentals",
+          "resource": "Redux Tutorial - Learn Redux from Scratch - https://www.youtube.com/watch?v=CVpUuw9XSjY"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Authentication in Node.js",
+          "resource": "Node.js Authentication with Passport.js - https://www.youtube.com/watch?v=sakQbeRjgwg"
+        },
+        {
+          "topic": "RESTful APIs with Express",
+          "resource": "Building RESTful APIs with Node.js and Express - https://www.youtube.com/watch?v=pKd0Rpw7O48"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "React Router",
+          "resource": "React Router Tutorial - https://www.youtube.com/watch?v=Law7wfdg_ls"
+        },
+        {
+          "topic": "MongoDB Atlas",
+          "resource": "MongoDB Atlas Tutorial - Getting Started with MongoDB Atlas - https://www.youtube.com/watch?v=KKyag6t98g8"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "JWT Authentication",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        },
+        {
+          "topic": "Error Handling in Node.js",
+          "resource": "Error Handling in Node.js - https://www.youtube.com/watch?v=w1cK1Z2llEI"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "React Performance Optimization",
+          "resource": "React Performance Optimization - https://www.youtube.com/watch?v=ff4fgQxPaO0"
+        },
+        {
+          "topic": "Data Validation with Joi",
+          "resource": "Data Validation with Joi in Node.js - https://www.youtube.com/watch?v=EMr2Xv3O1Gk"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Deployment with Heroku",
+          "resource": "Deploying a MERN Stack App to Heroku - https://www.youtube.com/watch?v=71wSzpLyW9k"
+        },
+        {
+          "topic": "Unit Testing with Jest",
+          "resource": "Unit Testing Node.js APIs with Jest - https://www.youtube.com/watch?v=7r4xVDI2vho"
+        }
+      ]
+    },
+    "week8": {
+      "day1": [
+        {
+          "topic": "Week 8 Day 1 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 1 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Week 8 Day 2 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 2 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Week 8 Day 3 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 3 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Week 8 Day 4 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 4 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Week 8 Day 5 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 5 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Week 8 Day 6 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 8 Day 6 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ]
+    },
+    "week9": {
+      "day1": [
+        {
+          "topic": "Introduction to RESTful APIs",
+          "resource": "What is REST API? | Web Service - https://youtu.be/7YcW25PHnAA"
+        },
+        {
+          "topic": "REST API Design Best Practices",
+          "resource": "RESTful API Design - https://restfulapi.net/"
+        },
+        {
+          "topic": "Implementing REST APIs with Node.js",
+          "resource": "Creating a RESTful API with Node.js - https://youtu.be/2ojkbxf7z0k"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Database Modeling and Relationships",
+          "resource": "Database Normalization Explained - https://youtu.be/UrYLYV7WSHM"
+        },
+        {
+          "topic": "Implementing CRUD Operations",
+          "resource": "CRUD Operations in MongoDB - https://zellwk.com/blog/crud-express-mongodb/"
+        },
+        {
+          "topic": "Using ORMs like Sequelize or Mongoose",
+          "resource": "Sequelize ORM Tutorial - https://youtu.be/p4l6W5vUxk8"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Authentication and Authorization",
+          "resource": "Understanding OAuth2 and JWT - https://dev.to/ryanwhocodes/understanding-oauth2-and-jwt-2f01"
+        },
+        {
+          "topic": "Implementing Authentication in Node.js",
+          "resource": "Node.js Authentication Tutorial - https://youtu.be/2jqok-WgelI"
+        },
+        {
+          "topic": "Role-Based Access Control",
+          "resource": "Role-Based Access Control in Express.js - https://dev.to/adebayoileri/role-based-access-control-using-middleware-in-express-js-2h7j"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Frontend Frameworks (React, Angular, Vue)",
+          "resource": "React vs. Angular vs. Vue - https://youtu.be/OxIDLw0M-m0"
+        },
+        {
+          "topic": "Component-Based Architecture",
+          "resource": "Introduction to React Components - https://www.taniarascia.com/getting-started-with-react/"
+        },
+        {
+          "topic": "State Management in React with Redux",
+          "resource": "React Redux Tutorial - https://youtu.be/CVpUuw9XSjY"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Building RESTful Frontend Applications",
+          "resource": "Consuming REST APIs in React - https://www.digitalocean.com/community/tutorials/react-consume-rest-api"
+        },
+        {
+          "topic": "Responsive Web Design",
+          "resource": "Introduction to Responsive Web Design - https://www.freecodecamp.org/news/an-overview-of-responsive-web-design-7f9ab63d98e5/"
+        },
+        {
+          "topic": "CSS Frameworks like Bootstrap or Materialize",
+          "resource": "Bootstrap Tutorial for Beginners - https://youtu.be/5GcQtLDGXy8"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Deployment Strategies (Heroku, AWS)",
+          "resource": "Deploying Node.js App to Heroku - https://devcenter.heroku.com/articles/deploying-nodejs"
+        },
+        {
+          "topic": "Continuous Integration and Continuous Deployment (CI/CD)",
+          "resource": "CI/CD Explained - https://www.redhat.com/en/topics/devops/what-is-ci-cd"
+        },
+        {
+          "topic": "Performance Optimization Techniques",
+          "resource": "Web Performance Optimization Tips - https://www.smashingmagazine.com/2019/06/optimization-performance-front-end-backend/"
+        },
+        {
+          "topic": "Monitoring and Debugging Tools",
+          "resource": "Debugging Node.js Applications - https://youtu.be/3XkN6-J7aH8"
+        }
+      ]
+    },
+    "week10": {
+      "day1": [
+        {
+          "topic": "React Hooks",
+          "resource": "React Hooks Crash Course - https://www.youtube.com/watch?v=-MlNBTSg_Ww"
+        },
+        {
+          "topic": "RESTful APIs",
+          "resource": "What is REST? - https://www.codecademy.com/articles/what-is-rest"
+        },
+        {
+          "topic": "Authentication in Node.js",
+          "resource": "Node.js Authentication with JWT - https://www.youtube.com/watch?v=7nafaH9SddU"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Redux Fundamentals",
+          "resource": "Redux Tutorial - Learn Redux from Scratch - https://www.youtube.com/watch?v=CVpUuw9XSjY"
+        },
+        {
+          "topic": "Database Design",
+          "resource": "Database Design Tutorial - https://www.youtube.com/watch?v=ztHopE5Wnpc"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Express Middleware",
+          "resource": "Express Middleware Tutorial - https://www.youtube.com/watch?v=9HOem0amlyg"
+        },
+        {
+          "topic": "Responsive Web Design",
+          "resource": "Responsive Web Design Fundamentals - https://www.youtube.com/watch?v=8OljwYbDf4Q"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "GraphQL Basics",
+          "resource": "GraphQL Tutorial for Beginners - https://www.youtube.com/watch?v=ZQL7tL2S0oQ"
+        },
+        {
+          "topic": "Unit Testing with Jest",
+          "resource": "Jest Testing Tutorial - https://www.youtube.com/watch?v=7r4xVDI2vho"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "WebSockets",
+          "resource": "WebSockets Tutorial - https://www.youtube.com/watch?v=2G_mWfG0DZE"
+        },
+        {
+          "topic": "Docker Basics",
+          "resource": "Docker Tutorial for Beginners - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "CI/CD Pipeline",
+          "resource": "CI/CD Pipeline Tutorial - https://www.youtube.com/watch?v=U5LXKvVJ4QA"
+        },
+        {
+          "topic": "Deployment Strategies",
+          "resource": "Deployment Strategies - https://www.digitalocean.com/community/tutorials/5-common-server-deployment-strategies-explained"
+        }
+      ]
+    },
+    "week11": {
+      "day1": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "REST API concepts and examples - https://www.youtube.com/watch?v=7YcW25PHnAA"
+        },
+        {
+          "topic": "Express.js Middleware",
+          "resource": "Understanding Express Middleware - https://developer.okta.com/blog/2018/09/13/express-middleware"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Authentication and Authorization",
+          "resource": "Introduction to Authentication and Authorization - https://www.youtube.com/watch?v=SLc3cTlypwM"
+        },
+        {
+          "topic": "JWT Tokens",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Database Relationships",
+          "resource": "Understanding Database Relationships - https://www.youtube.com/watch?v=kNL3Pc6QKqM"
+        },
+        {
+          "topic": "ORMs (Object-Relational Mapping)",
+          "resource": "What is an ORM? - https://stackify.com/what-is-orm-object-relational-mapping/"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Frontend Frameworks (React, Angular, Vue)",
+          "resource": "React vs Angular vs Vue - https://www.youtube.com/watch?v=F3WMP7v6iMI"
+        },
+        {
+          "topic": "State Management in React",
+          "resource": "Understanding React State Management - https://www.smashingmagazine.com/2019/01/react-state-management-redux-mobx-context/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "WebSockets",
+          "resource": "WebSocket Tutorial - https://www.youtube.com/watch?v=2G_mWfG0DZE"
+        },
+        {
+          "topic": "Real-time Applications",
+          "resource": "Building Real-time Apps with WebSockets - https://www.pubnub.com/blog/what-is-a-real-time-web-app/"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Deployment Strategies",
+          "resource": "Deployment Strategies Explained - https://www.youtube.com/watch?v=lW9eUwAgm50"
+        },
+        {
+          "topic": "Containerization (Docker)",
+          "resource": "Docker Tutorial for Beginners - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        }
+      ]
+    },
+    "week12": {
+      "day1": [
+        {
+          "topic": "Advanced React Hooks",
+          "resource": "Mastering React Hooks - https://www.youtube.com/watch?v=TNhaISOUy6Q"
+        },
+        {
+          "topic": "Server-side Rendering with React",
+          "resource": "Server-Side Rendering with React.js - https://www.youtube.com/watch?v=JupcR0i6pYQ"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "REST API concepts and examples - https://www.youtube.com/watch?v=7YcW25PHnAA"
+        },
+        {
+          "topic": "Express.js Middleware",
+          "resource": "Express.js Middleware Tutorial - https://www.youtube.com/watch?v=o3nJNYfP6yA"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "MongoDB Aggregation",
+          "resource": "MongoDB Aggregation Framework - https://www.youtube.com/watch?v=4Ex4RnWmE7M"
+        },
+        {
+          "topic": "Authentication and Authorization",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "GraphQL Basics",
+          "resource": "GraphQL Tutorial for Beginners - https://www.youtube.com/watch?v=ZQL7tL2S0oQ"
+        },
+        {
+          "topic": "Optimizing Performance in React",
+          "resource": "React Performance Optimization - https://www.youtube.com/watch?v=Z5iWr6Srsj8"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Docker Fundamentals",
+          "resource": "Docker Tutorial for Beginners - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        },
+        {
+          "topic": "CI/CD Pipelines",
+          "resource": "CI/CD Pipeline Tutorial - https://www.youtube.com/watch?v=JagA-1H8UyY"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "AWS Basics",
+          "resource": "Introduction to AWS Services - https://www.youtube.com/watch?v=I1UQKEjwtpA"
+        },
+        {
+          "topic": "Scalability and Load Balancing",
+          "resource": "Load Balancing Explained - https://www.youtube.com/watch?v=1fY9kq0Eqhg"
+        }
+      ]
+    },
+    "week13": {
+      "day1": [
+        {
+          "topic": "Introduction to React Hooks",
+          "resource": "React Hooks Crash Course - https://www.youtube.com/watch?v=-MlNBTSg_Ww"
+        },
+        {
+          "topic": "State Management in React",
+          "resource": "React State Management Tutorial - https://www.taniarascia.com/global-state-with-react-context-and-usecontext/"
+        },
+        {
+          "topic": "Building Responsive Web Design",
+          "resource": "Responsive Web Design Tutorial - https://www.freecodecamp.org/news/how-to-build-a-responsive-website-from-start-to-finish/"
+        },
+        {
+          "topic": "Introduction to Redux",
+          "resource": "Redux Tutorial - https://www.youtube.com/watch?v=poQXNp9ItL4"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "React Router",
+          "resource": "React Router Tutorial - https://www.youtube.com/watch?v=Law7wfdg_ls"
+        },
+        {
+          "topic": "RESTful APIs",
+          "resource": "REST API Tutorial - https://www.youtube.com/watch?v=SLwpqD8n3d0"
+        },
+        {
+          "topic": "Authentication and Authorization in Full Stack Development",
+          "resource": "Authentication and Authorization Tutorial - https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2"
+        },
+        {
+          "topic": "Error Handling in Node.js",
+          "resource": "Error Handling in Node.js - https://www.digitalocean.com/community/tutorials/nodejs-error-handling"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "GraphQL Basics",
+          "resource": "GraphQL Crash Course - https://www.youtube.com/watch?v=ZQL7tL2S0oQ"
+        },
+        {
+          "topic": "Database Design and Modeling",
+          "resource": "Database Design Tutorial - https://www.youtube.com/watch?v=ztHopE5Wnpc"
+        },
+        {
+          "topic": "Web Security Best Practices",
+          "resource": "Web Security Best Practices Guide - https://www.keycdn.com/blog/web-security-best-practices"
+        },
+        {
+          "topic": "Deployment Strategies for Full Stack Applications",
+          "resource": "Deployment Strategies Guide - https://www.digitalocean.com/community/tutorials/5-ways-to-deploy-your-node-js-app-to-the-cloud"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Performance Optimization in React",
+          "resource": "React Performance Optimization Tips - https://www.freecodecamp.org/news/how-to-optimize-react-applications/"
+        },
+        {
+          "topic": "Websockets and Real-Time Communication",
+          "resource": "Websockets Tutorial - https://www.youtube.com/watch?v=2G_mWfG0DZE"
+        },
+        {
+          "topic": "Scaling Full Stack Applications",
+          "resource": "Scaling Web Applications Guide - https://www.smashingmagazine.com/2019/02/scaling-web-service-node-js/"
+        },
+        {
+          "topic": "Code Version Control with Git",
+          "resource": "Git Handbook - https://guides.github.com/introduction/git-handbook/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Testing React Components",
+          "resource": "React Testing Tutorial - https://www.youtube.com/watch?v=3e1GHCA3GP0"
+        },
+        {
+          "topic": "Containerization with Docker",
+          "resource": "Docker Tutorial - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        },
+        {
+          "topic": "Continuous Integration and Deployment (CI/CD)",
+          "resource": "CI/CD Pipeline Tutorial - https://www.youtube.com/watch?v=QV9bRiDIjYw"
+        },
+        {
+          "topic": "Web Accessibility Best Practices",
+          "resource": "Web Accessibility Guide - https://web.dev/accessible/"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Serverless Architecture with AWS Lambda",
+          "resource": "AWS Lambda Tutorial - https://www.youtube.com/watch?v=1KQ6L3q5FgU"
+        },
+        {
+          "topic": "Microservices Architecture",
+          "resource": "Microservices Architecture Guide - https://microservices.io/"
+        },
+        {
+          "topic": "Optimizing Database Queries",
+          "resource": "Database Query Optimization Guide - https://use-the-index-luke.com/"
+        },
+        {
+          "topic": "Building a Portfolio Website",
+          "resource": "Portfolio Website Tutorial - https://www.youtube.com/watch?v=5bMdjkfvONE"
+        }
+      ]
+    },
+    "week14": {
+      "day1": [
+        {
+          "topic": "Using React Context",
+          "resource": "React Context API Tutorial - https://www.youtube.com/watch?v=XLJN4JfniH4"
+        },
+        {
+          "topic": "Node.js Authentication",
+          "resource": "Complete Node.js Authentication System - https://www.youtube.com/watch?v=2jqok-WgelI"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Redux Fundamentals",
+          "resource": "Redux Crash Course - https://www.youtube.com/watch?v=poQXNp9ItL4"
+        },
+        {
+          "topic": "RESTful APIs",
+          "resource": "REST API concepts and examples - https://www.youtube.com/watch?v=7YcW25PHnAA"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "GraphQL Basics",
+          "resource": "GraphQL Tutorial for Beginners - https://www.youtube.com/watch?v=ZQL7tL2S0oQ"
+        },
+        {
+          "topic": "Docker Fundamentals",
+          "resource": "Docker Tutorial for Beginners - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Unit Testing with Jest",
+          "resource": "Jest Crash Course - https://www.youtube.com/watch?v=7r4xVDI2vho"
+        },
+        {
+          "topic": "CI/CD Pipelines",
+          "resource": "CI/CD Pipeline Tutorial - https://www.youtube.com/watch?v=U3RkDLtSs2U"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "WebSockets",
+          "resource": "WebSocket Tutorial - https://www.youtube.com/watch?v=ZzZeteJGncY"
+        },
+        {
+          "topic": "AWS Basics",
+          "resource": "AWS Basics for Beginners - https://www.youtube.com/watch?v=ihq61u9zHsA"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Performance Optimization",
+          "resource": "Web Performance Optimization - https://www.youtube.com/watch?v=3RXxh0k3fKc"
+        },
+        {
+          "topic": "Security Best Practices",
+          "resource": "Web Application Security Best Practices - https://www.youtube.com/watch?v=Ug3FyCf7fQs"
+        }
+      ]
+    },
+    "week15": {
+      "day1": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "What is REST? - https://www.youtube.com/watch?v=Q-BpqyOT3a8"
+        },
+        {
+          "topic": "Authentication and Authorization",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Database Design",
+          "resource": "Database Design Tutorial - https://www.youtube.com/watch?v=ztHopE5Wnpc"
+        },
+        {
+          "topic": "ORMs and Sequelize",
+          "resource": "Sequelize ORM Tutorial - https://www.youtube.com/watch?v=qsDvJrGMSUY"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "React Components",
+          "resource": "Understanding React Components - https://www.youtube.com/watch?v=I2C7zY7Fm7w"
+        },
+        {
+          "topic": "State Management with Redux",
+          "resource": "Redux Crash Course - https://www.youtube.com/watch?v=poQXNp9ItL4"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Node.js Streams",
+          "resource": "Node.js Streams Tutorial - https://www.youtube.com/watch?v=l2dYUkUuBd0"
+        },
+        {
+          "topic": "WebSockets",
+          "resource": "WebSockets Tutorial - https://www.youtube.com/watch?v=ZqXixCrXU9o"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "CI/CD Pipeline",
+          "resource": "CI/CD Pipeline Tutorial - https://www.youtube.com/watch?v=3t8qf0JnW5s"
+        },
+        {
+          "topic": "Containerization with Docker",
+          "resource": "Docker Tutorial for Beginners - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Performance Optimization",
+          "resource": "Web Performance Optimization Tips - https://www.youtube.com/watch?v=3I7E9KjOHDY"
+        },
+        {
+          "topic": "Security Best Practices",
+          "resource": "Web Application Security Best Practices - https://www.youtube.com/watch?v=ouR1WfH5TcM"
+        }
+      ]
+    },
+    "week16": {
+      "day1": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "REST API concepts and examples - https://www.youtube.com/watch?v=7YcW25PHnAA"
+        },
+        {
+          "topic": "JWT Authentication",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "React Hooks",
+          "resource": "React Hooks Crash Course - https://www.youtube.com/watch?v=-MlNBTSg_Ww"
+        },
+        {
+          "topic": "Redux State Management",
+          "resource": "Redux Tutorial - https://www.youtube.com/watch?v=CVpUuw9XSjY"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Authentication with Passport.js",
+          "resource": "Passport.js Authentication Tutorial - https://www.youtube.com/watch?v=6FOq4cUdH8k"
+        },
+        {
+          "topic": "Database Design",
+          "resource": "Database Design Tutorial - https://www.youtube.com/watch?v=ztHopE5Wnpc"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Unit Testing with Jest",
+          "resource": "Jest Tutorial for Beginners - https://www.youtube.com/watch?v=7r4xVDI2vho"
+        },
+        {
+          "topic": "CI/CD Pipelines",
+          "resource": "CI/CD Pipelines Explained - https://www.youtube.com/watch?v=wqvK68r1w7w"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Docker Containers",
+          "resource": "Docker Tutorial for Beginners - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        },
+        {
+          "topic": "Microservices Architecture",
+          "resource": "Microservices Architecture - https://www.youtube.com/watch?v=I589R9g31t8"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Cloud Deployment",
+          "resource": "Cloud Deployment Tutorial - https://www.youtube.com/watch?v=zxqjeyKP2Tk"
+        },
+        {
+          "topic": "Scaling Applications",
+          "resource": "Scaling Applications with Kubernetes - https://www.youtube.com/watch?v=DCgEHZG0fH4"
+        }
+      ]
+    },
+    "week17": {
+      "day1": [
+        {
+          "topic": "Introduction to React Hooks",
+          "resource": "React Hooks Crash Course - https://youtu.be/eX_L39UvZes"
+        },
+        {
+          "topic": "RESTful API Design",
+          "resource": "REST API concepts and examples - https://youtu.be/7YcW25PHnAA"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Redux Fundamentals",
+          "resource": "Redux Tutorial - Learn Redux from Scratch - https://youtu.be/OSSpVLpuVWA"
+        },
+        {
+          "topic": "Database Normalization",
+          "resource": "Database Normalization Explained - https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Asynchronous JavaScript",
+          "resource": "Asynchronous JavaScript - From the basics to the event loop - https://youtu.be/_8gHHBlbziw"
+        },
+        {
+          "topic": "Authentication and Authorization",
+          "resource": "Authentication and Authorization - https://www.pluralsight.com/guides/token-based-authentication-with-angularjs"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "React Context API",
+          "resource": "React Context API Tutorial - https://youtu.be/Xq3iG3xUzCw"
+        },
+        {
+          "topic": "JWT Token Usage",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Node.js Middleware",
+          "resource": "Understanding Middleware in Node.js - https://www.digitalocean.com/community/tutorials/nodejs-middleware"
+        },
+        {
+          "topic": "Docker Basics",
+          "resource": "Docker Tutorial for Beginners - https://youtu.be/fqMOX6JJhGo"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "React Performance Optimization",
+          "resource": "React Performance Optimization - https://dev.to/saranshk/react-performance-optimization-a-detailed-guide-2nnj"
+        },
+        {
+          "topic": "Security Best Practices",
+          "resource": "Web Security Best Practices - https://www.keycdn.com/blog/web-application-security-best-practices"
+        }
+      ]
+    },
+    "week18": {
+      "day1": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "What is REST - A Simple Explanation for Beginners - https://www.youtube.com/watch?v=Q-BpqyOT3a8"
+        },
+        {
+          "topic": "Express.js Middleware",
+          "resource": "Understanding Express.js Middleware - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Request_response"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Authentication and Authorization",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        },
+        {
+          "topic": "Database Relationships",
+          "resource": "Understanding Database Relationships - https://www.w3schools.com/sql/sql_foreignkey.asp"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "React Components",
+          "resource": "React Components Tutorial - https://www.digitalocean.com/community/tutorial_series/getting-started-with-react"
+        },
+        {
+          "topic": "State Management in React",
+          "resource": "Managing State in React - https://reactjs.org/docs/state-and-lifecycle.html"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Node.js File System",
+          "resource": "Working with Files in Node.js - https://www.tutorialspoint.com/nodejs/nodejs_file_system.htm"
+        },
+        {
+          "topic": "Error Handling in Express.js",
+          "resource": "Error Handling in Express.js - https://expressjs.com/en/guide/error-handling.html"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Frontend Routing with React Router",
+          "resource": "React Router DOM Tutorial - https://www.freecodecamp.org/news/a-complete-guide-to-routing-in-react-using-react-router-dom/"
+        },
+        {
+          "topic": "CRUD Operations in MongoDB",
+          "resource": "MongoDB CRUD Operations Tutorial - https://www.mongodb.com/blog/post/crud-explained"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Deployment with Heroku",
+          "resource": "Heroku Deployment Tutorial - https://devcenter.heroku.com/articles/getting-started-with-nodejs"
+        },
+        {
+          "topic": "Version Control with Git",
+          "resource": "Git Handbook - https://guides.github.com/introduction/git-handbook/"
+        }
+      ]
+    },
+    "week19": {
+      "day1": [
+        {
+          "topic": "React Router",
+          "resource": "React Router Tutorial - https://www.youtube.com/watch?v=Law7wfdg_ls"
+        },
+        {
+          "topic": "Redux Middleware",
+          "resource": "Understanding Redux Middleware - https://medium.com/@jakesurfs/understanding-redux-middleware-8ac4e2a9e6f3"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Node.js Authentication",
+          "resource": "Node.js Authentication Tutorial - https://www.youtube.com/watch?v=6FOq4cUdH8k"
+        },
+        {
+          "topic": "JWT Tokens",
+          "resource": "Understanding JWT Tokens - https://jwt.io/introduction/"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "RESTful API Design - https://restfulapi.net/"
+        },
+        {
+          "topic": "Express Middleware",
+          "resource": "Express Middleware Tutorial - https://expressjs.com/en/guide/using-middleware.html"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Database Relationships",
+          "resource": "Understanding Database Relationships - https://www.youtube.com/watch?v=JlGsn_zQvCE"
+        },
+        {
+          "topic": "MongoDB Aggregation",
+          "resource": "MongoDB Aggregation Pipeline - https://docs.mongodb.com/manual/aggregation/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "React Native Basics",
+          "resource": "React Native Crash Course - https://www.youtube.com/watch?v=Hf4MJH0jDb4"
+        },
+        {
+          "topic": "Mobile App Development",
+          "resource": "Introduction to Mobile App Development - https://www.codecademy.com/learn/paths/build-mobile-apps-with-react-native"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "GraphQL Fundamentals",
+          "resource": "GraphQL Fundamentals - https://www.youtube.com/watch?v=lAJWHHUz8_8"
+        },
+        {
+          "topic": "Apollo Client",
+          "resource": "Getting Started with Apollo Client - https://www.apollographql.com/docs/react/get-started/"
+        }
+      ]
+    },
+    "week20": {
+      "day1": [
+        {
+          "topic": "React Hooks",
+          "resource": "React Hooks Crash Course - https://www.youtube.com/watch?v=-MlNBTSg_Ww"
+        },
+        {
+          "topic": "Node.js RESTful APIs",
+          "resource": "Building RESTful APIs with Node.js and Express - https://www.youtube.com/watch?v=pKd0Rpw7O48"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Authentication in Express.js",
+          "resource": "Authentication in Node.js with Passport.js - https://www.youtube.com/watch?v=6FOq4cUdH8k"
+        },
+        {
+          "topic": "React Router",
+          "resource": "React Router Tutorial - https://www.youtube.com/watch?v=Law7wfdg_ls"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "MongoDB Basics",
+          "resource": "MongoDB Tutorial for Beginners - https://www.youtube.com/watch?v=-56x56UppqQ"
+        },
+        {
+          "topic": "Redux Fundamentals",
+          "resource": "Redux Crash Course - https://www.youtube.com/watch?v=CVpUuw9XSjY"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Express Middleware",
+          "resource": "Express Middleware Tutorial - https://www.youtube.com/watch?v=9HOem0amlyg"
+        },
+        {
+          "topic": "React State Management",
+          "resource": "React State Management with Context API - https://www.youtube.com/watch?v=XLJN4JfniH4"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "JWT Authentication",
+          "resource": "JWT Authentication in Node.js - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        },
+        {
+          "topic": "React Performance Optimization",
+          "resource": "Optimizing React Performance - https://www.youtube.com/watch?v=-MlNBTSg_Ww"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Database Relationships",
+          "resource": "Understanding Database Relationships - https://www.youtube.com/watch?v=i7c9e08kCgI"
+        },
+        {
+          "topic": "React Testing",
+          "resource": "Testing React Components with Jest - https://www.youtube.com/watch?v=4kNfeI37xu4"
+        }
+      ]
+    },
+    "week21": {
+      "day1": [
+        {
+          "topic": "Introduction to React Hooks",
+          "resource": "React Hooks Crash Course - https://www.youtube.com/watch?v=-MlNBTSg_Ww"
+        },
+        {
+          "topic": "Backend Development with Node.js",
+          "resource": "Node.js Tutorial for Beginners - https://www.youtube.com/watch?v=TlB_eWDSMt4"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "State Management in React",
+          "resource": "React State Management using Context API and useContext - https://www.youtube.com/watch?v=XLJN4JfniH4"
+        },
+        {
+          "topic": "RESTful APIs",
+          "resource": "REST API concepts and examples - https://www.youtube.com/watch?v=7YcW25PHnAA"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "React Router",
+          "resource": "React Router Tutorial - https://www.youtube.com/watch?v=Law7wfdg_ls"
+        },
+        {
+          "topic": "Database Design Basics",
+          "resource": "Database Design Tutorial - https://www.youtube.com/watch?v=ztHopE5Wnpc"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Authentication in Full-Stack Applications",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        },
+        {
+          "topic": "SQL vs. NoSQL Databases",
+          "resource": "SQL vs. NoSQL Databases - https://www.youtube.com/watch?v=ZS_kXvOeQ5Y"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Working with Express.js",
+          "resource": "Express.js Tutorial - https://www.youtube.com/watch?v=L72fhGm1tfE"
+        },
+        {
+          "topic": "React Best Practices",
+          "resource": "React Best Practices - https://www.youtube.com/watch?v=Ujm6V4bC2u4"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Deployment Strategies",
+          "resource": "Deployment Strategies Explained - https://www.youtube.com/watch?v=DglkhGzVwoA"
+        },
+        {
+          "topic": "Code Optimization Techniques",
+          "resource": "Code Optimization Techniques - https://www.youtube.com/watch?v=65-RbBwZQdU"
+        }
+      ]
+    },
+    "week22": {
+      "day1": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "Representational State Transfer (REST) - https://www.youtube.com/watch?v=Q-BpqyOT3a8"
+        },
+        {
+          "topic": "Node.js",
+          "resource": "What is Node.js? - https://www.youtube.com/watch?v=TlB_eWDSMt4"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Express.js",
+          "resource": "Express.js Crash Course - https://www.youtube.com/watch?v=L72fhGm1tfE"
+        },
+        {
+          "topic": "Database Design",
+          "resource": "Introduction to Database Design - https://www.youtube.com/watch?v=ztHopE5Wnpc"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Authentication",
+          "resource": "Token-Based Authentication - https://www.youtube.com/watch?v=6y7WfLj8QcE"
+        },
+        {
+          "topic": "SQL vs. NoSQL",
+          "resource": "SQL vs. NoSQL Databases - https://www.youtube.com/watch?v=ZS_kXvOeQ5Y"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "React Components",
+          "resource": "React Components Tutorial - https://www.youtube.com/watch?v=H4qKbGZD5o0"
+        },
+        {
+          "topic": "State Management",
+          "resource": "React State Management with Redux - https://www.youtube.com/watch?v=CVpUuw9XSjY"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Frontend Routing",
+          "resource": "React Router Tutorial - https://www.youtube.com/watch?v=Law7wfdg_ls"
+        },
+        {
+          "topic": "Responsive Design",
+          "resource": "Introduction to Responsive Web Design - https://www.youtube.com/watch?v=6OvwVmZBpNU"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Deployment",
+          "resource": "Deploying Node.js Applications - https://www.youtube.com/watch?v=bG4-T0mNz7M"
+        },
+        {
+          "topic": "Testing",
+          "resource": "Introduction to Unit Testing - https://www.youtube.com/watch?v=Eu35xM76kKY"
+        }
+      ]
+    },
+    "week23": {
+      "day1": [
+        {
+          "topic": "RESTful API Design",
+          "resource": "RESTful API Design - Best Practices - https://www.youtube.com/watch?v=lsMZ6q3u3Xk"
+        },
+        {
+          "topic": "JWT Authentication",
+          "resource": "JWT Authentication Tutorial - Node.js - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "React Hooks",
+          "resource": "React Hooks Crash Course - https://www.youtube.com/watch?v=-MlNBTSg_Ww"
+        },
+        {
+          "topic": "Redux Fundamentals",
+          "resource": "Redux Fundamentals - https://www.youtube.com/watch?v=poQXNp9ItL4"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Database Normalization",
+          "resource": "Database Normalization Explained - https://www.youtube.com/watch?v=UrYLYV7WSHM"
+        },
+        {
+          "topic": "SQL Joins",
+          "resource": "Understanding SQL Joins - https://www.youtube.com/watch?v=9yeOJ6vZvJk"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Authentication Strategies",
+          "resource": "Authentication Strategies for Web Applications - https://www.youtube.com/watch?v=SLKfZ9t5c4w"
+        },
+        {
+          "topic": "Error Handling in Node.js",
+          "resource": "Error Handling in Node.js - https://www.youtube.com/watch?v=9TSBKO59u0Y"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "React Performance Optimization",
+          "resource": "React Performance Optimization - https://www.youtube.com/watch?v=F2JCjVSZlG0"
+        },
+        {
+          "topic": "GraphQL Basics",
+          "resource": "GraphQL Basics - https://www.youtube.com/watch?v=ZQL7tL2S0oQ"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Docker for Full-Stack Developers",
+          "resource": "Docker for Full-Stack Developers - https://www.youtube.com/watch?v=fqMOX6JJhGo"
+        },
+        {
+          "topic": "CI/CD Pipeline Setup",
+          "resource": "Setting Up a CI/CD Pipeline - https://www.youtube.com/watch?v=qpfU1exnm7E"
+        }
+      ]
+    },
+    "week24": {
+      "day1": [
+        {
+          "topic": "Authentication and Authorization",
+          "resource": "Understanding Authentication and Authorization - https://www.youtube.com/watch?v=AUg7mN3zVRw"
+        },
+        {
+          "topic": "JSON Web Tokens (JWT)",
+          "resource": "JWT Authentication Tutorial - https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "RESTful APIs",
+          "resource": "REST API concepts and examples - https://www.youtube.com/watch?v=7YcW25PHnAA"
+        },
+        {
+          "topic": "HTTP Methods",
+          "resource": "HTTP Methods Explained - https://www.restapitutorial.com/lessons/httpmethods.html"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Database Design",
+          "resource": "Intro to Database Design - https://www.youtube.com/watch?v=ztHopE5Wnpc"
+        },
+        {
+          "topic": "Relational vs. Non-Relational Databases",
+          "resource": "Relational vs Non-Relational Databases - https://www.mongodb.com/nosql-explained"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Frontend Frameworks (e.g., React, Angular, Vue)",
+          "resource": "React Tutorial for Beginners - https://www.youtube.com/watch?v=Ke90Tje7VS0"
+        },
+        {
+          "topic": "State Management in React",
+          "resource": "React State Management with Redux - https://www.youtube.com/watch?v=CVpUuw9XSjY"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Backend Frameworks (e.g., Node.js, Django, Flask)",
+          "resource": "Node.js Tutorial for Beginners - https://www.youtube.com/watch?v=rltBp3jyfIg"
+        },
+        {
+          "topic": "Express.js",
+          "resource": "Express.js Crash Course - https://www.youtube.com/watch?v=L72fhGm1tfE"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Deployment and Hosting",
+          "resource": "Deploying a Full-Stack App to Heroku - https://www.youtube.com/watch?v=P86N9FqNqso"
+        },
+        {
+          "topic": "CI/CD Pipelines",
+          "resource": "CI/CD Pipeline Explained - https://www.redhat.com/en/topics/devops/what-is-ci-cd"
+        }
+      ]
+    }
+  }
+}

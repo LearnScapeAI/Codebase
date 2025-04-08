@@ -1,0 +1,648 @@
+{
+  "roadmap": {
+    "week1": {
+      "day1": [
+        {
+          "topic": "Introduction to Data Science",
+          "resource": "What is Data Science? | Data Science for Beginners - https://www.youtube.com/watch?v=ua-CiDNNj30"
+        },
+        {
+          "topic": "Overview of Python for Data Science",
+          "resource": "Python for Data Science | Python Basics for Data Science - https://www.datacamp.com/community/tutorials/tutorial-python-basics-data-science"
+        },
+        {
+          "topic": "Setting up Python environment for data analysis",
+          "resource": "Setting up Python Environment for Machine Learning | Anaconda Installation - https://www.anaconda.com/products/individual"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Data Exploration and Cleaning",
+          "resource": "Data Exploration and Cleaning | Data Cleaning in Python - https://realpython.com/python-data-cleaning-numpy-pandas/"
+        },
+        {
+          "topic": "Pandas for data manipulation",
+          "resource": "Pandas Tutorial | Pandas for Data Analysis - https://www.youtube.com/watch?v=vmEHCJofslg"
+        },
+        {
+          "topic": "Data visualization with Matplotlib",
+          "resource": "Data Visualization with Matplotlib | Matplotlib Tutorial - https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Statistical analysis in data science",
+          "resource": "Statistical Analysis in Data Science | Statistics for Data Science - https://towardsdatascience.com/statistics-for-data-science-a-beginners-guide-858c7d7eb27f"
+        },
+        {
+          "topic": "Descriptive statistics",
+          "resource": "Descriptive Statistics | Introduction to Descriptive Statistics - https://www.youtube.com/watch?v=2V1z8vV3XqE"
+        },
+        {
+          "topic": "Inferential statistics",
+          "resource": "Inferential Statistics | Inferential Statistics Explained - https://www.youtube.com/watch?v=22QR_CQ6RyQ"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Introduction to Machine Learning",
+          "resource": "What is Machine Learning? | Machine Learning Explained - https://www.youtube.com/watch?v=ukzFI9rgwfU"
+        },
+        {
+          "topic": "Types of Machine Learning algorithms",
+          "resource": "Types of Machine Learning Algorithms | Machine Learning Basics - https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/"
+        },
+        {
+          "topic": "Supervised vs Unsupervised Learning",
+          "resource": "Supervised vs Unsupervised Learning | Types of Machine Learning - https://www.educba.com/supervised-vs-unsupervised-learning/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Linear Regression",
+          "resource": "Linear Regression Explained | Linear Regression in Python - https://www.youtube.com/watch?v=Q81RR3yKn30"
+        },
+        {
+          "topic": "Model evaluation metrics",
+          "resource": "Model Evaluation Metrics | Evaluation Metrics for Machine Learning - https://machinelearningmastery.com/metrics-evaluate-machine-learning-algorithms-python/"
+        },
+        {
+          "topic": "Implementing Linear Regression in Python",
+          "resource": "Linear Regression in Python | Implementing Linear Regression - https://realpython.com/linear-regression-in-python/"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Logistic Regression",
+          "resource": "Logistic Regression Explained | Logistic Regression in Python - https://www.youtube.com/watch?v=yIYKR4sgzI8"
+        },
+        {
+          "topic": "Model evaluation techniques",
+          "resource": "Model Evaluation Techniques | Evaluation Techniques in Machine Learning - https://towardsdatascience.com/common-model-evaluation-techniques-in-machine-learning-2f9eb6eb9d0a"
+        },
+        {
+          "topic": "Implementing Logistic Regression in Python",
+          "resource": "Logistic Regression in Python | Implementing Logistic Regression - https://realpython.com/logistic-regression-python/"
+        }
+      ]
+    },
+    "week2": {
+      "day1": [
+        {
+          "topic": "Decision Trees",
+          "resource": "Decision Trees in Machine Learning - https://www.youtube.com/watch?v=eKD5gxPPeY0"
+        },
+        {
+          "topic": "Random Forest",
+          "resource": "Random Forest Algorithm - https://towardsdatascience.com/random-forest-algorithm-with-python-and-scikit-learn-9a59b6b2f5f6"
+        },
+        {
+          "topic": "Implementing Decision Trees and Random Forest in Python",
+          "resource": "Decision Trees and Random Forest in Python - https://www.datacamp.com/community/tutorials/decision-trees-Random-Forests"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Feature Engineering",
+          "resource": "A Comprehensive Guide to Feature Engineering - https://towardsdatascience.com/a-comprehensive-guide-to-feature-engineering-20a7ff503b6d"
+        },
+        {
+          "topic": "Handling missing data",
+          "resource": "Dealing with Missing Data in Machine Learning - https://towardsdatascience.com/how-to-deal-with-missing-data-in-machine-learning-5a8d293f9f71"
+        },
+        {
+          "topic": "Feature scaling and normalization",
+          "resource": "Feature Scaling and Normalization - https://www.analyticsvidhya.com/blog/2020/04/feature-scaling-machine-learning-normalization-standardization/"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Model selection and tuning",
+          "resource": "Model Selection and Tuning in Machine Learning - https://towardsdatascience.com/model-selection-and-tuning-in-machine-learning-7ab7f4a2e536"
+        },
+        {
+          "topic": "Cross-validation",
+          "resource": "A Gentle Introduction to Cross-Validation - https://machinelearningmastery.com/cross-validation-for-imbalanced-classification/"
+        },
+        {
+          "topic": "Hyperparameter tuning",
+          "resource": "Hyperparameter Tuning in Machine Learning - https://towardsdatascience.com/hyperparameter-tuning-c5619e7e6624"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Clustering algorithms",
+          "resource": "A Comprehensive Guide to Clustering Algorithms - https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68"
+        },
+        {
+          "topic": "K-Means clustering",
+          "resource": "K-Means Clustering in Python - https://realpython.com/k-means-clustering-python/"
+        },
+        {
+          "topic": "Hierarchical clustering",
+          "resource": "Hierarchical Clustering - https://www.displayr.com/what-is-hierarchical-clustering/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Dimensionality reduction techniques",
+          "resource": "Introduction to Dimensionality Reduction - https://builtin.com/data-science/dimensionality-reduction-machine-learning"
+        },
+        {
+          "topic": "PCA (Principal Component Analysis)",
+          "resource": "Principal Component Analysis Explained - https://builtin.com/data-science/step-step-explanation-principal-component-analysis"
+        },
+        {
+          "topic": "Implementing PCA in Python",
+          "resource": "PCA in Python - https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Natural Language Processing (NLP)",
+          "resource": "Introduction to Natural Language Processing - https://towardsdatascience.com/a-gentle-introduction-to-natural-language-processing-e716ed3c0863"
+        },
+        {
+          "topic": "Text preprocessing",
+          "resource": "Text Preprocessing Techniques in NLP - https://medium.com/@datamonsters/text-preprocessing-in-natural-language-processing-or-how-to-process-large-amounts-of-text-2f64721f9a3f"
+        },
+        {
+          "topic": "Sentiment analysis",
+          "resource": "Sentiment Analysis Tutorial - https://www.datacamp.com/community/tutorials/simplifying-sentiment-analysis-python"
+        }
+      ]
+    },
+    "week3": {
+      "day1": [
+        {
+          "topic": "Introduction to Deep Learning",
+          "resource": "Deep Learning Explained - https://www.youtube.com/watch?v=CS4cs9xVecg"
+        },
+        {
+          "topic": "Neural Networks basics",
+          "resource": "Neural Networks - How Do They Work? - https://towardsdatascience.com/how-do-neural-networks-work-50e8f2f8a5f0"
+        },
+        {
+          "topic": "Activation functions",
+          "resource": "Understanding Activation Functions in Neural Networks - https://missinglink.ai/guides/neural-network-concepts/activation-function-deep-neural-networks/"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Convolutional Neural Networks (CNN)",
+          "resource": "Convolutional Neural Networks (CNN) Explained - https://www.youtube.com/watch?v=YRhxdVk_sIs"
+        },
+        {
+          "topic": "Image classification",
+          "resource": "Image Classification using CNN - https://www.tensorflow.org/tutorials/images/classification"
+        },
+        {
+          "topic": "Implementing CNN in Python",
+          "resource": "Convolutional Neural Networks with Python - https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-from-scratch-for-mnist-handwritten-digit-classification/"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Recurrent Neural Networks (RNN)",
+          "resource": "Recurrent Neural Networks (RNN) - https://www.youtube.com/watch?v=BwmddtPFWtA"
+        },
+        {
+          "topic": "Sequence prediction",
+          "resource": "Sequence Prediction with RNN - https://towardsdatascience.com/sequence-prediction-using-recurrent-neural-network-rnn-de645c7c7e20"
+        },
+        {
+          "topic": "Implementing RNN in Python",
+          "resource": "Recurrent Neural Networks in Python - https://stackabuse.com/sentiment-analysis-using-python-and-nltk/"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Transfer Learning",
+          "resource": "Transfer Learning in Deep Learning - https://www.youtube.com/watch?v=DAIyfOqy7WA"
+        },
+        {
+          "topic": "Fine-tuning pre-trained models",
+          "resource": "Fine-Tuning Pretrained Models - https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html"
+        },
+        {
+          "topic": "Implementing Transfer Learning in Python",
+          "resource": "Transfer Learning in Python - https://www.tensorflow.org/tutorials/images/transfer_learning"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Time Series Analysis",
+          "resource": "Introduction to Time Series Analysis - https://www.youtube.com/watch?v=e8Yw4alG16Q"
+        },
+        {
+          "topic": "Time series forecasting",
+          "resource": "Time Series Forecasting - https://towardsdatascience.com/the-complete-guide-to-time-series-analysis-and-forecasting-70d476bfe775"
+        },
+        {
+          "topic": "Implementing Time Series Analysis in Python",
+          "resource": "Time Series Analysis in Python - https://www.datacamp.com/community/tutorials/time-series-analysis-tutorial"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Model deployment",
+          "resource": "Model Deployment Strategies - https://www.youtube.com/watch?v=3ARJZnR7QG4"
+        },
+        {
+          "topic": "Flask for building APIs",
+          "resource": "Building APIs with Flask - https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask"
+        },
+        {
+          "topic": "Deploying a data science model",
+          "resource": "Deploying a Data Science Model - https://towardsdatascience.com/deploying-a-machine-learning-model-as-a-web-application-using-flask-and-heroku-7544c2b712c6"
+        }
+      ]
+    },
+    "week4": {
+      "day1": [
+        {
+          "topic": "SQL for data analysis",
+          "resource": "SQL Tutorial for Beginners - Full Course - https://www.youtube.com/watch?v=HXV3zeQKqGY"
+        },
+        {
+          "topic": "Querying databases",
+          "resource": "Querying Databases with SQL - https://www.datacamp.com/community/tutorials/sql-query-database"
+        },
+        {
+          "topic": "Join operations",
+          "resource": "Understanding SQL Joins - https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Big Data technologies",
+          "resource": "Introduction to Big Data - https://www.youtube.com/watch?v=9I9DtQAogEg"
+        },
+        {
+          "topic": "Introduction to Hadoop and Spark",
+          "resource": "Apache Hadoop and Apache Spark explained - https://data-flair.training/blogs/apache-hadoop-and-apache-spark/"
+        },
+        {
+          "topic": "Handling big data with Python",
+          "resource": "Big Data with Python: Introduction to Dask - https://realpython.com/dask-python/"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Data Science ethics",
+          "resource": "Ethics in Data Science - https://towardsdatascience.com/data-science-ethics-1486b3e1bf43"
+        },
+        {
+          "topic": "Bias and fairness in models",
+          "resource": "Fairness and Bias in Machine Learning - https://developers.google.com/machine-learning/fairness-overview/"
+        },
+        {
+          "topic": "Privacy and security in data science",
+          "resource": "Privacy and Security in Data Science - https://www.cio.com/article/3012419/big-data/privacy-and-security-issues-in-data-science.html"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Capstone project kickoff",
+          "resource": "How to Start Your Capstone Project - https://www.youtube.com/watch?v=7h2lEZdsAIA"
+        },
+        {
+          "topic": "Choosing a project topic",
+          "resource": "Tips for Choosing a Capstone Project Topic - https://www.bestcustomwriting.com/blog/capstone-project-ideas"
+        },
+        {
+          "topic": "Setting project milestones",
+          "resource": "Setting Milestones for Your Data Science Project - https://www.dataquest.io/blog/data-science-project-milestones/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Capstone project work",
+          "resource": "Data Collection and Cleaning for Data Science Projects - https://towardsdatascience.com/data-collection-and-cleaning-for-data-science-projects-26d1b8d86418"
+        },
+        {
+          "topic": "Exploratory data analysis",
+          "resource": "Exploratory Data Analysis in Python - https://www.datacamp.com/community/tutorials/exploratory-data-analysis-python"
+        },
+        {
+          "topic": "Capstone project work",
+          "resource": "Data Cleaning Techniques for Your Data Science Project - https://www.springboard.com/blog/data-cleaning/"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Model building and evaluation",
+          "resource": "Model Evaluation Techniques - https://towardsdatascience.com/model-evaluation-techniques-for-classification-models-eac30092c38e"
+        },
+        {
+          "topic": "Finalizing project deliverables",
+          "resource": "How to Finalize Your Data Science Project - https://towardsdatascience.com/how-to-finalize-your-data-science-project-1c7c5dbfd5f6"
+        }
+      ]
+    },
+    "week5": {
+      "day1": [
+        {
+          "topic": "Model Optimization Techniques in Data Science",
+          "resource": "Model Optimization Techniques | How to Fine Tune Your Machine Learning Models - https://www.youtube.com/watch?v=mcnAYyCZwGE"
+        },
+        {
+          "topic": "Fine-tuning Your Capstone Project",
+          "resource": "Fine Tuning a Deep Learning Model - https://www.tensorflow.org/tutorials/images/transfer_learning"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Documenting Your Capstone Project",
+          "resource": "How to Document Your Data Science Projects - https://towardsdatascience.com/how-to-document-your-data-science-projects-6c7d1c0e5d5a"
+        },
+        {
+          "topic": "Creating Visualizations for Presentation",
+          "resource": "Data Visualization Best Practices - https://www.datacamp.com/community/tutorials/data-visualization-best-practices"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Finalizing Capstone Project Documentation",
+          "resource": "Data Science Project Documentation - https://towardsdatascience.com/how-to-document-your-data-science-projects-6c7d1c0e5d5a"
+        },
+        {
+          "topic": "Practicing Capstone Project Presentation",
+          "resource": "Presentation Tips for Data Scientists - https://towardsdatascience.com/presentation-tips-for-data-scientists-51b0b4c1f5f3"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Capstone Project Presentation Tips",
+          "resource": "How to Give a Data Science Talk - https://www.youtube.com/watch?v=3ZG3xw1p7O4"
+        },
+        {
+          "topic": "Answering Questions from Panel",
+          "resource": "Handling Questions During a Data Science Interview - https://www.springboard.com/blog/data-science/data-science-interview-questions/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Effective Job Search Strategies for Data Science Roles",
+          "resource": "Data Science Job Search Strategies - https://towardsdatascience.com/data-science-job-search-strategies-2e7b3f0a1f7f"
+        },
+        {
+          "topic": "Building a Data Science Resume",
+          "resource": "How to Build a Data Science Resume - https://towardsdatascience.com/how-to-build-a-data-science-resume-8aee6e23dca2"
+        },
+        {
+          "topic": "Networking in the Data Science Industry",
+          "resource": "Networking Strategies for Data Scientists - https://www.datacamp.com/community/blog/data-science-networking"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Mock Interview Preparation for Data Science Roles",
+          "resource": "Data Science Mock Interview Example - https://www.youtube.com/watch?v=us9qz3s9eUQ"
+        },
+        {
+          "topic": "Behavioral Interview Preparation for Data Science Roles",
+          "resource": "Behavioral Interview Questions for Data Science - https://www.springboard.com/blog/data-science/behavioral-interview-questions-data-science/"
+        },
+        {
+          "topic": "Technical Interview Practice for Data Science Roles",
+          "resource": "Technical Interview Preparation Guide - https://towardsdatascience.com/data-science-technical-interview-preparation-guide-4e00f9c3b3bd"
+        }
+      ]
+    },
+    "week6": {
+      "day1": [
+        {
+          "topic": "Week 6 Day 1 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 6 Day 1 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Week 6 Day 2 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 6 Day 2 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Week 6 Day 3 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 6 Day 3 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Week 6 Day 4 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 6 Day 4 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Week 6 Day 5 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 6 Day 5 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Week 6 Day 6 Topic 1",
+          "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/"
+        },
+        {
+          "topic": "Week 6 Day 6 Topic 2",
+          "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"
+        }
+      ]
+    },
+    "week7": {
+      "day1": [
+        {
+          "topic": "Data Science interview question review",
+          "resource": "Top 50 Data Science Interview Questions and Answers - https://www.youtube.com/watch?v=xxBPh6XX9CM"
+        },
+        {
+          "topic": "Common interview questions",
+          "resource": "Common Interview Questions and Answers - https://www.datasciencecentral.com/profiles/blogs/common-interview-questions-and-answers-for-data-scientists"
+        },
+        {
+          "topic": "Best practices for answering questions",
+          "resource": "5 Tips for Answering Data Science Interview Questions - https://towardsdatascience.com/5-tips-for-answering-data-science-interview-questions-93e57f3f1b70"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Behavioral interview tips",
+          "resource": "Data Science Behavioral Interview Questions and Tips - https://www.youtube.com/watch?v=7naYDd6BtK8"
+        },
+        {
+          "topic": "STAR method for behavioral questions",
+          "resource": "How to Use the STAR Method to Ace Your Next Behavioral Interview - https://www.themuse.com/advice/star-interview-method"
+        },
+        {
+          "topic": "Crafting impactful stories",
+          "resource": "Crafting Your Story: A Data Scientist's Guide - https://towardsdatascience.com/crafting-your-story-a-data-scientists-guide-6c66f4e9a0f8"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Technical interview preparation",
+          "resource": "How to Prepare for a Data Science Technical Interview - https://www.springboard.com/blog/data-science/data-science-technical-interview-questions/"
+        },
+        {
+          "topic": "Coding challenges review",
+          "resource": "Data Science Interview Coding Questions - https://www.youtube.com/watch?v=3oJyQeAwwQs"
+        },
+        {
+          "topic": "Data science project discussion",
+          "resource": "Discussing Data Science Projects in Interviews - https://towardsdatascience.com/discussing-data-science-projects-in-interviews-48b5b3e1813c"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Portfolio review",
+          "resource": "How to Build a Data Science Portfolio - https://www.youtube.com/watch?v=4xG2RRIbeME"
+        },
+        {
+          "topic": "Showcasing projects",
+          "resource": "Showcasing Data Science Projects on Your Portfolio - https://towardsdatascience.com/how-to-showcase-data-science-projects-in-a-data-science-portfolio-3c4b6f4aec8e"
+        },
+        {
+          "topic": "Highlighting achievements",
+          "resource": "Highlighting Achievements in Data Science Interviews - https://www.springboard.com/blog/data-science/successful-data-scientist/ "
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Company research",
+          "resource": "How to Research Companies for Data Science Job Interviews - https://www.youtube.com/watch?v=JAwBqVjZn0U"
+        },
+        {
+          "topic": "Understanding potential employers",
+          "resource": "Understanding Company Culture in Data Science - https://towardsdatascience.com/understanding-company-culture-in-data-science-6a4f6e3c4f9"
+        },
+        {
+          "topic": "Tailoring responses to company culture",
+          "resource": "Tailoring Your Data Science Interview Responses to Company Culture - https://www.cio.com/article/3592740/how-to-tailor-data-science-interview-responses-to-company-culture.html"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Final mock interviews",
+          "resource": "Data Science Mock Interview Questions - https://www.youtube.com/watch?v=2zrF0G8uy5I"
+        },
+        {
+          "topic": "Fine-tuning responses",
+          "resource": "Fine-Tuning Your Data Science Interview Responses - https://towardsdatascience.com/fine-tuning-your-data-science-interview-responses-1f9b3e0e2289"
+        },
+        {
+          "topic": "Building confidence",
+          "resource": "Building Confidence for Data Science Interviews - https://www.youtube.com/watch?v=7Oz4EoYDwQs"
+        }
+      ]
+    },
+    "week8": {
+      "day1": [
+        {
+          "topic": "Interview Day Preparation",
+          "resource": "How to Prepare for a Data Science Interview - https://www.youtube.com/watch?v=jnCzuPCq1M0"
+        },
+        {
+          "topic": "Checklist for Interview Day",
+          "resource": "Data Science Interview Preparation Checklist - https://towardsdatascience.com/data-science-interview-preparation-checklist-1f8b0eb5d247"
+        },
+        {
+          "topic": "Mental and Physical Preparation",
+          "resource": "How to Mentally Prepare for Data Science Interviews - https://medium.com/@adamkawalec/how-to-mentally-prepare-for-data-science-interviews-6b681f4db73b"
+        }
+      ],
+      "day2": [
+        {
+          "topic": "Interview Follow-up Etiquette",
+          "resource": "Data Science Interview Follow-up Email Etiquette - https://www.springboard.com/blog/data-science/data-science-interview-follow-up-email-etiquette/"
+        },
+        {
+          "topic": "Thank You Notes",
+          "resource": "Writing a Thank You Note After a Data Science Interview - https://www.themuse.com/advice/data-scientist-thank-you-email-after-interview-example"
+        },
+        {
+          "topic": "Post-interview Reflection",
+          "resource": "Reflecting on Data Science Interview Performance - https://towardsdatascience.com/how-to-reflect-on-your-data-science-interview-performance-6d0fadf0e0d9"
+        }
+      ],
+      "day3": [
+        {
+          "topic": "Negotiating Job Offers",
+          "resource": "Data Science Job Offer Negotiation Tips - https://www.datacamp.com/community/blog/data-science-job-offer-negotiation-tips"
+        },
+        {
+          "topic": "Salary Negotiation Strategies",
+          "resource": "Effective Salary Negotiation Strategies for Data Scientists - https://towardsdatascience.com/effective-salary-negotiation-strategies-for-data-scientists-ee9d2b6f0c86"
+        },
+        {
+          "topic": "Evaluating Job Offers",
+          "resource": "How to Evaluate Data Science Job Offers - https://www.kdnuggets.com/2019/11/evaluate-data-science-job-offers.html"
+        }
+      ],
+      "day4": [
+        {
+          "topic": "Continuing Education Planning",
+          "resource": "Data Science Career Development and Continuing Education - https://www.analyticsvidhya.com/blog/2020/04/data-science-career-development-continuing-education/"
+        },
+        {
+          "topic": "Setting Career Goals",
+          "resource": "Setting Data Science Career Goals - https://towardsdatascience.com/setting-data-science-career-goals-9a1b51f1a9c8"
+        },
+        {
+          "topic": "Professional Development Opportunities",
+          "resource": "Data Science Professional Development Resources - https://www.springboard.com/blog/data-science/professional-development-opportunities-data-science/"
+        }
+      ],
+      "day5": [
+        {
+          "topic": "Celebrating Achievements",
+          "resource": "The Importance of Celebrating Data Science Achievements - https://towardsdatascience.com/the-importance-of-celebrating-your-data-science-achievements-3ca3be566329"
+        },
+        {
+          "topic": "Reflecting on the Learning Journey",
+          "resource": "Reflecting on Your Data Science Learning Journey - https://www.analyticsvidhya.com/blog/2020/07/reflections-data-science-learning-journey/"
+        },
+        {
+          "topic": "Planning for Future Growth",
+          "resource": "Data Science Career Planning for Future Growth - https://towardsdatascience.com/career-planning-for-future-growth-in-data-science-f0afee6ca4e0"
+        }
+      ],
+      "day6": [
+        {
+          "topic": "Rest and Relaxation",
+          "resource": "Importance of Rest and Relaxation for Data Scientists - https://towardsdatascience.com/the-importance-of-rest-and-relaxation-for-data-scientists-9e28593a62f5"
+        },
+        {
+          "topic": "Rewarding Yourself for Hard Work",
+          "resource": "Rewarding Yourself for Data Science Achievements - https://www.datasciencecentral.com/profiles/blogs/reward-yourself-for-your-data-science-achievements"
+        },
+        {
+          "topic": "Looking Ahead to Future Opportunities",
+          "resource": "Data Science Career Opportunities on the Horizon - https://towardsdatascience.com/data-science-career-opportunities-on-the-horizon-6b7c6c5f1f8a"
+        }
+      ]
+    }
+  }
+}
