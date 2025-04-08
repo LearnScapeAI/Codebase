@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-langchain_community
-langchain
-openai
-matplotlib
-plotly
-python-dotenv
