@@ -39,7 +39,7 @@ def filter_prompt(day_topic_plan):
     For **each topic**, find **one high-quality, specific and free resource**.
     
     INSTRUCTIONS FOR RESOURCES:
-    1. Each resource must be specific (e.g., "Introduction to Python Variables by CS Dojo" not just "CS Dojo")
+    1. Each resource must be specific
     2. Include predominantly free resources from reputable sources
     3. Mix resource types (videos, articles, interactive tutorials, documentation)
     4. Resources should match the topic's difficulty level

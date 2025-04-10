@@ -6,3 +6,6 @@ openai
 matplotlib
 plotly
 python-dotenv
+pinecone-client
+boto3
+schedule

@@ -1,11 +1,14 @@
 from app.utils.prompt_utils import filter_prompt, verify_prompt, format_json_prompt, generate_initial_prompt
 from app.utils.resource_fetcher import fetch_real_resources
-from langchain.chat_models import ChatOpenAI
+from app.services.cache_service import RoadmapCache
+from langchain_openai import ChatOpenAI
 from langchain.schema import HumanMessage
 from dotenv import load_dotenv
 import os
 import json
 import re
+import asyncio
+from datetime import datetime
 
 load_dotenv()
 
@@ -15,7 +18,20 @@ llm = ChatOpenAI(
     openai_api_key=os.getenv("OPENAI_API_KEY")
 )
 
+# Initialize the cache
+roadmap_cache = RoadmapCache()
+
 async def generate_roadmap(learning_goals: str, months: int, days_per_week: int):
+    """Generate a learning roadmap with tiered caching (Pinecone for hot data, S3 for cold data)"""
+    
+    # Check cache first (Pinecone, then S3 if needed)
+    cached_roadmap = roadmap_cache.get_cached_roadmap(learning_goals, months, days_per_week)
+    if cached_roadmap:
+        print(f"Cache hit for: {learning_goals}")
+        return json.dumps(cached_roadmap, indent=2)
+    
+    print(f"Cache miss for: {learning_goals}, generating with LLM...")
+    
     # Calculate total weeks for better prompting
     total_weeks = months * 4
     
@@ -37,6 +53,9 @@ async def generate_roadmap(learning_goals: str, months: int, days_per_week: int)
         
         # Add the week to our complete roadmap
         complete_roadmap[f"week{week_num}"] = week_content
+    
+    # Cache the result in Pinecone
+    roadmap_cache.cache_roadmap(learning_goals, months, days_per_week, complete_roadmap)
     
     # Final validation and formatting
     return json.dumps(complete_roadmap, indent=2)
@@ -186,3 +205,11 @@ def extract_json(text):
     
     # If all else fails, return the original text
     return text
+
+async def archive_cold_data(access_threshold=5, days_threshold=30):
+    """Run the archiving process to move cold data from Pinecone to S3"""
+    archived_count = roadmap_cache.archive_cold_data(
+        access_threshold=access_threshold,
+        days_threshold=days_threshold
+    )
+    return archived_count
