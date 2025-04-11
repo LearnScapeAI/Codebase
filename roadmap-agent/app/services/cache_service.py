@@ -29,17 +29,17 @@ s3_client = boto3.client(
     region_name=S3_REGION
 )
 
-# Create index if it doesn't exist
 def ensure_pinecone_index():
+    """Create index if it doesn't exist and return the index object"""
     # List all indexes
     indexes = pc.list_indexes()
     index_names = [idx.name for idx in indexes]
     
     if PINECONE_INDEX_NAME not in index_names:
-        # Create index if it doesn't exist
+        # Create index with dimension 1024 to match existing index
         pc.create_index(
             name=PINECONE_INDEX_NAME,
-            dimension=1536,  # Assuming OpenAI embeddings
+            dimension=1024,  # Changed from 1536 to 1024
             metric="cosine"
         )
     
@@ -52,11 +52,6 @@ def ensure_s3_bucket():
         s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
     except ClientError:
         # Bucket doesn't exist, create it
-        s3_client.create_bucket(
-            Bucket=S3_BUCKET_NAME,
-            CreateBucketConfiguration={'LocationConstraint': S3_REGION} if S3_REGION != 'us-east-1' else {}
-        )
-
         if S3_REGION != 'us-east-1':
             s3_client.create_bucket(
                 Bucket=S3_BUCKET_NAME,
@@ -64,8 +59,6 @@ def ensure_s3_bucket():
             )
         else:
             s3_client.create_bucket(Bucket=S3_BUCKET_NAME)
-
-
         
         # Set lifecycle policy for auto-deletion after 6 months
         lifecycle_config = {
@@ -80,23 +73,25 @@ def ensure_s3_bucket():
             LifecycleConfiguration=lifecycle_config
         )
 
-# Get vector embedding for a query
 def get_embedding(text):
+    """Get vector embedding for a query"""
     # This is a placeholder - in a real implementation, 
     # you would use OpenAI or another embedding service
     import hashlib
     # Create a deterministic vector based on text hash for demo purposes
     hash_value = hashlib.md5(text.encode()).hexdigest()
-    # Convert hash to a list of 1536 float values between -1 and 1
+    # Convert hash to a list of float values between -1 and 1
     vector = []
     for i in range(0, len(hash_value), 2):
         if i < len(hash_value) - 1:
-            value = int(hash_value[i:i+2], 16) / 255.0 * 2 - 1
+            value = float(int(hash_value[i:i+2], 16)) / 255.0 * 2 - 1
             vector.append(value)
 
-    # Pad to 1536 dimensions
-    vector = vector + [0] * (1536 - len(vector))
-    return vector
+    # Pad to 1024 dimensions with float zeros
+    vector = vector + [0.0] * (1024 - len(vector))
+    
+    # Ensure we have exactly 1024 dimensions
+    return vector[:1024]
 
 class RoadmapCache:
     def __init__(self):
@@ -123,15 +118,29 @@ class RoadmapCache:
             # Update access statistics
             match = results['matches'][0]
             new_count = match['metadata'].get('access_count', 0) + 1
+            
+            # Updated code for Pinecone update method
             self.index.update(
-                ids=[match['id']],
+                id=match['id'],
                 set_metadata={
                     'access_count': new_count,
                     'last_accessed': datetime.now().isoformat()
                 }
             )
-            return json.loads(match['metadata']['roadmap_json'])
-        
+            
+            roadmap_data = json.loads(match['metadata']['roadmap_json'])
+
+            # Check if the roadmap has all the expected weeks
+            expected_weeks = months * 4
+            for week_num in range(1, expected_weeks + 1):
+                week_key = f"week{week_num}"
+                if week_key not in roadmap_data:
+                    # If any week is missing, return None to force regeneration
+                    print(f"Cached roadmap missing {week_key}, regenerating...")
+                    return None
+
+            return roadmap_data
+
         # If not in Pinecone, try S3
         try:
             s3_object = s3_client.get_object(
@@ -141,7 +150,16 @@ class RoadmapCache:
             
             data = json.loads(s3_object['Body'].read())
             roadmap_json = data.get('roadmap_json')
-            
+
+            # Check for all expected weeks before rehydrating
+            roadmap_data = json.loads(roadmap_json)
+            expected_weeks = months * 4
+            for week_num in range(1, expected_weeks + 1):
+                week_key = f"week{week_num}"
+                if week_key not in roadmap_data:
+                    print(f"S3 roadmap missing {week_key}, regenerating...")
+                    return None
+
             # Rehydrate to Pinecone
             self.cache_roadmap(
                 learning_goals, 
@@ -150,11 +168,13 @@ class RoadmapCache:
                 roadmap_json,
                 rehydrated=True
             )
-            
-            return json.loads(roadmap_json)
+
+            return roadmap_data
+
         except ClientError:
             # Not found in S3 either
             return None
+
     
     def cache_roadmap(self, learning_goals, months, days_per_week, roadmap_json, rehydrated=False):
         """Store a roadmap in Pinecone"""
@@ -172,7 +192,7 @@ class RoadmapCache:
             'access_count': 1 if rehydrated else 0
         }
         
-        # Upsert to Pinecone
+        # Upsert to Pinecone - updated syntax
         self.index.upsert(
             vectors=[(roadmap_id, vector, metadata)]
         )
@@ -182,7 +202,8 @@ class RoadmapCache:
     def archive_cold_data(self, access_threshold=5, days_threshold=30):
         """Move cold data from Pinecone to S3"""
         # Calculate the date threshold
-        threshold_date = (datetime.now() - datetime.timedelta(days=days_threshold)).isoformat()
+        from datetime import datetime, timedelta
+        threshold_date = (datetime.now() - timedelta(days=days_threshold)).isoformat()
         
         # Query for cold data
         # Note: This is a simplified approach since Pinecone doesn't directly support
@@ -199,13 +220,18 @@ class RoadmapCache:
             # Check if it's cold data
             if access_count < access_threshold and last_accessed < threshold_date:
                 # Move to S3
+                # Check if it's cold data
+                # Convert vector values to float
+                vector_data['values'] = [float(value) for value in vector_data['values']]
+
+                # Move to S3
                 s3_client.put_object(
-                    Bucket=S3_BUCKET_NAME,
-                    Key=f"{vector_id}.json",
-                    Body=json.dumps({
-                        'vector': vector_data['values'],
-                        'metadata': metadata,
-                        'roadmap_json': metadata.get('roadmap_json', '{}')
+                Bucket=S3_BUCKET_NAME,
+                Key=f"{vector_id}.json",
+                Body=json.dumps({
+                    'vector': vector_data['values'],
+                    'metadata': metadata,
+                    'roadmap_json': metadata.get('roadmap_json', '{}')
                     })
                 )
                 
