@@ -1,11 +1,11 @@
-def generate_initial_prompt(goals, months, days_per_week):
+def generate_initial_prompt(goals, months, days_per_week, hours_per_day):
     total_weeks = months * 4  # Approximate weeks in months
     total_days = total_weeks * days_per_week
     
     return f"""
     You are an expert AI curriculum planner specializing in comprehensive learning roadmaps.
 
-    Create a detailed daily roadmap for learning **{goals}** over a period of {months} month(s), studying {days_per_week} day(s) per week.
+    Create a detailed daily roadmap for learning **{goals}** over a period of {months} month(s), studying {days_per_week} day(s) per week, {hours_per_day} hour(s) per day.
     
     This equals {total_weeks} weeks or {total_days} study days total.
     
@@ -97,7 +97,8 @@ def format_json_prompt(raw_text: str):
     {{
       "week1": {{
         "day1": [...],
-        "day2": [...]
+        "day2": [...],
+        ...
       }},
       ...
     }}
