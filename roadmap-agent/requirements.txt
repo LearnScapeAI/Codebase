@@ -9,3 +9,4 @@ python-dotenv
 pinecone-client
 boto3
 schedule
+langchain-google-genai

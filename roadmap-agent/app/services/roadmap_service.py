@@ -110,10 +110,10 @@ async def process_single_week(week_num, days_per_week, hours_per_day, learning_g
     You are creating a detailed learning roadmap for week {week_num} of a {learning_goals} course.
 
     Create content for ALL {days_per_week} days of week {week_num}. 
-    For EACH DAY, provide 2-4 topics with specific, high-quality resources. 
+    For EACH DAY, provide a natural and realistic distribution of topics that makes sense for {learning_goals}.
     
     IMPORTANT - TIME ALLOCATION: Each day has {hours_per_day} total study hours available.
-    Break down each day's content into HOURLY segments, specifying how much time to spend on each topic.
+    Break down each day's content into segments, specifying how much time to spend on each topic.
     The sum of hours for all topics must equal exactly {hours_per_day} hours for each day.
 
     If available, use these topics as guidance: 
@@ -144,7 +144,7 @@ async def process_single_week(week_num, days_per_week, hours_per_day, learning_g
 
     REQUIREMENTS:
     1. Include ALL {days_per_week} days from day1 to day{days_per_week}
-    2. Each day MUST have 2-4 topics with specific resources
+    2. Each day should have a realistic number of topics - don't force any specific number
     3. Each day MUST have topics that SUM UP to exactly {hours_per_day} total hours
     4. Resources must be high-quality, relevant to {learning_goals}
     5. Return ONLY valid JSON - no explanations or text before/after
@@ -214,10 +214,16 @@ async def generate_day_content(week_num, day_num, hours_per_day, learning_goals)
     """Generate content for a specific day if it's missing."""
     logger.info(f"Generating content for week {week_num}, day {day_num}")
     day_prompt = f"""
-    Generate 2-4 relevant topics with resources for day {day_num} of week {week_num} 
+    Generate a natural and realistic study plan for day {day_num} of week {week_num} 
     for a learning roadmap on {learning_goals}.
     
-    IMPORTANT: There are {hours_per_day} total study hours available for this day.
+    IMPORTANT: 
+    1. There are {hours_per_day} total study hours available for this day.
+    2. Create a NATURAL distribution of topics - don't force exactly 2-4 topics if that's not appropriate.
+    3. For complex topics that need focus, it's better to have fewer topics with more time allocated.
+    4. For simpler topics, having more topics with less time each might make sense.
+    5. The topics should be directly relevant to {learning_goals} and appropriate for week {week_num}.
+    
     Specify how many hours to spend on each topic, ensuring the total equals exactly {hours_per_day}.
 
     Return ONLY a JSON array like this:
@@ -265,24 +271,182 @@ async def generate_day_content(week_num, day_num, hours_per_day, learning_goals)
     except Exception as e:
         logger.error(f"Error generating day content: {str(e)}")
         # Emergency fallback
-        return generate_emergency_day_content(week_num, day_num, hours_per_day)
+        return generate_emergency_day_content(week_num, day_num, hours_per_day, learning_goals)
 
-def generate_emergency_day_content(week_num, day_num, hours_per_day):
-    """Generate emergency fallback content when all else fails"""
+def generate_emergency_day_content(week_num, day_num, hours_per_day, learning_goals):
+    """Generate emergency fallback content that's relevant to the learning goals"""
     logger.warning(f"Using emergency fallback content for week {week_num}, day {day_num}")
     
-    # Split hours between two topics
-    hours1 = round(hours_per_day * 0.6, 1)
-    hours2 = round(hours_per_day - hours1, 1)
-    
-    return [
-        {"topic": f"Week {week_num} Day {day_num} Topic 1", 
-         "resource": "Python for Data Science Handbook - https://jakevdp.github.io/PythonDataScienceHandbook/",
-         "hours": hours1},
-        {"topic": f"Week {week_num} Day {day_num} Topic 2", 
-         "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course",
-         "hours": hours2}
-    ]
+    # Make another attempt with a simpler prompt
+    try:
+        simplified_prompt = f"""
+        For a learning path on '{learning_goals}', provide 2-3 relevant topics for week {week_num}, day {day_num}.
+        For each topic include:
+        1. A specific topic name relevant to {learning_goals}
+        2. A real resource (title and link) 
+        3. Hours to allocate (total must be {hours_per_day})
+        
+        Return as JSON array:
+        [
+          {{"topic": "Topic name", "resource": "Resource title - https://link", "hours": X}}
+        ]
+        """
+        
+        # Use synchronous call to avoid nested awaits
+        fallback_response = llm.invoke([HumanMessage(content=simplified_prompt)])
+        fallback_json_str = extract_json(fallback_response.content)
+        fallback_data = json.loads(fallback_json_str)
+        
+        # Verify hours total
+        total_hours = sum(float(topic.get('hours', 0)) for topic in fallback_data)
+        if abs(total_hours - hours_per_day) > 0.1:
+            # Simple fix - distribute hours evenly
+            hours_per_topic = round(hours_per_day / len(fallback_data), 1)
+            remaining = round(hours_per_day, 1)
+            
+            for i in range(len(fallback_data)-1):
+                fallback_data[i]['hours'] = hours_per_topic
+                remaining -= hours_per_topic
+                
+            fallback_data[-1]['hours'] = remaining
+            
+        return fallback_data
+        
+    except Exception as e:
+        logger.error(f"Emergency fallback failed again: {str(e)}")
+        # Last resort - generate content based on learning goals with no LLM call
+        
+        # Define topic templates based on common learning domains
+        templates = {
+            "python": [
+                {"topic": "Python Fundamentals", 
+                 "resource": "Python Crash Course - https://nostarch.com/pythoncrashcourse2e"},
+                {"topic": "Python Data Structures", 
+                 "resource": "Python Data Structures Tutorial - https://realpython.com/python-data-structures/"}
+            ],
+            "javascript": [
+                {"topic": "JavaScript Basics", 
+                 "resource": "JavaScript.info - https://javascript.info/"},
+                {"topic": "DOM Manipulation", 
+                 "resource": "MDN Web Docs - https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"}
+            ],
+            "machine learning": [
+                {"topic": "ML Fundamentals", 
+                 "resource": "Machine Learning Crash Course - https://developers.google.com/machine-learning/crash-course"},
+                {"topic": "Supervised Learning Basics", 
+                 "resource": "Introduction to Statistical Learning - https://www.statlearning.com/"}
+            ],
+            "data science": [
+                {"topic": "Data Analysis with Pandas", 
+                 "resource": "Python for Data Analysis - https://wesmckinney.com/book/"},
+                {"topic": "Data Visualization Techniques", 
+                 "resource": "Data Visualization with Python - https://plotly.com/python/"}
+            ],
+            "web development": [
+                {"topic": "HTML & CSS Fundamentals", 
+                 "resource": "MDN Web Docs - https://developer.mozilla.org/en-US/docs/Web"},
+                {"topic": "Responsive Design", 
+                 "resource": "Responsive Web Design - https://www.w3schools.com/css/css_rwd_intro.asp"}
+            ],
+            "mobile development": [
+                {"topic": "Mobile App Architecture", 
+                 "resource": "Mobile App Development Guide - https://developer.android.com/guide"},
+                {"topic": "UI/UX for Mobile", 
+                 "resource": "Mobile UI Design Patterns - https://www.smashingmagazine.com/2021/05/ux-design-mobile-apps/"}
+            ],
+            "devops": [
+                {"topic": "CI/CD Fundamentals", 
+                 "resource": "CI/CD Pipeline Tutorial - https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment"},
+                {"topic": "Docker Containerization", 
+                 "resource": "Docker Documentation - https://docs.docker.com/get-started/"}
+            ],
+            "cloud computing": [
+                {"topic": "Cloud Architecture", 
+                 "resource": "AWS Architecture Center - https://aws.amazon.com/architecture/"},
+                {"topic": "Serverless Computing", 
+                 "resource": "Serverless Framework - https://www.serverless.com/"}
+            ],
+            "blockchain": [
+                {"topic": "Blockchain Fundamentals", 
+                 "resource": "Blockchain Basics - https://www.coursera.org/learn/blockchain-basics"},
+                {"topic": "Smart Contracts", 
+                 "resource": "Solidity Documentation - https://docs.soliditylang.org/"}
+            ],
+            "cybersecurity": [
+                {"topic": "Security Fundamentals", 
+                 "resource": "OWASP Top 10 - https://owasp.org/www-project-top-ten/"},
+                {"topic": "Penetration Testing", 
+                 "resource": "Penetration Testing: A Hands-On Introduction - https://nostarch.com/pentesting"}
+            ],
+            "artificial intelligence": [
+                {"topic": "AI Fundamentals", 
+                 "resource": "AI For Everyone - https://www.coursera.org/learn/ai-for-everyone"},
+                {"topic": "Neural Networks", 
+                 "resource": "Neural Networks and Deep Learning - https://www.coursera.org/learn/neural-networks-deep-learning"}
+            ]
+        }
+        
+        # Find best matching template for the learning goals
+        best_match = None
+        highest_score = 0
+        
+        # Try to find the most relevant template based on keyword matching
+        for key in templates:
+            # Calculate similarity score (simple word overlap for now)
+            if key.lower() in learning_goals.lower():
+                # Direct match gets high score
+                score = len(key)
+                if score > highest_score:
+                    highest_score = score
+                    best_match = key
+        
+        # Use default if no match found
+        if not best_match:
+            # Try to use "data science" as a reasonable default
+            if "data" in learning_goals.lower() or "analytics" in learning_goals.lower():
+                best_match = "data science"
+            elif "web" in learning_goals.lower() or "html" in learning_goals.lower() or "css" in learning_goals.lower():
+                best_match = "web development"
+            elif "python" in learning_goals.lower():
+                best_match = "python"
+            elif "javascript" in learning_goals.lower() or "js" in learning_goals.lower():
+                best_match = "javascript"
+            elif "machine" in learning_goals.lower() or "ml" in learning_goals.lower():
+                best_match = "machine learning"
+            elif "ai" in learning_goals.lower() or "intelligent" in learning_goals.lower():
+                best_match = "artificial intelligence"
+            else:
+                best_match = "data science"  # Ultimate fallback
+            
+        # Get template topics and adjust hours
+        topics = templates[best_match]
+        
+        # Make topic names more specific to the learning goals
+        for topic in topics:
+            # Add week and day context to topic names to make them more relevant
+            if week_num <= 4:
+                topic["topic"] = f"Introduction to {topic['topic']}"
+            elif week_num <= 8:
+                topic["topic"] = f"Intermediate {topic['topic']}"
+            else:
+                topic["topic"] = f"Advanced {topic['topic']}"
+        
+        # Distribute hours more naturally
+        if hours_per_day <= 2:
+            # For short study days, focus on one topic
+            return [{"topic": topics[0]["topic"], "resource": topics[0]["resource"], "hours": hours_per_day}]
+        else:
+            # For longer study days, distribute between topics
+            hours1 = round(hours_per_day * 0.6, 1)
+            hours2 = round(hours_per_day - hours1, 1)
+            
+            # Create fallback content
+            fallback_content = [
+                {**topics[0], "hours": hours1},
+                {**topics[1], "hours": hours2}
+            ]
+            
+            return fallback_content
 
 async def generate_fallback_week(week_num, days_per_week, hours_per_day, learning_goals):
     """Generate a fallback week structure with content for all days."""
@@ -339,6 +503,12 @@ def extract_json(text):
     json_match = re.search(r'(\{[\s\S]*\})', text)
     if json_match:
         logger.info("Found JSON between curly braces")
+        return json_match.group(1)
+    
+    # If searching for object failed, try looking for an array
+    json_match = re.search(r'(\[[\s\S]*\])', text)
+    if json_match:
+        logger.info("Found JSON array")
         return json_match.group(1)
 
     # If all else fails, return the original text
