@@ -4489,3 +4489,271 @@ HTTP response body: {"code":3,"message":"Metadata size is 166901 bytes, which ex
 2025-04-14 20:10:00,769 - app.routes.roadmap - WARNING - Hours don't add up in day1, week42: 7.5 vs 8
 2025-04-14 20:10:00,769 - app.routes.roadmap - WARNING - Hours don't add up in day1, week44: 7.5 vs 8
 2025-04-14 20:10:00,769 - app.routes.roadmap - INFO - Roadmap validation complete, returning response
+2025-04-15 00:01:07,446 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-15 00:01:09,917 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-15 00:01:09,917 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-15 00:01:13,895 - app.services.cache_service - INFO - Using existing Pinecone index: learnscape-index
+2025-04-15 00:01:16,612 - app.services.cache_service - INFO - S3 bucket learnscape-roadmap-backup exists
+2025-04-15 00:01:16,612 - app.services.cache_service - INFO - RoadmapCache initialized. S3 available: True
+2025-04-15 00:01:16,612 - app.services.roadmap_service - INFO - Roadmap cache initialized
+2025-04-15 00:01:16,623 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
+2025-04-15 00:01:16,624 - app.tasks.archive_task - INFO - Scheduler thread started
+2025-04-15 00:01:16,624 - app.tasks.archive_task - INFO - Scheduler started successfully
+2025-04-15 00:02:23,317 - app.routes.roadmap - INFO - Received roadmap request: gate exam mechanical engineering, 9 months, 6 days/week, 8 hours/day
+2025-04-15 00:02:23,317 - app.services.roadmap_service - INFO - Generating roadmap for: gate exam mechanical engineering, 9 months, 6 days/week, 8 hours/day
+2025-04-15 00:02:23,317 - app.services.cache_service - INFO - Checking cache for roadmap: gate exam mechanical engineering, 9 months, 6 days/week
+2025-04-15 00:02:23,317 - app.services.cache_service - INFO - Created cache ID: gateexammechanicalengineering-9-6-8
+2025-04-15 00:02:23,317 - app.services.cache_service - INFO - Generating embedding for text: gate exam mechanical engineering 9 months 6 days p...
+2025-04-15 00:02:24,258 - app.services.cache_service - INFO - Pinecone query returned 1 matches
+2025-04-15 00:02:24,258 - app.services.cache_service - INFO - Found match with score: 0.367905587
+2025-04-15 00:02:24,258 - app.services.cache_service - INFO - Match score too low (0.367905587), regenerating roadmap
+2025-04-15 00:02:24,258 - app.services.roadmap_service - INFO - Cache miss for: gate exam mechanical engineering, generating with LLM...
+2025-04-15 00:02:24,258 - app.services.roadmap_service - INFO - Calling LLM for initial topic plan
+2025-04-15 00:03:10,786 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:03:10,858 - app.services.roadmap_service - INFO - Received initial topic plan from LLM
+2025-04-15 00:03:10,858 - app.services.roadmap_service - INFO - Processing roadmap for 36 weeks using batched approach
+2025-04-15 00:03:10,858 - app.services.roadmap_service - INFO - Processing week batch 1-4
+2025-04-15 00:03:10,858 - app.services.roadmap_service - INFO - Extracting week 1 topics from plan
+2025-04-15 00:03:10,859 - app.services.roadmap_service - INFO - Extracted 7 lines for week 1
+2025-04-15 00:03:10,859 - app.services.roadmap_service - INFO - Extracting week 2 topics from plan
+2025-04-15 00:03:10,859 - app.services.roadmap_service - INFO - Extracted 7 lines for week 2
+2025-04-15 00:03:10,859 - app.services.roadmap_service - INFO - Extracting week 3 topics from plan
+2025-04-15 00:03:10,859 - app.services.roadmap_service - INFO - Extracted 7 lines for week 3
+2025-04-15 00:03:10,859 - app.services.roadmap_service - INFO - Extracting week 4 topics from plan
+2025-04-15 00:03:10,859 - app.services.roadmap_service - INFO - Extracted 7 lines for week 4
+2025-04-15 00:03:10,859 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 1-4
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Processing week batch 5-8
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Extracting week 5 topics from plan
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Extracted 7 lines for week 5
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Extracting week 6 topics from plan
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Extracted 7 lines for week 6
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Extracting week 7 topics from plan
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Extracted 7 lines for week 7
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Extracting week 8 topics from plan
+2025-04-15 00:03:10,860 - app.services.roadmap_service - INFO - Extracted 7 lines for week 8
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 5-8
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Processing week batch 9-12
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Extracting week 9 topics from plan
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Extracted 7 lines for week 9
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Extracting week 10 topics from plan
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Extracted 7 lines for week 10
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Extracting week 11 topics from plan
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Extracted 7 lines for week 11
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Extracting week 12 topics from plan
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Extracted 7 lines for week 12
+2025-04-15 00:03:10,862 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 9-12
+2025-04-15 00:03:38,629 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:03:38,664 - app.services.roadmap_service - INFO - Received batch content for weeks 9-12
+2025-04-15 00:03:38,664 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:03:38,664 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week9/day1: 6.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week9/day2: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week9/day3: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week9/day4: 6.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week9/day5: 6.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week10/day1: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week10/day2: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week10/day3: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week10/day5: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week11/day2: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week11/day3: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week12/day1: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week12/day2: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week12/day3: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - WARNING - Major hour allocation issue in week12/day5: 5.0 vs 8
+2025-04-15 00:03:38,664 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 9-12
+2025-04-15 00:03:42,199 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:03:42,238 - app.services.roadmap_service - INFO - Received batch content for weeks 5-8
+2025-04-15 00:03:42,239 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:03:42,239 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:03:42,239 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 5-8
+2025-04-15 00:03:56,835 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:03:56,872 - app.services.roadmap_service - INFO - Received batch content for weeks 1-4
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 1-4
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Completed batch group 1/3
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Processing week batch 13-16
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 13 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 13
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 14 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 14
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 15 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 15
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 16 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 16
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 13-16
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Processing week batch 17-20
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 17 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 17
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 18 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 18
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 19 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 19
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 20 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 20
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 17-20
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Processing week batch 21-24
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 21 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 21
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 22 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 22
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 23 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 23
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracting week 24 topics from plan
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Extracted 7 lines for week 24
+2025-04-15 00:03:56,873 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 21-24
+2025-04-15 00:04:26,107 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:26,156 - app.services.roadmap_service - INFO - Received batch content for weeks 17-20
+2025-04-15 00:04:26,156 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:26,156 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:26,156 - app.services.roadmap_service - WARNING - Major hour allocation issue in week17/day1: 6.0 vs 8
+2025-04-15 00:04:26,156 - app.services.roadmap_service - WARNING - Major hour allocation issue in week17/day2: 6.0 vs 8
+2025-04-15 00:04:26,158 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 17-20
+2025-04-15 00:04:26,773 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:26,819 - app.services.roadmap_service - INFO - Received batch content for weeks 13-16
+2025-04-15 00:04:26,821 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:26,821 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:26,821 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 13-16
+2025-04-15 00:04:27,264 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:27,307 - app.services.roadmap_service - INFO - Received batch content for weeks 21-24
+2025-04-15 00:04:27,308 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:27,308 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:27,308 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 21-24
+2025-04-15 00:04:27,308 - app.services.roadmap_service - INFO - Completed batch group 2/3
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Processing week batch 25-28
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Extracting week 25 topics from plan
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Extracted 7 lines for week 25
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Extracting week 26 topics from plan
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Extracted 7 lines for week 26
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Extracting week 27 topics from plan
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Extracted 7 lines for week 27
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Extracting week 28 topics from plan
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Extracted 7 lines for week 28
+2025-04-15 00:04:27,310 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 25-28
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Processing week batch 29-32
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Extracting week 29 topics from plan
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Extracted 7 lines for week 29
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Extracting week 30 topics from plan
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Extracted 7 lines for week 30
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Extracting week 31 topics from plan
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Extracted 6 lines for week 31
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Extracting week 32 topics from plan
+2025-04-15 00:04:27,311 - app.services.roadmap_service - INFO - Extracted 0 lines for week 32
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 29-32
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Processing week batch 33-36
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Extracting week 33 topics from plan
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Extracted 0 lines for week 33
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Extracting week 34 topics from plan
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Extracted 0 lines for week 34
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Extracting week 35 topics from plan
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Extracted 0 lines for week 35
+2025-04-15 00:04:27,312 - app.services.roadmap_service - INFO - Extracting week 36 topics from plan
+2025-04-15 00:04:27,314 - app.services.roadmap_service - INFO - Extracted 0 lines for week 36
+2025-04-15 00:04:27,314 - app.services.roadmap_service - INFO - Calling LLM for batch processing weeks 33-36
+2025-04-15 00:04:51,449 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:51,473 - app.services.roadmap_service - INFO - Received batch content for weeks 29-32
+2025-04-15 00:04:51,473 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:51,473 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:51,473 - app.services.roadmap_service - WARNING - Missing day5 in week31, generating content
+2025-04-15 00:04:51,473 - app.services.roadmap_service - INFO - Generating content for week 31, day 5
+2025-04-15 00:04:54,864 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:54,864 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:54,864 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:54,864 - app.services.roadmap_service - ERROR - Error generating day content: Extra data: line 5 column 8 (char 172)
+2025-04-15 00:04:54,864 - app.services.roadmap_service - WARNING - Using emergency fallback content for week 31, day 5
+2025-04-15 00:04:56,684 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:56,684 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:56,684 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:56,684 - app.services.roadmap_service - ERROR - Emergency fallback failed again: Extra data: line 5 column 6 (char 172)
+2025-04-15 00:04:56,684 - app.services.roadmap_service - WARNING - Missing day6 in week31, generating content
+2025-04-15 00:04:56,684 - app.services.roadmap_service - INFO - Generating content for week 31, day 6
+2025-04-15 00:04:56,915 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:56,956 - app.services.roadmap_service - INFO - Received batch content for weeks 25-28
+2025-04-15 00:04:56,956 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:56,956 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:56,956 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 25-28
+2025-04-15 00:04:59,595 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:59,646 - app.services.roadmap_service - INFO - Received batch content for weeks 33-36
+2025-04-15 00:04:59,646 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:59,647 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:59,647 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 33-36
+2025-04-15 00:04:59,828 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:04:59,840 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:04:59,840 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:04:59,840 - app.services.roadmap_service - ERROR - Error generating day content: Extra data: line 5 column 8 (char 172)
+2025-04-15 00:04:59,840 - app.services.roadmap_service - WARNING - Using emergency fallback content for week 31, day 6
+2025-04-15 00:05:02,259 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:02,259 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:02,259 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:02,259 - app.services.roadmap_service - ERROR - Emergency fallback failed again: Extra data: line 5 column 6 (char 192)
+2025-04-15 00:05:02,259 - app.services.roadmap_service - WARNING - Major hour allocation issue in week32/day1: 2.0 vs 8
+2025-04-15 00:05:02,259 - app.services.roadmap_service - WARNING - Missing day2 in week32, generating content
+2025-04-15 00:05:02,259 - app.services.roadmap_service - INFO - Generating content for week 32, day 2
+2025-04-15 00:05:04,986 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:04,986 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:04,986 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:04,986 - app.services.roadmap_service - ERROR - Error generating day content: Extra data: line 5 column 8 (char 166)
+2025-04-15 00:05:04,986 - app.services.roadmap_service - WARNING - Using emergency fallback content for week 32, day 2
+2025-04-15 00:05:07,473 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:07,488 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:07,488 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:07,489 - app.services.roadmap_service - ERROR - Emergency fallback failed again: Extra data: line 5 column 6 (char 215)
+2025-04-15 00:05:07,489 - app.services.roadmap_service - WARNING - Missing day3 in week32, generating content
+2025-04-15 00:05:07,489 - app.services.roadmap_service - INFO - Generating content for week 32, day 3
+2025-04-15 00:05:10,640 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:10,640 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:10,640 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:10,640 - app.services.roadmap_service - ERROR - Error generating day content: Extra data: line 5 column 8 (char 160)
+2025-04-15 00:05:10,640 - app.services.roadmap_service - WARNING - Using emergency fallback content for week 32, day 3
+2025-04-15 00:05:12,805 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:12,809 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:12,809 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:12,809 - app.services.roadmap_service - ERROR - Emergency fallback failed again: Extra data: line 5 column 6 (char 201)
+2025-04-15 00:05:12,809 - app.services.roadmap_service - WARNING - Missing day4 in week32, generating content
+2025-04-15 00:05:12,809 - app.services.roadmap_service - INFO - Generating content for week 32, day 4
+2025-04-15 00:05:15,124 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:15,124 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:15,124 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:15,124 - app.services.roadmap_service - ERROR - Error generating day content: Extra data: line 5 column 8 (char 133)
+2025-04-15 00:05:15,124 - app.services.roadmap_service - WARNING - Using emergency fallback content for week 32, day 4
+2025-04-15 00:05:17,342 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:17,350 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:17,350 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:17,350 - app.services.roadmap_service - ERROR - Emergency fallback failed again: Extra data: line 5 column 6 (char 261)
+2025-04-15 00:05:17,350 - app.services.roadmap_service - WARNING - Missing day5 in week32, generating content
+2025-04-15 00:05:17,350 - app.services.roadmap_service - INFO - Generating content for week 32, day 5
+2025-04-15 00:05:20,913 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:20,920 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:20,920 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:20,920 - app.services.roadmap_service - ERROR - Error generating day content: Extra data: line 5 column 8 (char 165)
+2025-04-15 00:05:20,921 - app.services.roadmap_service - WARNING - Using emergency fallback content for week 32, day 5
+2025-04-15 00:05:22,602 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:22,602 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:22,602 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:22,602 - app.services.roadmap_service - ERROR - Emergency fallback failed again: Extra data: line 5 column 6 (char 215)
+2025-04-15 00:05:22,602 - app.services.roadmap_service - WARNING - Missing day6 in week32, generating content
+2025-04-15 00:05:22,602 - app.services.roadmap_service - INFO - Generating content for week 32, day 6
+2025-04-15 00:05:24,625 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:24,625 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:24,625 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:24,625 - app.services.roadmap_service - ERROR - Error generating day content: Extra data: line 5 column 8 (char 133)
+2025-04-15 00:05:24,625 - app.services.roadmap_service - WARNING - Using emergency fallback content for week 32, day 6
+2025-04-15 00:05:27,193 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 00:05:27,193 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-15 00:05:27,193 - app.services.roadmap_service - INFO - Found JSON between curly braces
+2025-04-15 00:05:27,193 - app.services.roadmap_service - ERROR - Emergency fallback failed again: Extra data: line 5 column 6 (char 192)
+2025-04-15 00:05:27,193 - app.services.roadmap_service - INFO - Successfully processed batch for weeks 29-32
+2025-04-15 00:05:27,193 - app.services.roadmap_service - INFO - Completed batch group 3/3
+2025-04-15 00:05:27,193 - app.services.roadmap_service - INFO - Caching generated roadmap
+2025-04-15 00:05:27,193 - app.services.cache_service - INFO - Caching roadmap for: gate exam mechanical engineering, 9 months, 6 days/week
+2025-04-15 00:05:27,193 - app.services.cache_service - INFO - Created cache ID: gateexammechanicalengineering-9-6-8
+2025-04-15 00:05:27,193 - app.services.cache_service - INFO - Generating embedding for text: gate exam mechanical engineering 9 months 6 days p...
+2025-04-15 00:05:27,848 - app.services.cache_service - ERROR - Error caching roadmap in Pinecone: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'Date': 'Tue, 15 Apr 2025 04:05:28 GMT', 'Content-Type': 'application/json', 'Content-Length': '116', 'Connection': 'keep-alive', 'x-pinecone-request-latency-ms': '170', 'x-pinecone-request-id': '2636069435696516054', 'x-envoy-upstream-service-time': '31', 'server': 'envoy'})
+HTTP response body: {"code":3,"message":"Metadata size is 107318 bytes, which exceeds the limit of 40960 bytes per vector","details":[]}
+
+2025-04-15 00:05:27,848 - app.services.roadmap_service - INFO - Roadmap generation complete
+2025-04-15 00:05:27,848 - app.routes.roadmap - INFO - Successfully parsed roadmap JSON
+2025-04-15 00:05:27,848 - app.routes.roadmap - INFO - Roadmap validation complete, returning response
