@@ -28,11 +28,18 @@ logger = logging.getLogger(__name__)
 # Initialize the LLM
 try:
     llm = ChatOpenAI(
-        model_name="gpt-4o",
+        model_name="gpt-3.5-turbo",
         temperature=0.7,
         openai_api_key=os.getenv("OPENAI_API_KEY")
     )
-    logger.info("LLM initialized successfully")
+    
+    # Initialize a separate LLM for batch processing
+    batch_llm = ChatOpenAI(
+        model_name="gpt-3.5-turbo-16k",  # Use larger context model for batch processing
+        temperature=0.7,
+        openai_api_key=os.getenv("OPENAI_API_KEY")
+    )
+    logger.info("LLMs initialized successfully")
 except Exception as e:
     logger.error(f"Failed to initialize LLM: {str(e)}")
     raise
@@ -44,6 +51,10 @@ try:
 except Exception as e:
     logger.error(f"Failed to initialize roadmap cache: {str(e)}")
     raise
+
+# Constants for batching
+MAX_WEEKS_PER_BATCH = 4  # Number of weeks to process in a single batch
+CONCURRENT_BATCHES = 3   # Number of batches to process concurrently
 
 async def generate_roadmap(learning_goals: str, months: int, days_per_week: int, hours_per_day: float):
     """Generate a learning roadmap with tiered caching (Pinecone for hot data, S3 for cold data)"""
@@ -70,24 +81,38 @@ async def generate_roadmap(learning_goals: str, months: int, days_per_week: int,
         logger.error(f"Error from LLM when generating initial plan: {str(e)}")
         raise RuntimeError(f"Failed to generate initial roadmap plan: {str(e)}")
 
-    # 2. Process the entire roadmap week by week to ensure completeness
-    logger.info(f"Processing roadmap for {total_weeks} weeks")
+    # 2. Process the entire roadmap using batch processing and concurrency
+    logger.info(f"Processing roadmap for {total_weeks} weeks using batched approach")
     complete_roadmap = {}
 
-    for week_num in range(1, total_weeks + 1):
-        logger.info(f"Processing week {week_num}/{total_weeks}")
-        # Process each week individually to ensure proper handling
-        week_content = await process_single_week(
-            week_num, 
-            days_per_week,
-            hours_per_day,  
-            learning_goals, 
-            day_topic_plan.content
-        )
-
-        # Add the week to our complete roadmap
-        complete_roadmap[f"week{week_num}"] = week_content
-        logger.info(f"Completed week {week_num}")
+    # Determine batching strategy based on total weeks
+    batch_size = min(MAX_WEEKS_PER_BATCH, max(1, total_weeks // 6))  # Adjust batch size dynamically
+    
+    # Create batch processing tasks
+    batches = []
+    for start_week in range(1, total_weeks + 1, batch_size):
+        end_week = min(start_week + batch_size - 1, total_weeks)
+        batches.append((start_week, end_week))
+    
+    # Process batches concurrently in groups to avoid API rate limits
+    for i in range(0, len(batches), CONCURRENT_BATCHES):
+        batch_group = batches[i:i+CONCURRENT_BATCHES]
+        batch_tasks = [
+            process_week_batch(
+                start_week, end_week, days_per_week, hours_per_day, 
+                learning_goals, day_topic_plan.content
+            ) 
+            for start_week, end_week in batch_group
+        ]
+        
+        # Run batch tasks concurrently
+        batch_results = await asyncio.gather(*batch_tasks)
+        
+        # Merge results into complete roadmap
+        for result in batch_results:
+            complete_roadmap.update(result)
+        
+        logger.info(f"Completed batch group {i//CONCURRENT_BATCHES + 1}/{(len(batches) + CONCURRENT_BATCHES - 1)//CONCURRENT_BATCHES}")
 
     # Cache the result in Pinecone
     logger.info("Caching generated roadmap")
@@ -96,6 +121,191 @@ async def generate_roadmap(learning_goals: str, months: int, days_per_week: int,
     # Final validation and formatting
     logger.info("Roadmap generation complete")
     return json.dumps(complete_roadmap, indent=2)
+
+async def process_week_batch(start_week, end_week, days_per_week, hours_per_day, learning_goals, full_plan):
+    """Process a batch of consecutive weeks at once."""
+    logger.info(f"Processing week batch {start_week}-{end_week}")
+    batch_result = {}
+    
+    # Extract topics for all weeks in this batch
+    batch_topics = ""
+    for week_num in range(start_week, end_week + 1):
+        week_topics = extract_week_from_plan(full_plan, week_num)
+        batch_topics += f"\nWEEK {week_num} TOPICS:\n{week_topics}\n"
+    
+    # Generate a prompt for the entire batch
+    batch_prompt = f"""
+    You are creating a detailed learning roadmap for weeks {start_week} through {end_week} of a {learning_goals} course.
+
+    For EACH WEEK and EACH DAY, provide a natural and realistic distribution of topics that makes sense for {learning_goals}.
+    
+    IMPORTANT - TIME ALLOCATION: Each day has {hours_per_day} total study hours available.
+    Break down each day's content into segments, specifying how much time to spend on each topic.
+    The sum of hours for all topics must equal exactly {hours_per_day} hours for each day.
+
+    Consider these topics as guidance: 
+    {batch_topics}
+
+    For each topic, find one specific, high-quality resource (YouTube video, article, tutorial).
+    Each resource must include both a descriptive title AND a URL.
+
+    Your response should be a JSON object with this exact structure:
+    {{
+      "week{start_week}": {{
+        "day1": [
+          {{
+            "topic": "Topic Name", 
+            "resource": "Resource Title - https://link",
+            "hours": 1.5
+          }},
+          {{
+            "topic": "Another Topic", 
+            "resource": "Resource Title - https://link",
+            "hours": 0.5
+          }},
+          ...
+        ],
+        "day2": [...],
+        ...
+        "day{days_per_week}": [...]
+      }},
+      "week{start_week+1}": {{
+        ...
+      }},
+      ...
+      "week{end_week}": {{
+        ...
+      }}
+    }}
+
+    REQUIREMENTS:
+    1. Include ALL weeks from week{start_week} to week{end_week}
+    2. For each week, include ALL {days_per_week} days from day1 to day{days_per_week}
+    3. Each day should have a realistic number of topics
+    4. Each day MUST have topics that SUM UP to exactly {hours_per_day} total hours
+    5. Resources must be high-quality, relevant to {learning_goals}
+    6. Return ONLY valid JSON - no explanations or text before/after
+
+    Focus on appropriate {learning_goals} topics that would be covered at each stage of the learning journey.
+    """
+
+    # Call batch LLM to generate content for multiple weeks at once
+    try:
+        logger.info(f"Calling LLM for batch processing weeks {start_week}-{end_week}")
+        batch_response = await batch_llm.ainvoke([HumanMessage(content=batch_prompt)])
+        logger.info(f"Received batch content for weeks {start_week}-{end_week}")
+        
+        # Extract and parse JSON
+        batch_json_str = extract_json(batch_response.content)
+        batch_data = json.loads(batch_json_str)
+        
+        # Validate and fix each week in the batch
+        for week_num in range(start_week, end_week + 1):
+            week_key = f"week{week_num}"
+            
+            # Check if week exists in response
+            if week_key not in batch_data:
+                logger.warning(f"Missing {week_key} in batch response, generating separately")
+                batch_data[week_key] = await process_single_week(
+                    week_num, 
+                    days_per_week, 
+                    hours_per_day, 
+                    learning_goals, 
+                    full_plan
+                )
+                continue
+                
+            # Quick validation of week structure
+            week_data = batch_data[week_key]
+            for day in range(1, days_per_week + 1):
+                day_key = f"day{day}"
+                
+                # Check if day exists and has content
+                if day_key not in week_data or not week_data[day_key]:
+                    logger.warning(f"Missing {day_key} in {week_key}, generating content")
+                    week_data[day_key] = await generate_day_content(
+                        week_num, 
+                        day, 
+                        hours_per_day,
+                        learning_goals
+                    )
+                    continue
+                    
+                # Quick validation of hour allocations - only fix if seriously wrong
+                day_content = week_data[day_key]
+                try:
+                    total_hours = sum(float(topic.get('hours', 0)) for topic in day_content)
+                    if abs(total_hours - hours_per_day) > 0.5:  # More tolerant threshold
+                        logger.warning(f"Major hour allocation issue in {week_key}/{day_key}: {total_hours} vs {hours_per_day}")
+                        # Fix hour allocation in place rather than regenerating
+                        adjust_hours(day_content, hours_per_day)
+                except Exception as e:
+                    logger.error(f"Error validating hours for {week_key}/{day_key}: {str(e)}")
+                    week_data[day_key] = await generate_day_content(
+                        week_num, 
+                        day, 
+                        hours_per_day,
+                        learning_goals
+                    )
+        
+        # Add the batch results to overall result
+        batch_result.update(batch_data)
+        logger.info(f"Successfully processed batch for weeks {start_week}-{end_week}")
+        
+    except Exception as e:
+        logger.error(f"Error processing batch for weeks {start_week}-{end_week}: {str(e)}")
+        
+        # Fall back to processing each week individually
+        logger.warning(f"Falling back to individual week processing for weeks {start_week}-{end_week}")
+        week_tasks = [
+            process_single_week(
+                week_num, 
+                days_per_week, 
+                hours_per_day, 
+                learning_goals, 
+                full_plan
+            ) 
+            for week_num in range(start_week, end_week + 1)
+        ]
+        
+        week_results = await asyncio.gather(*week_tasks)
+        
+        for week_num, week_data in zip(range(start_week, end_week + 1), week_results):
+            batch_result[f"week{week_num}"] = week_data
+    
+    return batch_result
+
+def adjust_hours(day_content, target_hours):
+    """Adjust hours in a day's content to match the target total."""
+    if not day_content:
+        return day_content
+        
+    # Calculate current total
+    current_total = sum(float(topic.get('hours', 0)) for topic in day_content)
+    
+    # If current total is zero, distribute hours evenly
+    if current_total == 0:
+        hours_per_topic = round(target_hours / len(day_content), 1)
+        remaining = target_hours
+        
+        for i in range(len(day_content) - 1):
+            day_content[i]['hours'] = hours_per_topic
+            remaining -= hours_per_topic
+            
+        day_content[-1]['hours'] = round(remaining, 1)
+    else:
+        # Adjust proportionally
+        scale_factor = target_hours / current_total
+        remaining = target_hours
+        
+        for i in range(len(day_content) - 1):
+            adjusted = round(float(day_content[i].get('hours', 0)) * scale_factor, 1)
+            day_content[i]['hours'] = adjusted
+            remaining -= adjusted
+            
+        day_content[-1]['hours'] = round(remaining, 1)
+    
+    return day_content
 
 async def process_single_week(week_num, days_per_week, hours_per_day, learning_goals, full_plan):
     """Process a single week to ensure all days are populated with content."""
@@ -167,7 +377,7 @@ async def process_single_week(week_num, days_per_week, hours_per_day, learning_g
         week_data = json.loads(week_json_str)
         logger.info(f"Successfully parsed JSON for week {week_num}")
 
-        # Validate that all days are present and have correct hour allocations
+        # Quick validation that all days are present
         for day in range(1, days_per_week + 1):
             day_key = f"day{day}"
             
@@ -182,20 +392,16 @@ async def process_single_week(week_num, days_per_week, hours_per_day, learning_g
                 )
                 continue
                 
-            # Validate hour allocations
+            # Quick validate hour allocations
             day_content = week_data[day_key]
-            total_hours = 0
-            hours_missing = False
-            
-            for topic in day_content:
-                if 'hours' not in topic:
-                    hours_missing = True
-                    break
-                total_hours += float(topic['hours'])
-            
-            # If hours are missing or don't add up to the required total, regenerate
-            if hours_missing or abs(total_hours - hours_per_day) > 0.1:
-                logger.warning(f"Incorrect hour allocation for {day_key} in week {week_num}: {total_hours} vs {hours_per_day}, regenerating")
+            try:
+                total_hours = sum(float(topic.get('hours', 0)) for topic in day_content)
+                if abs(total_hours - hours_per_day) > 0.5:  # More tolerant threshold
+                    logger.warning(f"Major hour allocation issue: {total_hours} vs {hours_per_day}")
+                    # Fix in place
+                    adjust_hours(day_content, hours_per_day)
+            except Exception as e:
+                logger.error(f"Error validating hours: {str(e)}")
                 week_data[day_key] = await generate_day_content(
                     week_num, 
                     day, 
@@ -249,23 +455,8 @@ async def generate_day_content(week_num, day_num, hours_per_day, learning_goals)
         day_json_str = extract_json(day_response.content)
         day_data = json.loads(day_json_str)
         
-        # Verify hour allocation
-        total_hours = sum(float(topic.get('hours', 0)) for topic in day_data)
-        
-        if abs(total_hours - hours_per_day) > 0.1:
-            logger.warning(f"Generated day content has incorrect hours: {total_hours} vs {hours_per_day}, adjusting")
-            # Adjust hours to match exactly
-            adjustment_factor = hours_per_day / total_hours if total_hours > 0 else 1
-            remaining_hours = hours_per_day
-            
-            for i in range(len(day_data) - 1):
-                adjusted_hours = round(float(day_data[i]['hours']) * adjustment_factor, 1)
-                day_data[i]['hours'] = adjusted_hours
-                remaining_hours -= adjusted_hours
-                
-            # Assign remaining hours to last topic
-            day_data[-1]['hours'] = round(remaining_hours, 1)
-            
+        # Verify and adjust hour allocation if needed
+        adjust_hours(day_data, hours_per_day)
         logger.info(f"Successfully generated content for week {week_num}, day {day_num}")
         return day_data
     except Exception as e:
@@ -298,18 +489,7 @@ def generate_emergency_day_content(week_num, day_num, hours_per_day, learning_go
         fallback_data = json.loads(fallback_json_str)
         
         # Verify hours total
-        total_hours = sum(float(topic.get('hours', 0)) for topic in fallback_data)
-        if abs(total_hours - hours_per_day) > 0.1:
-            # Simple fix - distribute hours evenly
-            hours_per_topic = round(hours_per_day / len(fallback_data), 1)
-            remaining = round(hours_per_day, 1)
-            
-            for i in range(len(fallback_data)-1):
-                fallback_data[i]['hours'] = hours_per_topic
-                remaining -= hours_per_topic
-                
-            fallback_data[-1]['hours'] = remaining
-            
+        adjust_hours(fallback_data, hours_per_day)
         return fallback_data
         
     except Exception as e:
@@ -453,9 +633,16 @@ async def generate_fallback_week(week_num, days_per_week, hours_per_day, learnin
     logger.warning(f"Generating fallback content for week {week_num}")
     week_data = {}
 
+    # Process days in parallel for fallback
+    day_tasks = []
     for day in range(1, days_per_week + 1):
+        day_tasks.append(generate_day_content(week_num, day, hours_per_day, learning_goals))
+    
+    day_contents = await asyncio.gather(*day_tasks)
+    
+    for day, content in enumerate(day_contents, 1):
         day_key = f"day{day}"
-        week_data[day_key] = await generate_day_content(week_num, day, hours_per_day, learning_goals)
+        week_data[day_key] = content
 
     return week_data
 
@@ -467,7 +654,7 @@ def extract_week_from_plan(plan_text, week_num):
     lines = plan_text.strip().split('\n')
 
     week_pattern = re.compile(r'Week\s+(\d+):', re.IGNORECASE)
-    
+
     for line in lines:
         line = line.strip()
         if not line:
@@ -492,7 +679,7 @@ def extract_week_from_plan(plan_text, week_num):
 def extract_json(text):
     """Extract JSON content from text that might contain explanations."""
     logger.info("Extracting JSON from LLM response")
-    
+
     # Try to find content between triple backticks (```json ... ```)
     json_match = re.search(r'```(?:json)?\s*([\s\S]*?)\s*```', text)
     if json_match:
@@ -504,7 +691,7 @@ def extract_json(text):
     if json_match:
         logger.info("Found JSON between curly braces")
         return json_match.group(1)
-    
+
     # If searching for object failed, try looking for an array
     json_match = re.search(r'(\[[\s\S]*\])', text)
     if json_match:
