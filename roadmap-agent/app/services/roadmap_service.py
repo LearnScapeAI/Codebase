@@ -4,6 +4,9 @@ from app.utils.resource_fetcher import fetch_real_resources
 from app.services.cache_service import RoadmapCache
 from langchain_openai import ChatOpenAI
 from langchain.schema import HumanMessage
+from langchain.callbacks.base import BaseCallbackHandler
+from langchain.schema import LLMResult
+from typing import Dict, List, Any, Optional, Union
 from dotenv import load_dotenv
 import os
 import json
@@ -28,16 +31,18 @@ logger = logging.getLogger(__name__)
 # Initialize the LLM
 try:
     llm = ChatOpenAI(
-        model_name="gpt-3.5-turbo",
+        model_name="gpt-4o",
         temperature=0.7,
-        openai_api_key=os.getenv("OPENAI_API_KEY")
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
+        streaming=True
     )
     
     # Initialize a separate LLM for batch processing
     batch_llm = ChatOpenAI(
-        model_name="gpt-3.5-turbo-16k",  # Use larger context model for batch processing
+        model_name="gpt-4o",  # Use larger context model for batch processing
         temperature=0.7,
-        openai_api_key=os.getenv("OPENAI_API_KEY")
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
+        streaming=True
     )
     logger.info("LLMs initialized successfully")
 except Exception as e:
@@ -56,6 +61,395 @@ except Exception as e:
 MAX_WEEKS_PER_BATCH = 4  # Number of weeks to process in a single batch
 CONCURRENT_BATCHES = 3   # Number of batches to process concurrently
 
+# Add this callback handler class at an appropriate place in the file
+class StreamingJSONCallbackHandler(BaseCallbackHandler):
+    """Callback handler for streaming JSON chunks."""
+    
+    def __init__(self):
+        self.tokens = []
+        self.json_buffer = ""
+        self.streaming_queue = asyncio.Queue()
+        
+    async def on_llm_new_token(self, token: str, **kwargs):
+        """Process new tokens as they're generated."""
+        self.tokens.append(token)
+        self.json_buffer += token
+        
+        # Try to find valid JSON objects or arrays
+        if self._is_valid_json_chunk(self.json_buffer):
+            # Put the new chunk in the queue
+            await self.streaming_queue.put(token)
+    
+    def _is_valid_json_chunk(self, text: str) -> bool:
+        """Check if we have received a valid chunk of JSON."""
+        # For simplicity, we'll just check if we have a complete week or day object
+        # This is a basic implementation - you might want to improve it
+        if ('{"week' in text or '"day' in text) and ('"topic":' in text):
+            return True
+        return False
+    
+    async def on_llm_end(self, response: LLMResult, **kwargs):
+        """Called when LLM generation ends."""
+        # Signal that we're done
+        await self.streaming_queue.put(None)
+    
+    async def on_llm_error(self, error: Union[Exception, KeyboardInterrupt], **kwargs):
+        """Called when LLM encounters an error."""
+        await self.streaming_queue.put({"error": str(error)})
+        await self.streaming_queue.put(None)  # Signal completion
+
+# Add this new streaming function to roadmap_service.py
+async def generate_roadmap_streaming(learning_goals: str, months: int, days_per_week: int, hours_per_day: float):
+    """Generate a roadmap with streaming responses to show progress in real-time."""
+    logger.info(f"Generating streaming roadmap for: {learning_goals}, {months} months")
+    
+    # Check cache first (Pinecone, then S3 if needed)
+    cached_roadmap = roadmap_cache.get_cached_roadmap(learning_goals, months, days_per_week, hours_per_day)
+    if cached_roadmap:
+        logger.info(f"Cache hit for: {learning_goals}")
+        # For cached responses, we'll still stream but all at once
+        yield json.dumps({"status": "cached", "message": "Using cached roadmap"}) + "\n"
+        yield json.dumps(cached_roadmap) + "\n"
+        return
+
+    logger.info(f"Cache miss for: {learning_goals}, generating with streaming LLM...")
+    
+    # Calculate total weeks for better prompting
+    total_weeks = months * 4
+    
+    # Create the streaming callback handler
+    streaming_handler = StreamingJSONCallbackHandler()
+    
+    # Initialize the roadmap structure and metadata
+    yield json.dumps({
+        "status": "initializing",
+        "message": "Starting roadmap generation",
+        "total_weeks": total_weeks,
+        "days_per_week": days_per_week
+    }) + "\n"
+    
+    """
+    # 1. First LLM call — get outline of all topics
+    prompt1 = generate_initial_prompt(learning_goals, months, days_per_week, hours_per_day)
+    yield json.dumps({
+        "status": "planning",
+        "message": "Creating high-level roadmap plan"
+    }) + "\n"
+    
+    try:
+        day_topic_plan = await llm.ainvoke(
+            [HumanMessage(content=prompt1)],
+            callbacks=[streaming_handler]
+        )
+        logger.info("Received initial topic plan from LLM")
+        
+        yield json.dumps({
+            "status": "plan_complete",
+            "message": "High-level plan created, now generating detailed content"
+        }) + "\n"
+    except Exception as e:
+        logger.error(f"Error from LLM when generating initial plan: {str(e)}")
+        yield json.dumps({
+            "status": "error",
+            "message": f"Failed to generate initial roadmap plan: {str(e)}"
+        }) + "\n"
+        return
+    """
+    
+    # In roadmap_service.py, find and modify this part of the generate_roadmap function:
+
+    # 1. First LLM call — get complete outline of all topics
+    prompt1 = generate_initial_prompt(learning_goals, months, days_per_week, hours_per_day)
+    yield json.dumps({
+        "status": "planning",
+        "message": "Creating high-level roadmap plan"
+    }) + "\n"
+    logger.info("Calling LLM for initial topic plan")
+    # In generate_roadmap_streaming function, make sure the LLM call is handling streaming properly:
+
+    try:
+        # Create a separate streaming LLM instance to be extra safe
+        streaming_llm = ChatOpenAI(
+            model_name="gpt-4o",
+            temperature=0.7,
+            openai_api_key=os.getenv("OPENAI_API_KEY"),
+            streaming=True
+        )
+        
+        # Create the streaming callback handler
+        streaming_handler = StreamingJSONCallbackHandler()
+        
+        day_topic_plan = await streaming_llm.ainvoke(
+            [HumanMessage(content=prompt1)]
+        )
+
+        logger.info("Received initial topic plan from LLM")
+        
+        yield json.dumps({
+            "status": "plan_complete",
+            "message": "High-level plan created, now generating detailed content"
+        }) + "\n"
+    except Exception as e:
+        logger.error(f"Error from LLM when generating initial plan: {str(e)}")
+        yield json.dumps({
+            "status": "error",
+            "message": f"Failed to generate initial roadmap plan: {str(e)}"
+        }) + "\n"
+        return
+    
+    # 2. Process the roadmap with real-time updates
+    complete_roadmap = {}
+    
+    # Process weeks in smaller batches for better streaming
+    batch_size = min(MAX_WEEKS_PER_BATCH, total_weeks)  # If <4 weeks total, do fewer
+    
+    # Create batch processing tasks
+    batches = []
+    for start_week in range(1, total_weeks + 1, batch_size):
+        end_week = min(start_week + batch_size - 1, total_weeks)
+        batches.append((start_week, end_week))
+    
+    # Stream progress as each batch completes
+    current_batch = 0
+    total_batches = len(batches)
+    
+    # Process batches in sequence for more predictable streaming
+    for start_week, end_week in batches:
+        current_batch += 1
+        
+        yield json.dumps({
+            "status": "processing_batch",
+            "message": f"Processing weeks {start_week}-{end_week}",
+            "progress": {
+                "current_batch": current_batch,
+                "total_batches": total_batches,
+                "start_week": start_week,
+                "end_week": end_week
+            }
+        }) + "\n"
+        
+        try:
+            # Process this batch
+            batch_result = await process_week_batch_streaming(
+                start_week, end_week, days_per_week, hours_per_day,
+                learning_goals, day_topic_plan.content, streaming_handler
+            )
+            
+            # Update the complete roadmap
+            complete_roadmap.update(batch_result)
+            
+            # Stream the batch result
+            yield json.dumps({
+                "status": "batch_complete",
+                "batch_data": batch_result,
+                "progress": {
+                    "completed_weeks": end_week,
+                    "total_weeks": total_weeks,
+                    "percent_complete": round((end_week / total_weeks) * 100)
+                }
+            }) + "\n"
+            
+        except Exception as e:
+            logger.error(f"Error processing batch for weeks {start_week}-{end_week}: {str(e)}")
+            yield json.dumps({
+                "status": "batch_error",
+                "message": f"Error processing weeks {start_week}-{end_week}: {str(e)}",
+                "will_retry": True
+            }) + "\n"
+            
+            # Try to regenerate with a simplified approach
+            try:
+                simplified_result = {}
+                for week_num in range(start_week, end_week + 1):
+                    week_result = await process_single_week(
+                        week_num, days_per_week, hours_per_day, learning_goals, day_topic_plan.content
+                    )
+                    simplified_result[f"week{week_num}"] = week_result
+                    
+                    # Stream each week as it completes
+                    yield json.dumps({
+                        "status": "week_recovery_complete",
+                        #"week_data": {f"week{week_num}": week_result},
+                        "progress": {
+                            "completed_weeks": week_num,
+                            "total_weeks": total_weeks,
+                            "percent_complete": round((week_num / total_weeks) * 100)
+                        }
+                    }) + "\n"
+                
+                # Update the complete roadmap
+                complete_roadmap.update(simplified_result)
+                
+            except Exception as recovery_error:
+                logger.error(f"Recovery attempt failed: {str(recovery_error)}")
+                yield json.dumps({
+                    "status": "recovery_failed",
+                    "message": f"Failed to recover batch {current_batch}: {str(recovery_error)}"
+                }) + "\n"
+    
+    # Cache the result in Pinecone
+    logger.info("Caching generated roadmap")
+    try:
+        roadmap_cache.cache_roadmap(learning_goals, months, days_per_week, hours_per_day, complete_roadmap)
+        yield json.dumps({
+            "status": "caching_complete",
+            "message": "Roadmap saved to cache for future use"
+        }) + "\n"
+    except Exception as cache_error:
+        logger.error(f"Error caching roadmap: {str(cache_error)}")
+        yield json.dumps({
+            "status": "cache_error",
+            "message": f"Could not cache roadmap: {str(cache_error)}"
+        }) + "\n"
+    
+    # Final complete roadmap
+    yield json.dumps({
+        "status": "complete",
+        "roadmap": complete_roadmap,
+        "message": "Your personalized learning roadmap has been generated successfully."
+    }) + "\n"
+
+async def process_week_batch_streaming(start_week, end_week, days_per_week, hours_per_day, learning_goals, full_plan, streaming_handler):
+    """Process a batch of weeks with streaming updates."""
+    # This is a modified version of process_week_batch that supports streaming
+    
+    logger.info(f"Processing streaming batch for weeks {start_week}-{end_week}")
+    batch_result = {}
+    
+    # Extract topics for all weeks in this batch
+    batch_topics = ""
+    for week_num in range(start_week, end_week + 1):
+        week_topics = extract_week_from_plan(full_plan, week_num)
+        batch_topics += f"\nWEEK {week_num} TOPICS:\n{week_topics}\n"
+    
+    # Generate a prompt for the entire batch
+    batch_prompt = f"""
+    You are creating a detailed learning roadmap for weeks {start_week} through {end_week} of a {learning_goals} course.
+
+    For EACH WEEK and EACH DAY, provide a natural and realistic distribution of topics that makes sense for {learning_goals}.
+    
+    IMPORTANT - TIME ALLOCATION: Each day has {hours_per_day} total study hours available.
+    Break down each day's content into segments, specifying how much time to spend on each topic.
+    The sum of hours for all topics must equal exactly {hours_per_day} hours for each day.
+
+    Consider these topics as guidance: 
+    {batch_topics}
+
+    For each topic, find one specific, high-quality resource (YouTube video, article, tutorial).
+    Each resource must include both a descriptive title AND a URL.
+
+    Your response should be a JSON object with this exact structure:
+    {{
+      "week{start_week}": {{
+        "day1": [
+          {{
+            "topic": "Topic Name", 
+            "resource": "Resource Title - https://link",
+            "hours": 1.5
+          }},
+          {{
+            "topic": "Another Topic", 
+            "resource": "Resource Title - https://link",
+            "hours": 0.5
+          }},
+          ...
+        ],
+        "day2": [...],
+        ...
+        "day{days_per_week}": [...]
+      }},
+      "week{start_week+1}": {{
+        ...
+      }},
+      ...
+      "week{end_week}": {{
+        ...
+      }}
+    }}
+
+    REQUIREMENTS:
+    1. Include ALL weeks from week{start_week} to week{end_week}
+    2. For each week, include ALL {days_per_week} days from day1 to day{days_per_week}
+    3. Each day should have a realistic number of topics
+    4. Each day MUST have topics that SUM UP to exactly {hours_per_day} total hours
+    5. Resources must be high-quality, relevant to {learning_goals}
+    6. Return ONLY valid JSON - no explanations or text before/after
+
+    Focus on appropriate {learning_goals} topics that would be covered at each stage of the learning journey.
+    """
+
+    # Call batch LLM to generate content with streaming
+    try:
+        logger.info(f"Calling LLM for streaming batch processing weeks {start_week}-{end_week}")
+        batch_response = await batch_llm.ainvoke(
+            [HumanMessage(content=batch_prompt)],
+            callbacks=[streaming_handler]
+        )
+        logger.info(f"Received batch content for weeks {start_week}-{end_week}")
+        
+        # Extract and parse JSON
+        batch_json_str = extract_json(batch_response.content)
+        batch_data = json.loads(batch_json_str)
+        
+        # Validate and fix each week in the batch (same as before)
+        for week_num in range(start_week, end_week + 1):
+            week_key = f"week{week_num}"
+            
+            # Check if week exists in response
+            if week_key not in batch_data:
+                logger.warning(f"Missing {week_key} in batch response, generating separately")
+                batch_data[week_key] = await process_single_week(
+                    week_num, 
+                    days_per_week, 
+                    hours_per_day, 
+                    learning_goals, 
+                    full_plan
+                )
+                continue
+                
+            # Quick validation of week structure
+            week_data = batch_data[week_key]
+            for day in range(1, days_per_week + 1):
+                day_key = f"day{day}"
+                
+                # Check if day exists and has content
+                if day_key not in week_data or not week_data[day_key]:
+                    logger.warning(f"Missing {day_key} in {week_key}, generating content")
+                    week_data[day_key] = await generate_day_content(
+                        week_num, 
+                        day, 
+                        hours_per_day,
+                        learning_goals
+                    )
+                    continue
+                    
+                # Quick validation of hour allocations - only fix if seriously wrong
+                day_content = week_data[day_key]
+                try:
+                    total_hours = sum(float(topic.get('hours', 0)) for topic in day_content)
+                    if abs(total_hours - hours_per_day) > 0.5:  # More tolerant threshold
+                        logger.warning(f"Major hour allocation issue in {week_key}/{day_key}: {total_hours} vs {hours_per_day}")
+                        # Fix hour allocation in place rather than regenerating
+                        adjust_hours(day_content, hours_per_day)
+                except Exception as e:
+                    logger.error(f"Error validating hours for {week_key}/{day_key}: {str(e)}")
+                    week_data[day_key] = await generate_day_content(
+                        week_num, 
+                        day, 
+                        hours_per_day,
+                        learning_goals
+                    )
+        
+        # Add the batch results to overall result
+        batch_result.update(batch_data)
+        logger.info(f"Successfully processed batch for weeks {start_week}-{end_week}")
+        return batch_result
+        
+    except Exception as e:
+        logger.error(f"Error processing batch for weeks {start_week}-{end_week}: {str(e)}")
+        raise
+
+# Option 1: Create a non-streaming LLM instance for the initial plan
 async def generate_roadmap(learning_goals: str, months: int, days_per_week: int, hours_per_day: float):
     """Generate a learning roadmap with tiered caching (Pinecone for hot data, S3 for cold data)"""
     logger.info(f"Generating roadmap for: {learning_goals}, {months} months, {days_per_week} days/week, {hours_per_day} hours/day")
@@ -75,12 +469,20 @@ async def generate_roadmap(learning_goals: str, months: int, days_per_week: int,
     prompt1 = generate_initial_prompt(learning_goals, months, days_per_week, hours_per_day)
     logger.info("Calling LLM for initial topic plan")
     try:
-        day_topic_plan = await llm.ainvoke([HumanMessage(content=prompt1)])
+        # Create a non-streaming LLM for this specific call
+        non_streaming_llm = ChatOpenAI(
+            model_name="gpt-4o",
+            temperature=0.7,
+            openai_api_key=os.getenv("OPENAI_API_KEY"),
+            streaming=False  # Important: set streaming to False
+        )
+        day_topic_plan = await non_streaming_llm.ainvoke([HumanMessage(content=prompt1)])
         logger.info("Received initial topic plan from LLM")
     except Exception as e:
         logger.error(f"Error from LLM when generating initial plan: {str(e)}")
         raise RuntimeError(f"Failed to generate initial roadmap plan: {str(e)}")
 
+    # The rest of your function remains the same...
     # 2. Process the entire roadmap using batch processing and concurrency
     logger.info(f"Processing roadmap for {total_weeks} weeks using batched approach")
     complete_roadmap = {}
