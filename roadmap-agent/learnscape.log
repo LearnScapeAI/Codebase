@@ -9052,3 +9052,249 @@ HTTP response body: {"code":3,"message":"Metadata size is 43017 bytes, which exc
 2025-04-23 21:11:31,197 - app.services.cache_service - INFO - Roadmap cached successfully with ID: beagenerativeaiengineer-1-3-3
 2025-04-23 21:11:31,231 - app.services.roadmap_service - INFO - Saved roadmap to database: 3f9b75fb-47a2-49dc-8611-d06e1215cb4f
 2025-04-23 21:11:31,232 - app.routes.roadmap - INFO - Streaming roadmap saved with ID: 3f9b75fb-47a2-49dc-8611-d06e1215cb4f
+2025-04-24 15:40:55,850 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-24 15:41:00,138 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-24 15:41:00,139 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-24 15:41:00,897 - app.services.cache_service - INFO - Using existing Pinecone index: learnscape-index
+2025-04-24 15:41:02,853 - app.services.cache_service - INFO - S3 bucket learnscape-roadmap-backup exists
+2025-04-24 15:41:02,853 - app.services.cache_service - INFO - RoadmapCache initialized. S3 available: True
+2025-04-24 15:41:02,853 - app.services.roadmap_service - INFO - Roadmap cache initialized
+2025-04-24 15:41:03,169 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
+2025-04-24 15:41:03,169 - app.tasks.archive_task - INFO - Scheduler thread started
+2025-04-24 15:41:03,169 - app.tasks.archive_task - INFO - Scheduler started successfully
+2025-04-24 15:41:18,187 - app.routes.auth - INFO - User logged in: ashishblathkar7@gmail.com
+2025-04-24 15:41:59,707 - app.routes.roadmap - INFO - Received streaming roadmap request: Gate exam 2026 - Aptitude, 1 months
+2025-04-24 15:41:59,707 - app.services.roadmap_service - INFO - Generating streaming roadmap for: Gate exam 2026 - Aptitude, 1 months
+2025-04-24 15:41:59,707 - app.services.cache_service - INFO - Checking cache for roadmap: Gate exam 2026 - Aptitude, 1 months, 7 days/week
+2025-04-24 15:41:59,707 - app.services.cache_service - INFO - Created cache ID: gateexam2026-aptitude-1-7-4
+2025-04-24 15:41:59,707 - app.services.cache_service - INFO - Generating embedding for text: Gate exam 2026 - Aptitude 1 months 7 days per week...
+2025-04-24 15:42:00,701 - app.services.cache_service - INFO - Pinecone query returned 1 matches
+2025-04-24 15:42:00,701 - app.services.cache_service - INFO - Found match with score: 0.584689498
+2025-04-24 15:42:00,701 - app.services.cache_service - INFO - Match score too low (0.584689498), regenerating roadmap
+2025-04-24 15:42:00,701 - app.services.roadmap_service - INFO - Cache miss for: Gate exam 2026 - Aptitude, generating with streaming LLM...
+2025-04-24 15:42:00,701 - app.services.roadmap_service - INFO - Calling LLM for initial topic plan
+2025-04-24 15:42:03,689 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:42:17,930 - app.services.roadmap_service - INFO - Received initial topic plan from LLM
+2025-04-24 15:42:17,932 - app.services.roadmap_service - INFO - Processing streaming batch for weeks 1-4
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Extracting week 1 topics from plan
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Extracted 0 lines for week 1
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Extracting week 2 topics from plan
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Extracted 0 lines for week 2
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Extracting week 3 topics from plan
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Extracted 0 lines for week 3
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Extracting week 4 topics from plan
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Extracted 0 lines for week 4
+2025-04-24 15:42:17,933 - app.services.roadmap_service - INFO - Calling LLM for streaming batch processing weeks 1-4
+2025-04-24 15:42:17,933 - app.services.roadmap_service - ERROR - Error processing batch for weeks 1-4: langchain_core.language_models.chat_models.BaseChatModel.agenerate_prompt() got multiple values for keyword argument 'callbacks'
+2025-04-24 15:42:17,936 - app.services.roadmap_service - ERROR - Error processing batch for weeks 1-4: langchain_core.language_models.chat_models.BaseChatModel.agenerate_prompt() got multiple values for keyword argument 'callbacks'
+2025-04-24 15:42:17,936 - app.services.roadmap_service - INFO - Processing content for week 1
+2025-04-24 15:42:17,936 - app.services.roadmap_service - INFO - Extracting week 1 topics from plan
+2025-04-24 15:42:17,936 - app.services.roadmap_service - INFO - Extracted 0 lines for week 1
+2025-04-24 15:42:17,938 - app.services.roadmap_service - INFO - Extracted topics for week 1
+2025-04-24 15:42:17,938 - app.services.roadmap_service - INFO - Calling LLM for week 1 content
+2025-04-24 15:42:18,484 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:42:28,540 - app.services.roadmap_service - INFO - Received week 1 content from LLM
+2025-04-24 15:42:28,541 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 15:42:28,543 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 15:42:28,543 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 1
+2025-04-24 15:42:28,544 - app.services.roadmap_service - INFO - Processing content for week 2
+2025-04-24 15:42:28,546 - app.services.roadmap_service - INFO - Extracting week 2 topics from plan
+2025-04-24 15:42:28,546 - app.services.roadmap_service - INFO - Extracted 0 lines for week 2
+2025-04-24 15:42:28,546 - app.services.roadmap_service - INFO - Extracted topics for week 2
+2025-04-24 15:42:28,547 - app.services.roadmap_service - INFO - Calling LLM for week 2 content
+2025-04-24 15:42:28,983 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:42:50,546 - app.services.roadmap_service - INFO - Received week 2 content from LLM
+2025-04-24 15:42:50,562 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 15:42:50,562 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 15:42:50,562 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 2
+2025-04-24 15:42:50,562 - app.services.roadmap_service - INFO - Processing content for week 3
+2025-04-24 15:42:50,562 - app.services.roadmap_service - INFO - Extracting week 3 topics from plan
+2025-04-24 15:42:50,562 - app.services.roadmap_service - INFO - Extracted 0 lines for week 3
+2025-04-24 15:42:50,562 - app.services.roadmap_service - INFO - Extracted topics for week 3
+2025-04-24 15:42:50,562 - app.services.roadmap_service - INFO - Calling LLM for week 3 content
+2025-04-24 15:42:50,815 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Received week 3 content from LLM
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 3
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Processing content for week 4
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Extracting week 4 topics from plan
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Extracted 0 lines for week 4
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Extracted topics for week 4
+2025-04-24 15:43:05,231 - app.services.roadmap_service - INFO - Calling LLM for week 4 content
+2025-04-24 15:43:05,714 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:43:20,700 - app.services.roadmap_service - INFO - Received week 4 content from LLM
+2025-04-24 15:43:20,700 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 15:43:20,700 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 15:43:20,700 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 4
+2025-04-24 15:43:20,701 - app.services.roadmap_service - INFO - Caching generated roadmap
+2025-04-24 15:43:20,701 - app.services.cache_service - INFO - Caching roadmap for: Gate exam 2026 - Aptitude, 1 months, 7 days/week
+2025-04-24 15:43:20,702 - app.services.cache_service - INFO - Created cache ID: gateexam2026-aptitude-1-7-4
+2025-04-24 15:43:20,702 - app.services.cache_service - INFO - Generating embedding for text: Gate exam 2026 - Aptitude 1 months 7 days per week...
+2025-04-24 15:43:21,647 - app.services.cache_service - INFO - Roadmap cached successfully with ID: gateexam2026-aptitude-1-7-4
+2025-04-24 15:43:21,744 - app.services.roadmap_service - INFO - Saved roadmap to database: 252b1541-7c90-4e24-813d-11c83a43f957
+2025-04-24 15:43:21,744 - app.routes.roadmap - INFO - Streaming roadmap saved with ID: 252b1541-7c90-4e24-813d-11c83a43f957
+2025-04-24 15:50:57,219 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-24 15:51:00,295 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-24 15:51:00,295 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-24 15:51:01,025 - app.services.cache_service - INFO - Using existing Pinecone index: learnscape-index
+2025-04-24 15:51:01,744 - app.services.cache_service - INFO - S3 bucket learnscape-roadmap-backup exists
+2025-04-24 15:51:01,744 - app.services.cache_service - INFO - RoadmapCache initialized. S3 available: True
+2025-04-24 15:51:01,744 - app.services.roadmap_service - INFO - Roadmap cache initialized
+2025-04-24 15:51:02,012 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
+2025-04-24 15:51:02,012 - app.tasks.archive_task - INFO - Scheduler thread started
+2025-04-24 15:51:02,012 - app.tasks.archive_task - INFO - Scheduler started successfully
+2025-04-24 15:51:18,013 - app.routes.auth - INFO - User logged in: ashishblathkar7@gmail.com
+2025-04-24 15:51:51,547 - app.routes.roadmap - INFO - Received streaming roadmap request: UI/UX Design, 1 months
+2025-04-24 15:51:51,547 - app.services.roadmap_service - INFO - Generating streaming roadmap for: UI/UX Design, 1 months
+2025-04-24 15:51:51,547 - app.services.cache_service - INFO - Checking cache for roadmap: UI/UX Design, 1 months, 6 days/week
+2025-04-24 15:51:51,549 - app.services.cache_service - INFO - Created cache ID: ui/uxdesign-1-6-4
+2025-04-24 15:51:51,549 - app.services.cache_service - INFO - Generating embedding for text: UI/UX Design 1 months 6 days per week 4 hours per ...
+2025-04-24 15:51:52,602 - app.services.cache_service - INFO - Pinecone query returned 1 matches
+2025-04-24 15:51:52,602 - app.services.cache_service - INFO - Found match with score: 0.381609172
+2025-04-24 15:51:52,602 - app.services.cache_service - INFO - Match score too low (0.381609172), regenerating roadmap
+2025-04-24 15:51:52,602 - app.services.roadmap_service - INFO - Cache miss for: UI/UX Design, generating with streaming LLM...
+2025-04-24 15:51:52,602 - app.services.roadmap_service - INFO - Calling LLM for initial topic plan
+2025-04-24 15:51:54,464 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Received initial topic plan from LLM
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Processing streaming batch for weeks 1-4
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracting week 1 topics from plan
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracted 7 lines for week 1
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracting week 2 topics from plan
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracted 7 lines for week 2
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracting week 3 topics from plan
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracted 7 lines for week 3
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracting week 4 topics from plan
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracted 7 lines for week 4
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Calling LLM for streaming batch processing weeks 1-4
+2025-04-24 15:52:04,958 - app.services.roadmap_service - ERROR - Error processing batch for weeks 1-4: langchain_core.language_models.chat_models.BaseChatModel.agenerate_prompt() got multiple values for keyword argument 'callbacks'
+2025-04-24 15:52:04,958 - app.services.roadmap_service - ERROR - Error processing batch for weeks 1-4: langchain_core.language_models.chat_models.BaseChatModel.agenerate_prompt() got multiple values for keyword argument 'callbacks'
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Processing content for week 1
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracting week 1 topics from plan
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracted 7 lines for week 1
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Extracted topics for week 1
+2025-04-24 15:52:04,958 - app.services.roadmap_service - INFO - Calling LLM for week 1 content
+2025-04-24 15:52:05,584 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Received week 1 content from LLM
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 1
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Processing content for week 2
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Extracting week 2 topics from plan
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Extracted 7 lines for week 2
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Extracted topics for week 2
+2025-04-24 15:52:21,858 - app.services.roadmap_service - INFO - Calling LLM for week 2 content
+2025-04-24 15:52:22,465 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:52:42,446 - app.services.roadmap_service - INFO - Received week 2 content from LLM
+2025-04-24 15:52:42,446 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 15:52:42,447 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 15:52:42,447 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 2
+2025-04-24 15:52:42,447 - app.services.roadmap_service - INFO - Processing content for week 3
+2025-04-24 15:52:42,447 - app.services.roadmap_service - INFO - Extracting week 3 topics from plan
+2025-04-24 15:52:42,448 - app.services.roadmap_service - INFO - Extracted 7 lines for week 3
+2025-04-24 15:52:42,448 - app.services.roadmap_service - INFO - Extracted topics for week 3
+2025-04-24 15:52:42,448 - app.services.roadmap_service - INFO - Calling LLM for week 3 content
+2025-04-24 15:52:42,912 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:52:59,042 - app.services.roadmap_service - INFO - Received week 3 content from LLM
+2025-04-24 15:52:59,042 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 15:52:59,042 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 15:52:59,043 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 3
+2025-04-24 15:52:59,043 - app.services.roadmap_service - INFO - Processing content for week 4
+2025-04-24 15:52:59,043 - app.services.roadmap_service - INFO - Extracting week 4 topics from plan
+2025-04-24 15:52:59,043 - app.services.roadmap_service - INFO - Extracted 7 lines for week 4
+2025-04-24 15:52:59,044 - app.services.roadmap_service - INFO - Extracted topics for week 4
+2025-04-24 15:52:59,044 - app.services.roadmap_service - INFO - Calling LLM for week 4 content
+2025-04-24 15:52:59,742 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 15:53:21,870 - app.services.roadmap_service - INFO - Received week 4 content from LLM
+2025-04-24 15:53:21,871 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 15:53:21,871 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 15:53:21,871 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 4
+2025-04-24 15:53:21,872 - app.services.roadmap_service - INFO - Caching generated roadmap
+2025-04-24 15:53:21,872 - app.services.cache_service - INFO - Caching roadmap for: UI/UX Design, 1 months, 6 days/week
+2025-04-24 15:53:21,872 - app.services.cache_service - INFO - Created cache ID: ui/uxdesign-1-6-4
+2025-04-24 15:53:21,872 - app.services.cache_service - INFO - Generating embedding for text: UI/UX Design 1 months 6 days per week 4 hours per ...
+2025-04-24 15:53:22,739 - app.services.cache_service - INFO - Roadmap cached successfully with ID: ui/uxdesign-1-6-4
+2025-04-24 15:53:22,838 - app.services.roadmap_service - INFO - Saved roadmap to database: aa73e4fb-3b5d-46e3-a772-26629371e4fd
+2025-04-24 15:53:22,838 - app.routes.roadmap - INFO - Streaming roadmap saved with ID: aa73e4fb-3b5d-46e3-a772-26629371e4fd
+2025-04-24 16:06:17,748 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-24 16:06:20,905 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-24 16:06:20,905 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-24 16:06:23,872 - app.services.cache_service - INFO - Using existing Pinecone index: learnscape-index
+2025-04-24 16:06:24,480 - app.services.cache_service - INFO - S3 bucket learnscape-roadmap-backup exists
+2025-04-24 16:06:24,487 - app.services.cache_service - INFO - RoadmapCache initialized. S3 available: True
+2025-04-24 16:06:24,487 - app.services.roadmap_service - INFO - Roadmap cache initialized
+2025-04-24 16:06:24,749 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
+2025-04-24 16:06:24,749 - app.tasks.archive_task - INFO - Scheduler thread started
+2025-04-24 16:06:24,749 - app.tasks.archive_task - INFO - Scheduler started successfully
+2025-04-24 16:06:37,504 - app.routes.auth - INFO - User logged in: ashishblathkar7@gmail.com
+2025-04-24 16:07:09,710 - app.routes.roadmap - INFO - Received streaming roadmap request: react, 1 months
+2025-04-24 16:07:09,710 - app.services.roadmap_service - INFO - Generating streaming roadmap for: react, 1 months
+2025-04-24 16:07:09,710 - app.services.cache_service - INFO - Checking cache for roadmap: react, 1 months, 5 days/week
+2025-04-24 16:07:09,710 - app.services.cache_service - INFO - Created cache ID: react-1-5-5
+2025-04-24 16:07:09,710 - app.services.cache_service - INFO - Generating embedding for text: react 1 months 5 days per week 5 hours per day...
+2025-04-24 16:07:10,537 - app.services.cache_service - INFO - Pinecone query returned 1 matches
+2025-04-24 16:07:10,539 - app.services.cache_service - INFO - Found match with score: 0.461372107
+2025-04-24 16:07:10,539 - app.services.cache_service - INFO - Match score too low (0.461372107), regenerating roadmap
+2025-04-24 16:07:10,539 - app.services.roadmap_service - INFO - Cache miss for: react, generating with streaming LLM...
+2025-04-24 16:07:10,539 - app.services.roadmap_service - INFO - Calling LLM for initial topic plan
+2025-04-24 16:07:12,092 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Received initial topic plan from LLM
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Processing streaming batch for weeks 1-4
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracting week 1 topics from plan
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracted 6 lines for week 1
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracting week 2 topics from plan
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracted 6 lines for week 2
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracting week 3 topics from plan
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracted 6 lines for week 3
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracting week 4 topics from plan
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracted 7 lines for week 4
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Calling LLM for streaming batch processing weeks 1-4
+2025-04-24 16:07:20,801 - app.services.roadmap_service - ERROR - Error processing batch for weeks 1-4: langchain_core.language_models.chat_models.BaseChatModel.agenerate_prompt() got multiple values for keyword argument 'callbacks'
+2025-04-24 16:07:20,801 - app.services.roadmap_service - ERROR - Error processing batch for weeks 1-4: langchain_core.language_models.chat_models.BaseChatModel.agenerate_prompt() got multiple values for keyword argument 'callbacks'
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Processing content for week 1
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracting week 1 topics from plan
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracted 6 lines for week 1
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Extracted topics for week 1
+2025-04-24 16:07:20,801 - app.services.roadmap_service - INFO - Calling LLM for week 1 content
+2025-04-24 16:07:21,288 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Received week 1 content from LLM
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 1
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Processing content for week 2
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Extracting week 2 topics from plan
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Extracted 6 lines for week 2
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Extracted topics for week 2
+2025-04-24 16:07:34,039 - app.services.roadmap_service - INFO - Calling LLM for week 2 content
+2025-04-24 16:07:34,480 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Received week 2 content from LLM
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 2
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Processing content for week 3
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Extracting week 3 topics from plan
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Extracted 6 lines for week 3
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Extracted topics for week 3
+2025-04-24 16:07:47,751 - app.services.roadmap_service - INFO - Calling LLM for week 3 content
+2025-04-24 16:07:47,969 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 16:08:01,279 - app.services.roadmap_service - INFO - Received week 3 content from LLM
+2025-04-24 16:08:01,280 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 16:08:01,280 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 16:08:01,280 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 3
+2025-04-24 16:08:01,280 - app.services.roadmap_service - INFO - Processing content for week 4
+2025-04-24 16:08:01,281 - app.services.roadmap_service - INFO - Extracting week 4 topics from plan
+2025-04-24 16:08:01,281 - app.services.roadmap_service - INFO - Extracted 7 lines for week 4
+2025-04-24 16:08:01,281 - app.services.roadmap_service - INFO - Extracted topics for week 4
+2025-04-24 16:08:01,281 - app.services.roadmap_service - INFO - Calling LLM for week 4 content
+2025-04-24 16:08:01,823 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-24 16:08:13,531 - app.services.roadmap_service - INFO - Received week 4 content from LLM
+2025-04-24 16:08:13,531 - app.services.roadmap_service - INFO - Extracting JSON from LLM response
+2025-04-24 16:08:13,531 - app.services.roadmap_service - INFO - Found JSON between backticks
+2025-04-24 16:08:13,531 - app.services.roadmap_service - INFO - Successfully parsed JSON for week 4
+2025-04-24 16:08:13,531 - app.services.roadmap_service - INFO - Caching generated roadmap
+2025-04-24 16:08:13,531 - app.services.cache_service - INFO - Caching roadmap for: react, 1 months, 5 days/week
+2025-04-24 16:08:13,531 - app.services.cache_service - INFO - Created cache ID: react-1-5-5
+2025-04-24 16:08:13,531 - app.services.cache_service - INFO - Generating embedding for text: react 1 months 5 days per week 5 hours per day...
+2025-04-24 16:08:14,451 - app.services.cache_service - INFO - Roadmap cached successfully with ID: react-1-5-5
+2025-04-24 16:08:14,614 - app.services.roadmap_service - INFO - Saved roadmap to database: b2239236-63ff-4c37-a60c-78a491ca1ba2
+2025-04-24 16:08:14,614 - app.routes.roadmap - INFO - Streaming roadmap saved with ID: b2239236-63ff-4c37-a60c-78a491ca1ba2

@@ -6,7 +6,7 @@ openai
 matplotlib
 plotly
 python-dotenv
-#pinecone
+pinecone
 boto3
 schedule
 langchain-google-genai
@@ -19,3 +19,4 @@ python-jose
 passlib
 bcrypt
 python-multipart
+google-search-results
