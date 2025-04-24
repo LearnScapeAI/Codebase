@@ -20,3 +20,4 @@ passlib
 bcrypt
 python-multipart
 google-search-results
+langchain-openai
