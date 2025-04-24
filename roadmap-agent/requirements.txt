@@ -6,9 +6,16 @@ openai
 matplotlib
 plotly
 python-dotenv
-pinecone
+#pinecone
 boto3
 schedule
 langchain-google-genai
 beautifulsoup4
 isodate
+pydantic
+sqlalchemy
+psycopg2-binary
+python-jose
+passlib
+bcrypt
+python-multipart

@@ -1,6 +1,9 @@
-from fastapi import APIRouter, HTTPException
-from app.models import RoadmapRequest
-from app.services.roadmap_service import generate_roadmap, generate_roadmap_streaming
+from fastapi import APIRouter, HTTPException, Depends
+from app.models import RoadmapRequest, User
+from app.services.roadmap_service import generate_roadmap, generate_roadmap_streaming, save_roadmap
+from app.services.auth_service import get_current_user
+from app.database import get_db
+from sqlalchemy.orm import Session
 import json
 import logging
 from fastapi.responses import JSONResponse
@@ -17,7 +20,11 @@ router = APIRouter(tags=["Roadmap Generator"])
 
 # Generate a personalized learning roadmap
 @router.post("/generate_roadmap")
-async def create_roadmap(request: RoadmapRequest):
+async def create_roadmap(
+    request: RoadmapRequest, 
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
     logger.info(f"Received roadmap request: {request.learning_goals}, {request.months} months, "
                f"{request.days_per_week} days/week, {request.hours_per_day} hours/day")
     
@@ -64,20 +71,36 @@ async def create_roadmap(request: RoadmapRequest):
                 if abs(total_hours - request.hours_per_day) > 0.1:
                     logger.warning(f"Hours don't add up in {day_key}, {week_key}: {total_hours} vs {request.hours_per_day}")
 
-        logger.info("Roadmap validation complete, returning response")
+        # Save the roadmap to the database
+        db_roadmap = await save_roadmap(
+            db,
+            current_user.id,
+            request.learning_goals,
+            request.months,
+            request.days_per_week,
+            request.hours_per_day,
+            parsed_roadmap
+        )
+
+        logger.info(f"Roadmap saved with ID: {db_roadmap.id}")
+        
         return {
+            "roadmap_id": db_roadmap.id,
             "roadmap": parsed_roadmap,
-            "message": "Your personalized learning roadmap has been generated successfully. Each day includes an hour-by-hour breakdown to help you manage your study time effectively."
+            "message": "Your personalized learning roadmap has been generated and saved successfully. Each day includes an hour-by-hour breakdown to help you manage your study time effectively."
         }
 
     except Exception as e:
         logger.error(f"Error generating roadmap: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error generating roadmap: {str(e)}")
 
-
 # Generate a personalized learning roadmap with streaming response
 @router.post("/generate_roadmap_stream")
-async def create_roadmap_stream(request: RoadmapRequest):
+async def create_roadmap_stream(
+    request: RoadmapRequest,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
     """
     Generate a personalized learning roadmap with a streaming response.
     Instead of returning chunks, this collects and returns a complete JSON response.
@@ -108,11 +131,25 @@ async def create_roadmap_stream(request: RoadmapRequest):
             else:
                 logger.warning("Chunk not in expected format (dict)")
 
-        logger.info("Streaming roadmap aggregation complete, returning JSON response")
+        # ✅ Save the roadmap using authenticated user
+        db_roadmap = await save_roadmap(
+            db,
+            current_user.id,  # <-- user ID from token
+            request.learning_goals,
+            request.months,
+            request.days_per_week,
+            request.hours_per_day,
+            roadmap_dict
+        )
+
+        logger.info(f"Streaming roadmap saved with ID: {db_roadmap.id}")
+        
+        # ✅ Include roadmap_id in response
         return JSONResponse(
             content={
+                "roadmap_id": db_roadmap.id,
                 "roadmap": roadmap_dict,
-                "message": "Your personalized learning roadmap has been generated successfully using the streaming process."
+                "message": "Your personalized learning roadmap has been generated and saved using the streaming process."
             },
             status_code=200
         )

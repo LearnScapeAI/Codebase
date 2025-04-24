@@ -117,6 +117,7 @@ import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import isodate
+from datetime import datetime, timedelta
 
 load_dotenv()
 
@@ -136,7 +137,13 @@ TRUSTED_DOMAINS = [
 
 def google_search(query, api_key, cse_id, num_results=10):
     search_url = "https://www.googleapis.com/customsearch/v1"
-    params = {'key': api_key, 'cx': cse_id, 'q': query, 'num': num_results}
+    params = {
+        'key': api_key,
+        'cx': cse_id,
+        'q': query + " free",
+        'num': num_results,
+        'dateRestrict': 'y[1]'  # published within 1 year
+    }
     try:
         response = requests.get(search_url, params=params)
         response.raise_for_status()
@@ -145,17 +152,12 @@ def google_search(query, api_key, cse_id, num_results=10):
         print(f"Error during Google Search API call: {e}")
         return []
 
-def extract_text_from_html(html_content):
-    if not html_content:
-        return ""
+def is_valid_url(url):
     try:
-        soup = BeautifulSoup(html_content, 'html.parser')
-        for element in soup(["script", "style", "nav", "footer", "aside"]):
-            element.extract()
-        return ' '.join(soup.get_text(separator=" ", strip=True).split())
-    except Exception as e:
-        print(f"Error parsing HTML: {e}")
-        return ""
+        resp = requests.head(url, allow_redirects=True, timeout=5)
+        return resp.status_code == 200
+    except Exception:
+        return False
 
 def get_youtube_video_for_query(query, api_key, max_results=5):
     search_url = "https://www.googleapis.com/youtube/v3/search"
@@ -164,10 +166,11 @@ def get_youtube_video_for_query(query, api_key, max_results=5):
     def search_youtube(q):
         params = {
             "part": "snippet",
-            "q": q,
+            "q": q + " tutorial",
             "key": api_key,
             "maxResults": max_results,
-            "type": "video"
+            "type": "video",
+            "publishedAfter": (datetime.now() - timedelta(days=365)).isoformat("T") + "Z"
         }
         try:
             response = requests.get(search_url, params=params)
@@ -175,18 +178,9 @@ def get_youtube_video_for_query(query, api_key, max_results=5):
             return response.json().get("items", [])
         except Exception as e:
             print(f"Error during YouTube search API call: {e}")
-            return None
+            return []
 
     results = search_youtube(query)
-    if not results:
-        parts = query.split()
-        if len(parts) > 1:
-            fallback_query = " ".join(parts[1:])
-            print(f"Fallback: Trying YouTube search with subtopic '{fallback_query}'")
-            results = search_youtube(fallback_query)
-        if not results:
-            return None
-
     for item in results:
         video_id = item["id"]["videoId"]
         details_params = {
@@ -203,14 +197,16 @@ def get_youtube_video_for_query(query, api_key, max_results=5):
             continue
 
         if details:
-            duration_str = details[0].get("contentDetails", {}).get("duration", "PT0S")
+            duration_str = details[0]["contentDetails"].get("duration", "PT0S")
+            published_at = details[0]["snippet"].get("publishedAt", "")
             try:
                 duration_seconds = isodate.parse_duration(duration_str).total_seconds()
+                published_date = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
             except Exception:
                 continue
 
-            if duration_seconds < 600:
-                snippet = details[0].get("snippet", {})
+            if duration_seconds < 600 and published_date > datetime.now() - timedelta(days=365):
+                snippet = details[0]["snippet"]
                 return {
                     "video_id": video_id,
                     "title": snippet.get("title", "Untitled Video"),
@@ -223,18 +219,18 @@ def fetch_real_resources(query: str) -> str:
     if not GOOGLE_API_KEY or not GOOGLE_CSE_ID or not YOUTUBE_API_KEY:
         return "https://www.kaggle.com/, https://www.coursera.org/, https://www.youtube.com/"
 
-    results = google_search(query + " best tutorials", GOOGLE_API_KEY, GOOGLE_CSE_ID, num_results=10)
+    results = google_search(query, GOOGLE_API_KEY, GOOGLE_CSE_ID, num_results=10)
     resources = ""
 
     for item in results:
         link = item.get("link", "")
         title = item.get("title", "")
         if any(domain in link for domain in TRUSTED_DOMAINS):
-            resources += f"{title} - {link}\n"
+            if is_valid_url(link):
+                resources += f"{title} - {link}\n"
 
-    # Add validated YouTube video from YouTube API
     yt_video = get_youtube_video_for_query(query, YOUTUBE_API_KEY)
     if yt_video:
         resources += f"{yt_video['title']} - {yt_video['url']}\n"
 
-    return resources if resources.strip() else "No valid resources found. Try another query."
+    return resources.strip() if resources.strip() else "No valid recent resources found. Try a different topic."

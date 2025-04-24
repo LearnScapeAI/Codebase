@@ -394,3 +394,37 @@ class RoadmapCache:
         except Exception as e:
             logger.error(f"Error in archive_cold_data: {str(e)}")
             return 0
+
+# Add this function to your cache_service.py
+def get_cached_roadmap(cache_key):
+    """Wrapper function to maintain compatibility with existing code"""
+    # Parse the cache key
+    parts = cache_key.split('_')
+    if len(parts) >= 4:
+        # Extract parameters from cache key
+        hours_per_day = float(parts[-1])
+        days_per_week = int(parts[-2])
+        months = int(parts[-3])
+        learning_goals = '_'.join(parts[:-3])
+        
+        # Create cache instance and get roadmap
+        cache = RoadmapCache()
+        return cache.get_cached_roadmap(learning_goals, months, days_per_week, hours_per_day)
+    return None
+
+# Add this function to your cache_service.py
+def cache_roadmap(cache_key, roadmap_data):
+    """Wrapper function to maintain compatibility with existing code"""
+    # Parse the cache key
+    parts = cache_key.split('_')
+    if len(parts) >= 4:
+        # Extract parameters from cache key
+        hours_per_day = float(parts[-1])
+        days_per_week = int(parts[-2])
+        months = int(parts[-3])
+        learning_goals = '_'.join(parts[:-3])
+        
+        # Create cache instance and cache roadmap
+        cache = RoadmapCache()
+        return cache.cache_roadmap(learning_goals, months, days_per_week, hours_per_day, roadmap_data)
+    return None

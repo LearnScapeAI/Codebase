@@ -1,11 +1,13 @@
 # app/services/roadmap_service.py
 from app.utils.prompt_utils import filter_prompt, verify_prompt, format_json_prompt, generate_initial_prompt
 from app.utils.resource_fetcher import fetch_real_resources
-from app.services.cache_service import RoadmapCache
+from app.services.cache_service import RoadmapCache, get_cached_roadmap, cache_roadmap
 from langchain_openai import ChatOpenAI
 from langchain.schema import HumanMessage
 from langchain.callbacks.base import BaseCallbackHandler
 from langchain.schema import LLMResult
+from app.models import Roadmap, Progress, User
+from sqlalchemy.orm import Session
 from typing import Dict, List, Any, Optional, Union
 from dotenv import load_dotenv
 import os
@@ -449,13 +451,13 @@ async def process_week_batch_streaming(start_week, end_week, days_per_week, hour
         logger.error(f"Error processing batch for weeks {start_week}-{end_week}: {str(e)}")
         raise
 
-# Option 1: Create a non-streaming LLM instance for the initial plan
 async def generate_roadmap(learning_goals: str, months: int, days_per_week: int, hours_per_day: float):
     """Generate a learning roadmap with tiered caching (Pinecone for hot data, S3 for cold data)"""
     logger.info(f"Generating roadmap for: {learning_goals}, {months} months, {days_per_week} days/week, {hours_per_day} hours/day")
 
     # Check cache first (Pinecone, then S3 if needed)
-    cached_roadmap = roadmap_cache.get_cached_roadmap(learning_goals, months, days_per_week, hours_per_day)
+    cache_key = f"{learning_goals}_{months}_{days_per_week}_{hours_per_day}"
+    cached_roadmap = get_cached_roadmap(cache_key)
     if cached_roadmap:
         logger.info(f"Cache hit for: {learning_goals}")
         return json.dumps(cached_roadmap, indent=2)
@@ -518,11 +520,137 @@ async def generate_roadmap(learning_goals: str, months: int, days_per_week: int,
 
     # Cache the result in Pinecone
     logger.info("Caching generated roadmap")
-    roadmap_cache.cache_roadmap(learning_goals, months, days_per_week, hours_per_day, complete_roadmap)
+    cache_roadmap(cache_key, complete_roadmap)
 
     # Final validation and formatting
     logger.info("Roadmap generation complete")
     return json.dumps(complete_roadmap, indent=2)
+
+# Save roadmap to database
+async def save_roadmap(db: Session, user_id: str, learning_goals: str, 
+                      months: int, days_per_week: int, hours_per_day: float, 
+                      content: dict):
+    # Create new roadmap
+    db_roadmap = Roadmap(
+        user_id=user_id,
+        learning_goals=learning_goals,
+        months=months,
+        days_per_week=days_per_week,
+        hours_per_day=hours_per_day,
+        content=content
+    )
+    
+    db.add(db_roadmap)
+    db.commit()
+    db.refresh(db_roadmap)
+    
+    # Create progress items for each topic in the roadmap
+    for week_num in range(1, months * 4 + 1):
+        week_key = f"week{week_num}"
+        if week_key in content:
+            for day_num in range(1, days_per_week + 1):
+                day_key = f"day{day_num}"
+                if day_key in content[week_key]:
+                    for topic_idx, _ in enumerate(content[week_key][day_key]):
+                        progress_item = Progress(
+                            roadmap_id=db_roadmap.id,
+                            week_number=week_num,
+                            day_number=day_num,
+                            topic_index=topic_idx,
+                            completed=False
+                        )
+                        db.add(progress_item)
+    
+    db.commit()
+    logger.info(f"Saved roadmap to database: {db_roadmap.id}")
+    return db_roadmap
+
+# Get user roadmaps
+async def get_user_roadmaps(db: Session, user_id: str):
+    roadmaps = db.query(Roadmap).filter(Roadmap.user_id == user_id).all()
+    return roadmaps
+
+# Get roadmap with progress
+async def get_roadmap_with_progress(db: Session, roadmap_id: str, user_id: str):
+    # Get roadmap and verify it belongs to the user
+    roadmap = db.query(Roadmap).filter(
+        Roadmap.id == roadmap_id,
+        Roadmap.user_id == user_id
+    ).first()
+    
+    if not roadmap:
+        return None
+    
+    # Get progress items
+    progress_items = db.query(Progress).filter(
+        Progress.roadmap_id == roadmap_id
+    ).all()
+    
+    # Convert to dictionary for easy access
+    progress_dict = {}
+    for item in progress_items:
+        week_key = f"week{item.week_number}"
+        day_key = f"day{item.day_number}"
+        
+        if week_key not in progress_dict:
+            progress_dict[week_key] = {}
+        
+        if day_key not in progress_dict[week_key]:
+            progress_dict[week_key][day_key] = []
+        
+        progress_dict[week_key][day_key].append({
+            "topic_index": item.topic_index,
+            "completed": item.completed,
+            "completed_at": item.completed_at.isoformat() if item.completed_at else None
+        })
+    
+    # Create result with roadmap and progress
+    result = {
+        "id": roadmap.id,
+        "learning_goals": roadmap.learning_goals,
+        "months": roadmap.months,
+        "days_per_week": roadmap.days_per_week,
+        "hours_per_day": roadmap.hours_per_day,
+        "content": roadmap.content,
+        "progress": progress_dict,
+        "created_at": roadmap.created_at.isoformat()
+    }
+    
+    return result
+
+# Update progress
+async def update_progress(db: Session, roadmap_id: str, user_id: str, 
+                         week_number: int, day_number: int, 
+                         topic_index: int, completed: bool):
+    # Verify roadmap belongs to the user
+    roadmap = db.query(Roadmap).filter(
+        Roadmap.id == roadmap_id,
+        Roadmap.user_id == user_id
+    ).first()
+    
+    if not roadmap:
+        return None
+    
+    # Get the progress item
+    progress_item = db.query(Progress).filter(
+        Progress.roadmap_id == roadmap_id,
+        Progress.week_number == week_number,
+        Progress.day_number == day_number,
+        Progress.topic_index == topic_index
+    ).first()
+    
+    if not progress_item:
+        return None
+    
+    # Update progress
+    from datetime import datetime
+    progress_item.completed = completed
+    progress_item.completed_at = datetime.utcnow() if completed else None
+    
+    db.commit()
+    db.refresh(progress_item)
+    
+    return progress_item
 
 async def process_week_batch(start_week, end_week, days_per_week, hours_per_day, learning_goals, full_plan):
     """Process a batch of consecutive weeks at once."""
