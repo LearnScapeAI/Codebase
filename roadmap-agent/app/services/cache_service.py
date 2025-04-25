@@ -46,7 +46,7 @@ try:
 except Exception as e:
     logger.error(f"Failed to initialize S3 client: {str(e)}")
     s3_client = None
-
+    
 def ensure_pinecone_index():
     """Create index if it doesn't exist and return the index object"""
     try:
@@ -57,10 +57,18 @@ def ensure_pinecone_index():
         if PINECONE_INDEX_NAME not in index_names:
             # Create index with dimension 1024 to match existing index
             logger.info(f"Creating new Pinecone index: {PINECONE_INDEX_NAME}")
+            
+            # Define the spec for the index
+            index_spec = {
+                "dimension": 1024,  # Specify the dimension for the index
+                "metric": "cosine",  # Use cosine similarity as the metric
+                # You can add more fields here as needed, like "pod_type"
+            }
+            
+            # Create the index with the spec
             pc.create_index(
                 name=PINECONE_INDEX_NAME,
-                dimension=1024,
-                metric="cosine"
+                spec=index_spec
             )
             logger.info(f"Pinecone index {PINECONE_INDEX_NAME} created successfully")
         else:
