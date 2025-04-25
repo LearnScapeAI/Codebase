@@ -21,3 +21,5 @@ bcrypt
 python-multipart
 google-search-results
 langchain-openai
+uvicorn[standard]
+alembic
