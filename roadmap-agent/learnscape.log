@@ -9749,6 +9749,7 @@ HTTP response body: {"code":3,"message":"Metadata size is 107477 bytes, which ex
 
 2025-04-24 19:38:48,406 - app.services.roadmap_service - INFO - Saved roadmap to database: f019c317-01b5-4847-bf0f-7a8b8cf42aab
 2025-04-24 19:38:48,407 - app.routes.roadmap - INFO - Streaming roadmap saved with ID: f019c317-01b5-4847-bf0f-7a8b8cf42aab
+<<<<<<< HEAD
 2025-04-25 19:35:25,465 - app.services.cache_service - INFO - S3 client initialized successfully
 2025-04-25 19:35:28,555 - app.services.roadmap_service - INFO - LLMs initialized successfully
 2025-04-25 19:35:28,555 - app.services.cache_service - INFO - Initializing RoadmapCache
@@ -9841,3 +9842,28 @@ HTTP response body: {"code":3,"message":"Metadata size is 107477 bytes, which ex
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Scheduler thread started
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Scheduler started successfully
+=======
+2025-04-25 23:18:41,871 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-25 23:18:42,849 - app.services.roadmap_service - ERROR - Failed to initialize LLM: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2025-04-25 23:19:14,062 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-25 23:19:15,084 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-25 23:19:15,084 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-25 23:19:15,207 - app.services.cache_service - INFO - Creating new Pinecone index: None
+2025-04-25 23:19:15,207 - app.services.cache_service - ERROR - Error in ensure_pinecone_index: Pinecone.create_index() missing 1 required positional argument: 'spec'
+2025-04-25 23:19:15,207 - app.services.cache_service - ERROR - Failed to initialize RoadmapCache: Pinecone.create_index() missing 1 required positional argument: 'spec'
+2025-04-25 23:19:15,207 - app.services.roadmap_service - ERROR - Failed to initialize roadmap cache: Pinecone.create_index() missing 1 required positional argument: 'spec'
+2025-04-25 23:21:43,731 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-25 23:21:44,717 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-25 23:21:44,718 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-25 23:21:45,100 - app.services.cache_service - INFO - Creating new Pinecone index: None
+2025-04-25 23:21:45,100 - app.services.cache_service - ERROR - Error in ensure_pinecone_index: Pinecone.create_index() missing 1 required positional argument: 'spec'
+2025-04-25 23:21:45,100 - app.services.cache_service - ERROR - Failed to initialize RoadmapCache: Pinecone.create_index() missing 1 required positional argument: 'spec'
+2025-04-25 23:21:45,101 - app.services.roadmap_service - ERROR - Failed to initialize roadmap cache: Pinecone.create_index() missing 1 required positional argument: 'spec'
+2025-04-25 23:23:11,092 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-25 23:23:12,081 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-25 23:23:12,081 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-25 23:23:12,291 - app.services.cache_service - INFO - Creating new Pinecone index: None
+2025-04-25 23:23:12,292 - app.services.cache_service - ERROR - Error in ensure_pinecone_index: Pinecone.create_index() missing 1 required positional argument: 'spec'
+2025-04-25 23:23:12,292 - app.services.cache_service - ERROR - Failed to initialize RoadmapCache: Pinecone.create_index() missing 1 required positional argument: 'spec'
+2025-04-25 23:23:12,292 - app.services.roadmap_service - ERROR - Failed to initialize roadmap cache: Pinecone.create_index() missing 1 required positional argument: 'spec'
+>>>>>>> ce19bf410 (updated index in pinecone)
