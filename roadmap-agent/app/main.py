@@ -5,6 +5,8 @@ from app.routes.auth import router as auth_router
 from app.routes.user import router as user_router
 from app.tasks.archive_task import start_scheduler
 from app.database import engine, Base
+from dotenv import load_dotenv
+load_dotenv()
 
 # Create tables
 Base.metadata.create_all(bind=engine)

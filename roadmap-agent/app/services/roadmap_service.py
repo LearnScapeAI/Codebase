@@ -639,14 +639,25 @@ async def update_progress(db: Session, roadmap_id: str, user_id: str,
         Progress.topic_index == topic_index
     ).first()
     
-    if not progress_item:
-        return None
-    
-    # Update progress
     from datetime import datetime
-    progress_item.completed = completed
-    progress_item.completed_at = datetime.utcnow() if completed else None
-    
+
+    if not progress_item:
+        # 👉 create new progress item if not exists
+        progress_item = Progress(
+            user_id=user_id,
+            roadmap_id=roadmap_id,
+            week_number=week_number,
+            day_number=day_number,
+            topic_index=topic_index,
+            completed=completed,
+            completed_at=datetime.utcnow() if completed else None
+        )
+        db.add(progress_item)
+    else:
+        # 👉 update if exists
+        progress_item.completed = completed
+        progress_item.completed_at = datetime.utcnow() if completed else None
+
     db.commit()
     db.refresh(progress_item)
     
