@@ -9841,3 +9841,13 @@ HTTP response body: {"code":3,"message":"Metadata size is 107477 bytes, which ex
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Scheduler thread started
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Scheduler started successfully
+2025-04-26 21:56:13,225 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-26 21:56:16,476 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-26 21:56:16,476 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-26 21:56:17,487 - app.services.cache_service - INFO - Using existing Pinecone index: learnscape-index
+2025-04-26 21:56:18,304 - app.services.cache_service - INFO - S3 bucket learnscape-roadmap-backup exists
+2025-04-26 21:56:18,304 - app.services.cache_service - INFO - RoadmapCache initialized. S3 available: True
+2025-04-26 21:56:18,304 - app.services.roadmap_service - INFO - Roadmap cache initialized
+2025-04-26 21:56:18,705 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
+2025-04-26 21:56:18,706 - app.tasks.archive_task - INFO - Scheduler thread started
+2025-04-26 21:56:18,706 - app.tasks.archive_task - INFO - Scheduler started successfully

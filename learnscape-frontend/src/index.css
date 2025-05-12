@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  input, button {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+  }
+  
+  .roadmap-card {
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+  }
+  
+  .roadmap-view {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
