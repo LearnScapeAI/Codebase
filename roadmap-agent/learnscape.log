@@ -9842,6 +9842,18 @@ HTTP response body: {"code":3,"message":"Metadata size is 107477 bytes, which ex
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Scheduler thread started
 2025-04-25 20:37:49,523 - app.tasks.archive_task - INFO - Scheduler started successfully
+<<<<<<< HEAD
+2025-04-26 21:56:13,225 - app.services.cache_service - INFO - S3 client initialized successfully
+2025-04-26 21:56:16,476 - app.services.roadmap_service - INFO - LLMs initialized successfully
+2025-04-26 21:56:16,476 - app.services.cache_service - INFO - Initializing RoadmapCache
+2025-04-26 21:56:17,487 - app.services.cache_service - INFO - Using existing Pinecone index: learnscape-index
+2025-04-26 21:56:18,304 - app.services.cache_service - INFO - S3 bucket learnscape-roadmap-backup exists
+2025-04-26 21:56:18,304 - app.services.cache_service - INFO - RoadmapCache initialized. S3 available: True
+2025-04-26 21:56:18,304 - app.services.roadmap_service - INFO - Roadmap cache initialized
+2025-04-26 21:56:18,705 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
+2025-04-26 21:56:18,706 - app.tasks.archive_task - INFO - Scheduler thread started
+2025-04-26 21:56:18,706 - app.tasks.archive_task - INFO - Scheduler started successfully
+=======
 =======
 2025-04-25 23:18:41,871 - app.services.cache_service - INFO - S3 client initialized successfully
 2025-04-25 23:18:42,849 - app.services.roadmap_service - ERROR - Failed to initialize LLM: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
@@ -9965,6 +9977,7 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-04-27 02:46:11,619 - app.tasks.archive_task - INFO - Starting scheduler for archiving cold data
 2025-04-27 02:46:11,620 - app.tasks.archive_task - INFO - Scheduler thread started
 2025-04-27 02:46:11,620 - app.tasks.archive_task - INFO - Scheduler started successfully
+<<<<<<< HEAD
 2025-05-10 21:57:24,566 - app.services.cache_service - INFO - S3 client initialized successfully
 2025-05-10 21:57:26,370 - app.services.roadmap_service - INFO - LLMs initialized successfully
 2025-05-10 21:57:26,370 - app.services.cache_service - INFO - Initializing RoadmapCache
@@ -12046,3 +12059,6 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-05-14 16:28:20,004 - app.routes.roadmap - INFO - Streaming roadmap saved with ID: cadea8e0-4f75-474a-b713-8b4572acab96
 2025-05-14 16:28:25,865 - app.routes.auth - INFO - User logged in: neerajjawahirani@gmail.com
 2025-05-14 16:29:52,352 - app.routes.auth - INFO - User logged in: ash@learnscapeai.com
+=======
+>>>>>>> ae047039f01c35b1bdb3d377a853e280330ed00f
+>>>>>>> 60673ccc8e04babf219d5bfec8bc3457b1535b3d
