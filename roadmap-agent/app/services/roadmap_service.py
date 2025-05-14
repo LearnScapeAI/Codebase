@@ -16,6 +16,7 @@ import re
 import logging
 import asyncio
 from datetime import datetime
+import traceback
 
 load_dotenv()
 
@@ -571,52 +572,82 @@ async def get_user_roadmaps(db: Session, user_id: str):
     return roadmaps
 
 # Get roadmap with progress
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 async def get_roadmap_with_progress(db: Session, roadmap_id: str, user_id: str):
-    # Get roadmap and verify it belongs to the user
-    roadmap = db.query(Roadmap).filter(
-        Roadmap.id == roadmap_id,
-        Roadmap.user_id == user_id
-    ).first()
-    
-    if not roadmap:
-        return None
-    
-    # Get progress items
-    progress_items = db.query(Progress).filter(
-        Progress.roadmap_id == roadmap_id
-    ).all()
-    
-    # Convert to dictionary for easy access
-    progress_dict = {}
-    for item in progress_items:
-        week_key = f"week{item.week_number}"
-        day_key = f"day{item.day_number}"
+    try:
+        logger.info(f"Fetching roadmap {roadmap_id} for user {user_id}")
         
-        if week_key not in progress_dict:
-            progress_dict[week_key] = {}
+        # Get roadmap and verify it belongs to the user
+        roadmap = db.query(Roadmap).filter(
+            Roadmap.id == roadmap_id,
+            Roadmap.user_id == user_id
+        ).first()
         
-        if day_key not in progress_dict[week_key]:
-            progress_dict[week_key][day_key] = []
+        if not roadmap:
+            logger.warning(f"Roadmap {roadmap_id} not found or doesn't belong to user {user_id}")
+            return None
         
-        progress_dict[week_key][day_key].append({
-            "topic_index": item.topic_index,
-            "completed": item.completed,
-            "completed_at": item.completed_at.isoformat() if item.completed_at else None
-        })
-    
-    # Create result with roadmap and progress
-    result = {
-        "id": roadmap.id,
-        "learning_goals": roadmap.learning_goals,
-        "months": roadmap.months,
-        "days_per_week": roadmap.days_per_week,
-        "hours_per_day": roadmap.hours_per_day,
-        "content": roadmap.content,
-        "progress": progress_dict,
-        "created_at": roadmap.created_at.isoformat()
-    }
-    
-    return result
+        logger.info(f"Found roadmap: {roadmap.id}")
+        
+        # Safely handle content - ensure it's a dict even if None
+        content = roadmap.content if roadmap.content is not None else {}
+        
+        # Get progress items
+        progress_items = db.query(Progress).filter(
+            Progress.roadmap_id == roadmap_id
+        ).all()
+        
+        logger.info(f"Found {len(progress_items)} progress items")
+        
+        # Convert to dictionary for easy access
+        progress_dict = {}
+        for item in progress_items:
+            week_key = f"week{item.week_number}"
+            day_key = f"day{item.day_number}"
+            
+            if week_key not in progress_dict:
+                progress_dict[week_key] = {}
+            
+            if day_key not in progress_dict[week_key]:
+                progress_dict[week_key][day_key] = []
+            
+            # Handle completed_at safely
+            completed_at = None
+            if item.completed_at:
+                try:
+                    completed_at = item.completed_at.isoformat()
+                except AttributeError:
+                    # In case completed_at is not a datetime object
+                    completed_at = str(item.completed_at)
+            
+            progress_dict[week_key][day_key].append({
+                "topic_index": item.topic_index,
+                "completed": item.completed,
+                "completed_at": completed_at
+            })
+        
+        # Create result with roadmap and progress
+        result = {
+            "id": roadmap.id,
+            "learning_goals": roadmap.learning_goals,
+            "months": roadmap.months,
+            "days_per_week": roadmap.days_per_week,
+            "hours_per_day": float(roadmap.hours_per_day),  # Ensure this is a float
+            "content": content,
+            "progress": progress_dict,
+            "created_at": roadmap.created_at.isoformat() if isinstance(roadmap.created_at, datetime) else str(roadmap.created_at)
+        }
+        
+        return result
+        
+    except Exception as e:
+        logger.error(f"Error in get_roadmap_with_progress: {str(e)}")
+        logger.error(traceback.format_exc())
+        # Re-raise with more context
+        raise Exception(f"Failed to retrieve roadmap: {str(e)}")
 
 # Update progress
 async def update_progress(db: Session, roadmap_id: str, user_id: str, 

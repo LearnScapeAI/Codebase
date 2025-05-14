@@ -36,15 +36,24 @@ async def get_roadmap_details(
     db: Session = Depends(get_db)
 ):
     """Get a specific roadmap with progress information"""
-    roadmap_data = await get_roadmap_with_progress(db, roadmap_id, current_user.id)
-    
-    if not roadmap_data:
+    try:
+        logger.info(f"User {current_user.id} requesting roadmap {roadmap_id}")
+        roadmap_data = await get_roadmap_with_progress(db, roadmap_id, current_user.id)
+        
+        if not roadmap_data:
+            logger.warning(f"Roadmap {roadmap_id} not found for user {current_user.id}")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Roadmap not found or access denied"
+            )
+        
+        return roadmap_data
+    except Exception as e:
+        logger.error(f"Error retrieving roadmap {roadmap_id}: {str(e)}")
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Roadmap not found or access denied"
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"An error occurred: {str(e)}"
         )
-    
-    return roadmap_data
 
 @router.post("/roadmaps/{roadmap_id}/progress")
 async def mark_topic_progress(
