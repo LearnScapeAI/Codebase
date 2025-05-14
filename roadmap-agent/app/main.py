@@ -17,12 +17,13 @@ app = FastAPI(title="LearnScape Roadmap Generator")
 origins = [
     "http://localhost:3000",
     "https://learnscape-frontend.vercel.app",  # Add your frontend URL here
+    "https://www.learnscapeai.com",
     "*"  # During development, you can allow all origins
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Update this with your frontend URL in production
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
