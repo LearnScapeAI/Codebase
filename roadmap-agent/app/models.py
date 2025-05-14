@@ -35,6 +35,7 @@ class User(Base):
     
     # Relationship with roadmaps
     roadmaps = relationship("Roadmap", back_populates="user")
+    progress_items = relationship("Progress", back_populates="user")
 
 class Roadmap(Base):
     __tablename__ = "roadmaps"
@@ -57,6 +58,7 @@ class Progress(Base):
     __tablename__ = "progress"
     
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = Column(String, ForeignKey("users.id"))  # Add this line
     roadmap_id = Column(String, ForeignKey("roadmaps.id"))
     week_number = Column(Integer)
     day_number = Column(Integer)
@@ -66,6 +68,8 @@ class Progress(Base):
     
     # Relationship with roadmap
     roadmap = relationship("Roadmap", back_populates="progress_items")
+    # Add user relationship
+    user = relationship("User", back_populates="progress_items")
 
 # Pydantic models for responses
 class UserResponse(BaseModel):
